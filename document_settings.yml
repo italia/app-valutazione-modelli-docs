@@ -1,0 +1,7 @@
+--- 
+document: 
+  name: "Documento di prova"
+  short_name: doc-proca
+  description: "Descrizione"
+  tags:
+    - Docs Italia
