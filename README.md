@@ -1,6 +1,6 @@
-# Documento di esempio - Docs Italia
+# Documentazione delle App di valutazione dell’adesione ai modelli
 
-Descrizione scopo del documento.
+Questo repository raccoglie la documentazione sulle App di valutazione dell'adesione ai modelli di Designers Italia.
 
 # Dipendenze
 
