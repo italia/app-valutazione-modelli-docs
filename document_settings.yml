@@ -1,7 +1,7 @@
 --- 
 document: 
-  name: "Documento di prova"
-  short_name: doc-proca
-  description: "Descrizione"
+  name: "Documentazione delle App di valutazione dell’adesione ai modelli"
+  short_name: app-valutazione-modelli-doc
+  description: "Questo documento guida all'installazione e l'uso delle App di valutazione dell’adesione ai modelli di Designers Italia per i Comuni e le scuole."
   tags:
     - Docs Italia
