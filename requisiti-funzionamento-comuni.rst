@@ -278,3 +278,70 @@ Criterio C.SI.3.3
 
   <a href="#" data-element="privacy-policy-link">Informativa privacy</a>
   
+Criterio C.SE.5.1
+-----------------
+
+**Comportamento atteso:** l'App preleva l’url per accedere all’area personale e applica gli audit di sicurezza per la verifica del certificato.  
+
+**Template HTML su cui si effettua scraping:** template-homepage.html
+
+**Mappatura:** In homepage all’interno di un tag <a> deve esserci l'attributo ``data-element="personal-area-login"``. 
+
+**Esempio:**
+
+.. code-block::
+
+  <a href="#" data-element=”personal-area-login”>
+    <span> Accedi all'area personale</span>
+  </a>
+
+Criterio C.SE.5.2
+-----------------_
+
+**Comportamento atteso:** l'App preleva l’url per accedere all’area personale e applica gli audit di verifica del sottodominio.  
+
+**Template HTML su cui si effettua scraping:** template-homepage.html
+
+**Mappatura:** In homepage all’interno di un tag <a> deve esserci l'attributo ``data-element="personal-area-login"``. 
+
+**Esempio:**
+
+.. code-block::
+
+  <a href="#" data-element=”personal-area-login”>
+    <span> Accedi all'area personale</span>
+  </a>
+
+Audit R.SI.1.1
+-----------------
+
+**Comportamento atteso:** l'App preleva i metatag da una pagina servizio casuale e ne controlla la struttura: presenza delle chiavi con relativa valorizzazione. 
+
+**Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
+
+**Mappatura:** In homepage all’interno di un tag <a> deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. All’interno dell’HTML della pagina servizio deve esserci un attributo <script> che contiene come valore un JSON di metatag. Il tag <script> deve avere l'attributo ``data-element="metatag"``.
+
+**Esempio:**
+
+.. code-block::
+
+  <script data-element="metatag" type="application/ld+json">
+  {
+    "name": "Iscrizione alla Scuola dell’infanzia",
+      "serviceType": "P1Y",
+    "serviceOperator": {
+      "name": "Lorem"
+    },
+    "areaServed": {
+      "name": "Lorem ipsum"
+    },
+    "audience": {
+      "name": ""
+    },
+    "availableChannel": {
+      "serviceUrl": "Lorem ipsum",
+      "serviceLocation": {
+        …
+      }
+    }
+  }
