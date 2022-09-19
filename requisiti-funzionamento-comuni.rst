@@ -34,8 +34,6 @@ Criterio C.SI.1.3
 
 **Esempio:**
 
-.. code-block::
-
   <li>
     <a href="/template-servizi.html">
     <span>Servizi</span>
@@ -46,6 +44,7 @@ Criterio C.SI.1.3
     <h3><a href="/ template-dettaglio-servizio.html" data-element="service-link">Abbandono di rifiuti in aree private</a></h3>
     <p>Titolo servizio…</p>
   </div>
+
 
 All’interno della scheda servizio devono esserci i seguenti attributi:
 
@@ -62,8 +61,6 @@ Voci delle quali viene verificata la presenza e sequenzialità all’interno del
 
 **Esempio:**
 
-.. code-block::
-
   <ul data-element="page-index">
     <li>
      <a>
@@ -71,11 +68,9 @@ Voci delle quali viene verificata la presenza e sequenzialità all’interno del
      </a>
     </li>
   
-.. code-block::
 
   <h1 data-element="service-title">Iscrizione alla Scuola dell’infanzia</h1>
   
-.. code-block::
 
   <p data-element="service-description">Descrizione</p>
   <span data-element="service-status">Servizio attivo</span>
@@ -92,13 +87,10 @@ Criterio C.SI.1.5
 
 **Esempio:**
 
-.. code-block::
-
   <a href="/template-argomenti.html" 
     <span> Tutti gli argomenti...</span>
   </a>
   
-.. code-block::
 
   <a href="#" data-element="topic-element"><h3>Animale domestico</h3></a>
   
@@ -113,8 +105,6 @@ Criterio C.SI.1.6
 **Mappatura:** In template-homepage deve esserci un <ul> con l’attributo ``data-element=”main-navigation”`` che contenga degli <li> e degli <a> in cui ci sono le label (può contenere altri tag). 
 
 **Esempio:**
-
-.. code-block::
 
   <ul data-element="main-navigation">
     <li>
@@ -134,11 +124,8 @@ Criterio C.SI.1.7
 
 **Esempio:**
 
-.. code-block::
-
   <a href=”/template-servizi.html"data-element="service">Servizi</a>
 
-.. code-block::
 
   <a data-element="service-page" href="/template-servizi-servizio.html">
   <h3 class="card-title t-primary title-xlarge">Agricoltura e pesca</h3>
@@ -154,8 +141,6 @@ Criterio C.SI.2.1
 **Mappatura:** In homepage, all’interno di un tag <a>, deve esserci l'attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina “Servizi” i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. Nella pagina dettaglio servizio deve esserci un tag <a> che contiene l’attributo ``data-element="appointment-booking"``. Il tag può essere contenuto in altri (esempio: <li>).
 
 **Esempio:**
-
-.. code-block::
 
   <li>
     <a href="#" data-element="appointment-booking">
@@ -176,8 +161,6 @@ Criterio C.SI.2.2
 
 **Esempio:**
 
-.. code-block::
-
   <ul data-element="page-index">
     <li>
       <a>
@@ -196,8 +179,6 @@ Criterio C.SI.2.3
 
 **Esempio:**
 
-.. code-block::
-
   <a href="#" data-element="faq">Leggi le FAQ</a>
 
 
@@ -211,8 +192,6 @@ Criterio C.SI.2.4
 **Mappatura:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla Segnalazione disservizio. Il tag <a> deve avere l’attributo ``data-element="report-inefficiency"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
 **Esempio:**
-
-.. code-block::
 
   <a href="#" data-element="report-inefficiency">Segnalazione disservizio</a>
   
@@ -229,18 +208,14 @@ L’href della voce Servizi deve riportare alla pagina template-servizi.html. Al
 che riportano alla pagina di secondo livello servizio in cui deve esserci un componente (un wrapper) come un <div> che contiene l’attributo ``data-element="feedback"``.
 
 **Esempio:**
-
-.. code-block::
   
   <a href=”/template-servizi.html" data-element="all-services">Servizi</a>
 
-.. code-block::
 
   <a data-element="service-category-link" href="/template-servizi-servizio.html">
   <h3 class="card-title t-primary title-xlarge">Agricoltura e pesca</h3>
   </a>
 
-.. code-block::
 
   <div data-element="feedback">
     <div>
@@ -259,8 +234,6 @@ Criterio C.SI.3.2
 
 **Esempio:**
 
-.. code-block::
-
   <a href="#" data-element="accessibility-link">Dichiarazione di accessibilità</a>
 
 Criterio C.SI.3.3
@@ -274,10 +247,9 @@ Criterio C.SI.3.3
 
 **Esempio:**
 
-.. code-block::
-
   <a href="#" data-element="privacy-policy-link">Informativa privacy</a>
   
+
 Criterio C.SE.5.1
 -----------------
 
@@ -288,8 +260,6 @@ Criterio C.SE.5.1
 **Mappatura:** In homepage all’interno di un tag <a> deve esserci l'attributo ``data-element="personal-area-login"``. 
 
 **Esempio:**
-
-.. code-block::
 
   <a href="#" data-element=”personal-area-login”>
     <span> Accedi all'area personale</span>
@@ -306,13 +276,12 @@ Criterio C.SE.5.2
 
 **Esempio:**
 
-.. code-block::
-
   <a href="#" data-element=”personal-area-login”>
     <span> Accedi all'area personale</span>
   </a>
 
-Audit R.SI.1.1
+
+Raccomandazione R.SI.1.1
 -----------------
 
 **Comportamento atteso:** l'App preleva i metatag da una pagina servizio casuale e ne controlla la struttura: presenza delle chiavi con relativa valorizzazione. 
@@ -322,8 +291,6 @@ Audit R.SI.1.1
 **Mappatura:** In homepage all’interno di un tag <a> deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. All’interno dell’HTML della pagina servizio deve esserci un attributo <script> che contiene come valore un JSON di metatag. Il tag <script> deve avere l'attributo ``data-element="metatag"``.
 
 **Esempio:**
-
-.. code-block::
 
   <script data-element="metatag" type="application/ld+json">
   {
