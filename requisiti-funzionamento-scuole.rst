@@ -26,8 +26,8 @@ Criterio C.SC.1.1
 Dalla pagina "scuola-servizi-tipologia" le card devono contenere una tag <a> con attributo ``data-element=”service-link”``. 
 
 
-C.SC.1.4
------------
+Criterio C.SC.1.4
+-------------------
 
 **Comportamento atteso:** L'Audit controlla le voci del menù di primo livello del sito web
 
@@ -51,8 +51,8 @@ C.SC.1.4
  …
 </ul>
 
-C.SC.1.5
----------------
+Criterio C.SC.1.5
+--------------------
 
 **Comportamento atteso:** L'audit controlla le voci di menù di secondo livello della voce di primo livello "Scuola"
 
@@ -72,8 +72,8 @@ C.SC.1.5
   …
 </ul>
 
-C.SC.2.1
------------
+Criterio C.SC.2.1
+--------------------
 
 **Comportamento atteso:** L'audit controlla la presenza della privacy-policy
 
@@ -91,8 +91,8 @@ C.SC.2.1
 …
 </footer>
 
-C.SC.2.2
------------
+Criterio C.SC.2.2
+-------------------
 
 **Comportamento atteso:** L'audit controlla la presenza della dichiarazione di accessibilità
 
