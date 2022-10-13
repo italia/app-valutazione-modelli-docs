@@ -13,6 +13,6 @@ Documentazione delle App di valutazione dell’adesione ai modelli
 
    cosa-sono-cosa-fanno.rst
    requisiti-funzionamento-comuni.rst
-  
+   requisiti-funzionamento-scuole.rst
 
    
