@@ -8,10 +8,11 @@ Documentazione delle App di valutazione dell’adesione ai modelli
 
 .. toctree::
    :numbered:
-   :maxdepth: 3
+   :maxdepth: 2
    :caption: Indice dei contenuti
 
    cosa-sono-cosa-fanno.rst
+   criteri-conformita.rst
    requisiti-funzionamento-comuni.rst
    requisiti-funzionamento-scuole.rst
 
