@@ -16,4 +16,7 @@ Gli obiettivi sono stati definiti per assicurare l’aderenza ai principi conten
 `Vai ai criteri di conformità per il modello scuole <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_
 
 
+.. attention::
+  Per il corretto funzionamento dell'app e svolgimento delle valutazioni, è necessario, in fase di sviluppo dei siti, tenere conto dei `requisiti di funzionamento per il modello Comuni <app-valutazione-modelli-docs/requisiti-funzionamento-comuni.rst>`_ e dei `requisiti di funzionamento per il modello scuole <app-valutazione-modelli-docs/requisiti-funzionamento-scuole.rst>`_.
+
 
