@@ -7,6 +7,10 @@ Sono applicativi desktop che aiutano a valutare la qualità, le caratteristiche 
 
 Sono di supporto agli sviluppatori dei siti istituzionali per verificare la corretta implementazione degli stessi, sia durante che dopo lo sviluppo, e così informare eventuali modifiche o piani di miglioramento. Le App sono di supporto anche al Dipartimento per la trasformazione digitale per la valutazione, insieme ad altri controlli manuali e semiautomatici, della conformità dei siti per l’erogazione dei fondi della misura 1.4.1.
 
+Le app sono in **versione beta** e quindi soggette a revisioni e perfezionamenti.
+
+
+
 Le app:
 
 * sono due, una per la valutazione del sito dei Comuni e una per la valutazione del sito delle scuole;
@@ -15,4 +19,4 @@ Le app:
 * aiutano a valutare l’aderenza ad alcuni dei criteri di conformità, ad alcune raccomandazioni e ad altri parametri consigliati;
 * forniscono le informazioni per interpretare i risultati e apportare migliorie.
 
-Le App sono state create sulla base della conformità agli avvisi della misura 1.4.1 e nei report sono presenti riferimenti diretti ad alcuni dei criteri di conformità.
+Le app sono state create sulla base della conformità agli avvisi della misura 1.4.1 e nei report sono presenti riferimenti diretti ad alcuni dei criteri di conformità.
