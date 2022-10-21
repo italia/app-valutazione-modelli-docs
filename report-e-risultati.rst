@@ -6,7 +6,7 @@ Una volta effettuata l’analisi, il report si aprirà automaticamente. Il repor
 Barra superiore
 -------------------
 
-.. figure:: barra-superiore-report.png
+.. figure:: media/barra-superiore-report.png
    :name: barra-superiore-report
    :alt: La figura mostra la barra superiore del report generato dall'App di valutazione.
 
@@ -14,7 +14,9 @@ Barra superiore
    
 Nella barra superiore, i colori degli indicatori non indicano il risultato del superamento dei test.
 
-Il punteggio è valido solo per **Velocità e tempi risposta** (Criterio *C.SI.4.1 - Velocità e tempi di risposta* per i siti dei Comuni e Raccomandazione progettuale *R.SC.3.1 - Velocità e tempi di risposta* per i siti delle scuole. Per i gruppi di criteri, il numero visualizzato è una percentuale di quanti test sono stati passati in quel gruppo ma non è da considerarsi valido ai fini del processo di valutazione tecnica. 
+Il punteggio è valido solo per **Velocità e tempi risposta** (Criterio *C.SI.4.1 - Velocità e tempi di risposta* per i siti dei Comuni e Raccomandazione progettuale *R.SC.3.1 - Velocità e tempi di risposta* per i siti delle scuole. 
+
+Per i gruppi di criteri, il numero visualizzato è una percentuale di quanti test sono stati passati in quel gruppo ma non è da considerarsi valido ai fini del processo di valutazione tecnica. 
 
 Cliccando su un criterio o un gruppo, puoi saltare alla sezione del report con informazioni aggiuntive.
 
