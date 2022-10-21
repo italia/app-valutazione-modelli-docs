@@ -23,7 +23,7 @@ Criterio C.SI.1.1
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
-**Mappatura:** In homepage all’interno di un tag <a> deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio.
+**Requisiti tecnici:** In homepage all’interno di un tag <a> deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio.
 
 Criterio C.SI.1.2
 -----------------------
@@ -41,10 +41,9 @@ Criterio C.SI.1.3
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
-**Mappatura:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. 
+**Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. 
 
-.. admonition:: example
-   :class: admonition-example display-page
+**Esempio:**
    
    <li>
      &nbsp;&nbsp;<a href="/template-servizi.html">
@@ -88,14 +87,24 @@ Voci delle quali viene verificata la presenza e sequenzialità all’interno del
   <span data-element="service-status">Servizio attivo</span>
   
 
+Criterio C.SI.1.4
+----------------------
+
+**Condizioni di successo:** se è in uso il tema CMS del modello per i Comuni, la versione utilizzata è uguale o superiore alla 1.0.
+
+**Modalità di verifica:** viene verificata la versione indicata nel file style.css ricercando la chiave "Text Domain: design_comuni_italia".
+  
+
 Criterio C.SI.1.5
 -------------------
 
-**Comportamento atteso:** l'App preleva un listato di vocaboli (argomenti) e ne controlla la presenza su vocabolari dati. 
+**Condizioni di successo:** gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello Comuni alla voce "Tassonomia ARGOMENTI" o al vocabolario controllato EuroVoc.
+
+**Modalità di verifica:** gli argomenti identificati all'interno della funzione di ricerca del sito vengono confrontati con l'elenco di voci presente nel documento di architettura dell'informazione e con il vocabolario controllato EuroVoc, usando nella ricerca specifici attributi data-element.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-argomenti.html
 
-**Mappatura:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-topics"`` che riporta alla pagina template-argomenti.html. In template-argomenti deve esserci una lista di argomenti (tag <a>) con l’attributo ``data-element="topic-element"`` che contengono del testo con il nome dell’argomento. 
+**Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-topics"`` che riporta alla pagina template-argomenti.html. In template-argomenti deve esserci una lista di argomenti (tag <a>) con l’attributo ``data-element="topic-element"`` che contengono del testo con il nome dell’argomento. 
 
 **Esempio:**
 
@@ -110,11 +119,13 @@ Criterio C.SI.1.5
 Criterio C.SI.1.6
 --------------------
 
-**Comportamento atteso:** l'App preleva le voci di menù di primo livello.
+**Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero Amministrazione, Novità, Servizi, Vivere il Comune).
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito, il loro ordine e confrontate con quanto indicato nel documento di architettura dell'informazione, applicando una tolleranza di massimo 3 voci aggiuntive.
 
 **Template HTML  su cui si effettua scraping:** template-homepage.html
 
-**Mappatura:** In template-homepage deve esserci un <ul> con l’attributo ``data-element=”main-navigation”`` che contenga degli <li> e degli <a> in cui ci sono le label (può contenere altri tag). 
+**Requisiti tecnici:** In template-homepage deve esserci un <ul> con l’attributo ``data-element=”main-navigation”`` che contenga degli <li> e degli <a> in cui ci sono le label (può contenere altri tag). 
 
 **Esempio:**
 
@@ -128,11 +139,13 @@ Criterio C.SI.1.6
 Criterio C.SI.1.7
 -------------------
 
-**Comportamento atteso:** l'App preleva i titoli delle pagine di secondo livello che devono rispettare un vocabolario. 
+**Condizioni di successo:** i titoli delle pagine di secondo livello corrispondono a quelli indicati nel documento di architettura dell'informazione del modello Comuni.
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, vengono confrontati i titoli delle categorie di servizi presentati nella pagina di primo livello "Servizi" con i titoli richiesti dal modello nell'elenco Tassonomia categorie dei servizi del documento di architettura dell'informazione.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html
 
-**Mappatura:** In homepage, la voce di menù “Servizi” deve essere un tag <a> con un un attributo ``data-element="all-services"``. L’href della voce Servizi deve riportare alla pagina template-servizi.html. All’interno della pagina, sotto la voce “Categoria” le card devono contenere degli <a> con l’attributo ``data-element="service-category-link"``. Verrà prelevato il titolo testuale della card.
+**Requisiti tecnici:** In homepage, la voce di menù “Servizi” deve essere un tag <a> con un un attributo ``data-element="all-services"``. L’href della voce Servizi deve riportare alla pagina template-servizi.html. All’interno della pagina, sotto la voce “Categoria” le card devono contenere degli <a> con l’attributo ``data-element="service-category-link"``. Verrà prelevato il titolo testuale della card.
 
 **Esempio:**
 
@@ -146,11 +159,12 @@ Criterio C.SI.1.7
 Criterio C.SI.2.1
 -------------------
 
-**Comportamento atteso:** l'App preleva una scheda di servizio casuale e controlla la presenza del componente per prenotare un appuntamento.
+**Condizioni di successo:** la funzionalità di prenotazione di un appuntamento presso lo sportello è presente in tutte le schede servizio che lo richiedono.
 
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza del componente "Prenota appuntamento" all'interno di una scheda servizio selezionata casualmente. Questo test non ha una condizione di fallimento in quanto dipende dal servizio specifico. analizzato; 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
-**Mappatura:** In homepage, all’interno di un tag <a>, deve esserci l'attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina “Servizi” i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. Nella pagina dettaglio servizio deve esserci un tag <a> che contiene l’attributo ``data-element="appointment-booking"``. Il tag può essere contenuto in altri (esempio: <li>).
+**Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l'attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina “Servizi” i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. Nella pagina dettaglio servizio deve esserci un tag <a> che contiene l’attributo ``data-element="appointment-booking"``. Il tag può essere contenuto in altri (esempio: <li>).
 
 **Esempio:**
 
@@ -165,11 +179,13 @@ Criterio C.SI.2.1
 Criterio C.SI.2.2
 -----------------
 
-**Comportamento atteso:** l'App preleva una scheda di servizio casuale e controlla la presenza della voce “Contatti” all’interno dell’indice.
+**Condizioni di successo:** i contatti dell'ufficio preposto all'erogazione del servizio sono presenti in tutte le schede servizio.
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza della voce "Contatti" all'interno dell'indice di una scheda servizio selezionata casualmente.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
-**Mappatura:** In homepage, all’interno di un tag <a>, deve esserci l'attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi, i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. All’interno della pagina di dettaglio servizio deve esserci un attributo ``data-element="page-index"`` – deve essere un tag <ul> – con l’attributo che contiene altri <li> che contenga la label “Contatti”.
+**Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l'attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi, i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. All’interno della pagina di dettaglio servizio deve esserci un attributo ``data-element="page-index"`` – deve essere un tag <ul> – con l’attributo che contiene altri <li> che contenga la label “Contatti”.
 
 **Esempio:**
 
@@ -183,11 +199,13 @@ Criterio C.SI.2.2
 Criterio C.SI.2.3
 --------------------
 
-**Comportamento atteso:** l'App controlla la presenza del link alla sezione di FAQ sul footer.
+**Condizioni di successo:** nel footer del sito è presente un link contenente le espressioni "FAQ" oppure "domande frequenti" che invia a una pagina di domande frequenti.
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza del link nel footer che invii ad una pagina esistente e che il testo del link contenga almeno una delle espressioni richieste, senza fare distinzione tra caratteri minuscoli o maiuscoli.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html
 
-**Mappatura:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla sezione FAQ. Il tag <a> deve avere l’attributo ``data-element="faq"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
+**Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla sezione FAQ. Il tag <a> deve avere l’attributo ``data-element="faq"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
 **Esempio:**
 
@@ -197,11 +215,13 @@ Criterio C.SI.2.3
 Criterio C.SI.2.4
 -------------------
 
-**Comportamento atteso:** Il crawler controlla la presenza del link alla sezione di Segnalazione disservizio sul footer.
+**Condizioni di successo:** nel footer del sito è presente un link per la segnalazione di un disservizio che contenga le espressioni "disservizio" oppure "segnala disservizio" oppure "segnalazione disservizio".
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza del link nel footer che invii ad una pagina esistente e che il testo del link contenga almeno una delle espressioni richieste, senza fare distinzione tra caratteri minuscoli o maiuscoli.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html
 
-**Mappatura:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla Segnalazione disservizio. Il tag <a> deve avere l’attributo ``data-element="report-inefficiency"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
+**Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla Segnalazione disservizio. Il tag <a> deve avere l’attributo ``data-element="report-inefficiency"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
 **Esempio:**
 
@@ -211,13 +231,14 @@ Criterio C.SI.2.4
 Criterio C.SI.2.5
 -------------------
 
-**Comportamento atteso:** Il crawler controlla la presenza del componente feedback su una pagina di primo livello estratta casualmente e su una di secondo livello dei servizi estratta casualmente.
+**Condizioni di successo:** la funzionalità per valutare la chiarezza informativa è presente su tutte le pagine di primo e secondo livello del sito; 
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza del componente su una pagina di primo livello selezionata casualmente e su una pagina di secondo livello selezionata casualmente a partire dalla pagina "Servizi".
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-servizi-servizio.html
 
-**Mappatura:** In homepage all’interno del menù le voci di primo livello devono essere degli <a> con i seguenti tag: ``data-element="management"``, ``data-element="all-services"``, ``data-element="news"``, ``data-element="live"``. L’href deve riportare alle pagine di primo livello in cui deve esserci un componente (un wrapper) come un <div> che contiene l’attributo ``data-element="feedback"``. 
-L’href della voce Servizi deve riportare alla pagina template-servizi.html. All’interno della pagina, sotto la voce “Categoria” le card devono contenere degli <a> con l’attributo ``data-element="service-category-link"``
-che riportano alla pagina di secondo livello servizio in cui deve esserci un componente (un wrapper) come un <div> che contiene l’attributo ``data-element="feedback"``.
+**Requisiti tecnici:** In homepage all’interno del menù le voci di primo livello devono essere degli <a> con i seguenti tag: ``data-element="management"``, ``data-element="all-services"``, ``data-element="news"``, ``data-element="live"``. L’href deve riportare alle pagine di primo livello in cui deve esserci un componente (un wrapper) come un <div> che contiene l’attributo ``data-element="feedback"``. 
+L’href della voce Servizi deve riportare alla pagina template-servizi.html. All’interno della pagina, sotto la voce “Categoria” le card devono contenere degli <a> con l’attributo ``data-element="service-category-link"`` che riportano alla pagina di secondo livello servizio in cui deve esserci un componente (un wrapper) come un <div> che contiene l’attributo ``data-element="feedback"``.
 
 **Esempio:**
   
@@ -235,14 +256,24 @@ che riportano alla pagina di secondo livello servizio in cui deve esserci un com
         <h2>Quanto sono utili le informazioni in questa pagina?</h2>
       </div>
 
+
+Criterio C.SI.3.1
+--------------------
+
+**Condizioni di successo:** il sito presenta solo cookie idonei come definito dalla normativa.
+
+**Modalità di verifica:** viene verificato che il dominio dei cookie identificati sia corrispondente al dominio del sito web. Se nella pagina analizzata non vengono rilevati cookie non verrà generata una tabella di risultati.
+
 Criterio C.SI.3.2
 -------------------
 
-**Comportamento atteso:** l'App verifica la presenza della dichiarazione di accessibilità nel footer.
+**Condizioni di successo:** il sito presenta una voce nel footer che riporta alla dichiarazione di accessibilità di AGID valida.
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente che sia quella contenente la dichiarazione di accessibilità (il link deve iniziare con "https://form.agid.gov.it/view/").
 
 **Template HTML su cui si effettua scraping:** template-homepage.html
 
-**Mappatura:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla dichiarazione di accessibilità. Il tag <a> deve avere l’attributo ``data-element="accessibility-link"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
+**Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla dichiarazione di accessibilità. Il tag <a> deve avere l’attributo ``data-element="accessibility-link"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
 **Esempio:**
 
@@ -251,25 +282,29 @@ Criterio C.SI.3.2
 Criterio C.SI.3.3
 --------------------
 
-**Comportamento atteso:** l'App verifica la presenza della privacy policy nel footer. 
+**Condizioni di successo:** il sito presenta una voce nel footer che riporta all'informativa privacy.
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente e con certificato HTTPS valido e attivo.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html
 
-**Mappatura:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla privacy policy. Il tag <a> deve avere l’attributo ``data-element="privacy-policy-link"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
+**Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla privacy policy. Il tag <a> deve avere l’attributo ``data-element="privacy-policy-link"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
 **Esempio:**
 
   <a href="#" data-element="privacy-policy-link">Informativa privacy</a>
-  
 
-Criterio C.SE.5.1
+
+Criterio C.SI.5.1
 -----------------
 
-**Comportamento atteso:** l'App preleva l’url per accedere all’area personale e applica gli audit di sicurezza per la verifica del certificato.  
+**Condizioni di successo:** il sito utilizza un certificato https valido e non obsoleto secondo le raccomandazioni AGID.
+
+**Modalità di verifica:** viene verificato che il certificato https del sito sia valido e attivo.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html
 
-**Mappatura:** In homepage all’interno di un tag <a> deve esserci l'attributo ``data-element="personal-area-login"``. 
+**Requisiti tecnici:** In homepage all’interno di un tag <a> deve esserci l'attributo ``data-element="personal-area-login"``. 
 
 **Esempio:**
 
@@ -277,14 +312,16 @@ Criterio C.SE.5.1
     <span> Accedi all'area personale</span>
   </a>
 
-Criterio C.SE.5.2
------------------_
+Criterio C.SI.5.2
+--------------------
 
-**Comportamento atteso:** l'App preleva l’url per accedere all’area personale e applica gli audit di verifica del sottodominio.  
+**Condizioni di successo:** il sito comunale è raggiungibile senza necessità di inserimento del sottodominio “www.” e utilizza il sottodominio "comune." immediatamente seguito da uno dei domini istituzionali per il Comune presente nell'Elenco Nomi a Dominio Riservati Per i Comuni Italiani (es: comune.anzio.roma.it) o dal nome del Comune se coincidente con il nome del capoluogo di provincia (es: comune.roma.it).
+
+**Modalità di verifica:** viene verificato che il dominio utilizzato dal sito sia presente nell'Elenco Nomi a Dominio Riservati per i Comuni Italiani o sia un nome di capoluogo di provincia e che immediatamente prima di questo sia utilizzato il sottodominio "comune.".
 
 **Template HTML su cui si effettua scraping:** template-homepage.html
 
-**Mappatura:** In homepage all’interno di un tag <a> deve esserci l'attributo ``data-element="personal-area-login"``. 
+**Requisiti tecnici:** In homepage all’interno di un tag <a> deve esserci l'attributo ``data-element="personal-area-login"``. 
 
 **Esempio:**
 
@@ -296,11 +333,13 @@ Criterio C.SE.5.2
 Raccomandazione R.SI.1.1
 -----------------
 
-**Comportamento atteso:** l'App preleva i metatag da una pagina servizio casuale e ne controlla la struttura: presenza delle chiavi con relativa valorizzazione. 
+**Condizioni di successo:** le voci delle schede servizio presentano tutti i metatag richiesti dal modello.
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza e correttezza dei metatag indicati nella sezione "Dati strutturati e interoperabilità" della documentazione in una scheda servizio selezionata casualmente.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
-**Mappatura:** In homepage all’interno di un tag <a> deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. All’interno dell’HTML della pagina servizio deve esserci un attributo <script> che contiene come valore un JSON di metatag. Il tag <script> deve avere l'attributo ``data-element="metatag"``.
+**Requisiti tecnici:** In homepage all’interno di un tag <a> deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. All’interno dell’HTML della pagina servizio deve esserci un attributo <script> che contiene come valore un JSON di metatag. Il tag <script> deve avere l'attributo ``data-element="metatag"``.
 
 **Esempio:**
 
