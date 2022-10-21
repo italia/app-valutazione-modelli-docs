@@ -46,8 +46,6 @@ Criterio C.SI.1.3
 .. admonition:: example
    :class: admonition-example display-page
    
-   .. code-block:: rst
-   
    <li>
      <a href="/template-servizi.html">
      <span>Servizi</span>
