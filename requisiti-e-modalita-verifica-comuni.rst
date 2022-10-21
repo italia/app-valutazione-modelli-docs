@@ -47,14 +47,14 @@ Criterio C.SI.1.3
    :class: admonition-example display-page
    
    <li>
-     <a href="/template-servizi.html">
-     <span>Servizi</span>
-    </a>
+     &nspb;&nspb;<a href="/template-servizi.html">
+     &nspb;&nspb;<span>Servizi</span>
+    &nspb;</a>
    </li>
 
    <div>
-    <h3><a href="/ template-dettaglio-servizio.html" data-element="service-link">Abbandono di rifiuti in aree private</a></h3>
-     <p>Titolo servizio…</p>
+    &nspb;<h3><a href="/ template-dettaglio-servizio.html" data-element="service-link">Abbandono di rifiuti in aree private</a></h3>
+     &nspb;<p>Titolo servizio…</p>
    </div>
 
 
