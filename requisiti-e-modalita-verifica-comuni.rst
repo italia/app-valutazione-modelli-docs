@@ -1,5 +1,5 @@
-Requisiti di funzionamento per il modello Comuni
-=================================================
+Requisiti tecnici e modalità di verifica per il modello Comuni
+================================================================
 
 Per il corretto funzionamento dell'App di valutazione, è necessario inserire dei **data attribute** all’interno dei tag HTML del sito.
 
@@ -17,33 +17,47 @@ NB: Per tutto ciò che viene controllato sulla base di un vocabolario si utilizz
 Criterio C.SI.1.1
 --------------------------------
 
-**Comportamento atteso:** l'App preleva i font da una scheda di servizio casuale.
+**Condizioni di successo:** il sito utilizza almeno i font Titillium Web e Lora.
+
+**Modalità di verifica:** tramite ricerca dello specifico attributo data-element, viene verificata la presenza dei font all'interno di una scheda servizio casualmente selezionata.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
 **Mappatura:** In homepage all’interno di un tag <a> deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio.
 
+Criterio C.SI.1.2
+-----------------------
+
+**Condizioni di successo:** il sito usa la libreria Bootstrap Italia in una versione uguale o superiore alla 2.0.
+
+**Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
+
 Criterio C.SI.1.3
 -------------------------------
 
-**Comportamento atteso:** Il crawler preleva una scheda di servizio casuale e ne ispeziona elementi per controllarne la presenza e l’ordine.
+**Condizioni di successo:** nelle schede informative di servizio le voci indicate come obbligatorie sono presenti e sono nell'ordine corretto.
+
+**Modalità di verifica:** viene verificato se le voci indicate come obbligatorie all'interno del documento di architettura dell'informazione sono presenti. Inoltre viene verificato se le voci obbligatorie presenti nell'indice della pagina sono nell'ordine corretto. La verifica viene effettuata su una scheda servizio casualmente selezionata, ricercando le voci indicate nella documentazione del modello tramite specifici attributi data-element.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
 **Mappatura:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. 
 
-**Esempio:**
+.. admonition:: example
+   :class: admonition-example display-page
+   
+   .. code-block:: rst
+   
+   <li>
+     <a href="/template-servizi.html">
+     <span>Servizi</span>
+    </a>
+   </li>
 
-  <li>
-    <a href="/template-servizi.html">
-    <span>Servizi</span>
-   </a>
-  </li>
- 
-  <div>
+   <div>
     <h3><a href="/ template-dettaglio-servizio.html" data-element="service-link">Abbandono di rifiuti in aree private</a></h3>
     <p>Titolo servizio…</p>
-  </div>
+   </div>
 
 
 All’interno della scheda servizio devono esserci i seguenti attributi:
