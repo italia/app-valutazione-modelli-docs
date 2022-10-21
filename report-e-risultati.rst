@@ -38,7 +38,9 @@ Sezione Velocità e tempi di risposta
 
 Questa sezione fa riferimento nello specifico al *C.SI.4.1 - Velocità e tempi di risposta* per i siti dei Comuni e Raccomandazione progettuale *R.SC.3.1 - Velocità e tempi di risposta* per i siti delle scuole.
 
-Nella sezione *Metriche*, vengono presentati i risultati delle 6 metriche (First Contentful Paint, Speed Index, Largest Contentful Paint, Time to Interactive, Total Blocking Time, Cumulative Layout Shift) che concorrono al punteggio del criterio o della raccomandazione criterio di conformità. Per i siti dei Comuni soltanto, nel caso di punteggio totale inferiore a 50, è necessario pubblicare sul sito comunale un «Piano di miglioramento del sito» che mostri, per ciascuna metrica che impatta negativamente la performance, le azioni future di miglioramento della performance stessa e le relative tempistiche di realizzazione attese.
+Nella sezione *Metriche*, vengono presentati i risultati delle 6 metriche (First Contentful Paint, Speed Index, Largest Contentful Paint, Time to Interactive, Total Blocking Time, Cumulative Layout Shift) che concorrono al punteggio del criterio di conformità o della raccomandazione. 
+
+Per i siti dei Comuni soltanto, nel caso di punteggio totale inferiore a 50, è necessario pubblicare sul sito comunale un «Piano di miglioramento del sito» che mostri, per ciascuna metrica che impatta negativamente la performance, le azioni future di miglioramento della performance stessa e le relative tempistiche di realizzazione attese.
 
 Le sezioni *Opportunità*, *Diagnostica* e *Controlli superati* mostrano i risultati di altri test che lighthouse svolge in automatico. Possono essere utili a valutare miglioramenti del sito.
 
