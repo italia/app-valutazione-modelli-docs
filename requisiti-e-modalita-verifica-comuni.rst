@@ -54,7 +54,7 @@ Criterio C.SI.1.3
 
    <div>
     <h3><a href="/ template-dettaglio-servizio.html" data-element="service-link">Abbandono di rifiuti in aree private</a></h3>
-    <p>Titolo servizio…</p>
+     <p>Titolo servizio…</p>
    </div>
 
 
