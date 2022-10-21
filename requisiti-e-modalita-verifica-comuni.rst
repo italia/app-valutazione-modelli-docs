@@ -12,7 +12,7 @@ La chiave generale dell’attribute è ``data-element=*`` e va inserita all’in
 
 Per tutto ciò che è un URL, per esempio FAQ o Segnalazione disservizio, l'App controlla anche che l’URL nell’href del componente non sia nullo e, per alcuni casi specifici, che sia in HTTPS (vedi dettagli audit) e che riporti ad una pagina “funzionante”.
 
-NB: Per tutto ciò che viene controllato sulla base di un vocabolario si utilizzano controlli non case-sensitive. 
+NB: Per tutto ciò che viene controllato sulla base di un vocabolario si utilizzano controlli non case-sensitive.
 
 Criterio C.SI.1.1
 --------------------------------
