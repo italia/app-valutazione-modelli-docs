@@ -14,7 +14,8 @@ Documentazione delle App di valutazione dell’adesione ai modelli
    cosa-sono-cosa-fanno.rst
    criteri-conformita.rst
    requisiti-e-modalita-verifica-comuni.rst
-   requisiti-funzionamento-scuole.rst
+   requisiti-e-modalita-verifica-scuole.rst
    scarica-app-avvia-valutazione.rst
+   report-e-risultati.rst
 
    
