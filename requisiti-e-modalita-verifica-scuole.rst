@@ -1,5 +1,7 @@
-Requisiti di funzionamento per il modello scuole
-=================================================
+Requisiti tecnici e modalità di verifica per il modello scuole
+======================================================================
+
+Di seguito sono riportati i criteri di conformità e le raccomandazioni verificabili tramite App di valutazione dell'adesione al modello scuole.
 
 Per il corretto funzionamento dell'App di valutazione, è necessario inserire dei **data attribute** all’interno dei tag HTML del sito.
 
@@ -17,23 +19,41 @@ NB: Per tutto ciò che viene controllato sulla base di un vocabolario si utilizz
 
 Criterio C.SC.1.1
 --------------------
+**Condizioni di successo:** il sito utilizza almeno i font Titillium Web e Lora.
 
-**Comportamento atteso:** L'audit preleva una scheda servizio casuale a partire dal listato di servizi e ne ricava i font presenti.
+**Modalità di verifica:** tramite ricerca dello specifico attributo data-element, viene verificata la presenza dei font all'interno di una scheda servizio casualmente selezionata.
 
 **Template HTML su cui si effettua scraping:** scuole-home.html, scuola-servizi-tipologia.html, scuole-servizio-generico.html
 
-**Mappatura:** Il menù di secondo livello "Servizi" deve contenere voci (ad esempio "Servizi per il personale scolastico" e "Servizi per famiglie e studenti") entrambe con attributo data-element=”service-type” al fine di prelevare gli URL (in modo randomico) del listato servizi (contengono l’URL alla pagina scuola-servizi-tipologia), devono essere degli <a> con “href” e possono essere inclusi in altri tag (ad es: <li>).
+**Requisiti tecnici:** Il menù di secondo livello "Servizi" deve contenere voci (ad esempio "Servizi per il personale scolastico" e "Servizi per famiglie e studenti") entrambe con attributo data-element=”service-type” al fine di prelevare gli URL (in modo randomico) del listato servizi (contengono l’URL alla pagina scuola-servizi-tipologia), devono essere degli <a> con “href” e possono essere inclusi in altri tag (ad es: <li>).
 Dalla pagina "scuola-servizi-tipologia" le card devono contenere una tag <a> con attributo ``data-element=”service-link”``. 
 
+
+
+Criterio C.SC.1.2
+-----------------------
+
+**Condizioni di successo:** il sito usa la libreria Bootstrap Italia in una versione uguale o superiore alla 1.6.
+
+**Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
+
+Criterio C.SC.1.3
+----------------------
+
+**Condizioni di successo:** se è in uso il tema CMS del modello scuole, la versione utilizzata è uguale o superiore alla 2.0.
+
+**Modalità di verifica:** viene verificata la versione indicata nel file style.css ricercando la chiave "Text Domain: design_scuole_italia".
 
 Criterio C.SC.1.4
 -------------------
 
-**Comportamento atteso:** L'Audit controlla le voci del menù di primo livello del sito web
+**Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero Scuola, Servizi, Novità, Didattica).
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito, il loro ordine e confrontate con quanto indicato nel documento di architettura dell'informazione, applicando una tolleranza di massimo 3 voci aggiuntive;
 
 **Template HTML su cui si effettua scraping:** scuole-home.html
 
-**Mappatura:** Il tag <ul> deve avere l’attributo ``data-element=”menu”`` ed essere composto da <li> e <a>
+**Requisiti tecnici:** Il tag <ul> deve avere l’attributo ``data-element=”menu”`` ed essere composto da <li> e <a>
 
 **Esempio:**
 
@@ -54,11 +74,13 @@ Criterio C.SC.1.4
 Criterio C.SC.1.5
 --------------------
 
-**Comportamento atteso:** L'audit controlla le voci di menù di secondo livello della voce di primo livello "Scuola"
+**Condizioni di successo:** le voci del menù di secondo livello corrispondono a quelle indicate nel documento di architettura dell'informazione del modello scuole e sono nell'ordine corretto. 
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la correttezza e l'ordine delle voci del menù di secondo livello riferite alla voce di primo livello "Scuola".
 
 **Template HTML su cui si effettua scraping:** scuole-home.html
 
-**Mappatura:** Il tag <ul> deve avere l’attributo ``data-element=”school-submenu”`` ed essere composto da <li> (può contenere anche altri tag, ad esempio <a>). 
+**Requisiti tecnici:** Il tag <ul> deve avere l’attributo ``data-element=”school-submenu”`` ed essere composto da <li> (può contenere anche altri tag, ad esempio <a>). 
 
 **Esempio:**
 
@@ -75,11 +97,13 @@ Criterio C.SC.1.5
 Criterio C.SC.2.1
 --------------------
 
-**Comportamento atteso:** L'audit controlla la presenza della privacy-policy
+**Condizioni di successo:** il sito presenta una voce nel footer che riporta all'informativa privacy.
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente e con certificato HTTPS valido e attivo.
 
 **Template HTML su cui si effettua scraping:** scuole-home.html
 
-**Mappatura:** Il tag <a> deve avere l’attributo ``data-element=”privacy-policy-link”`` e contenere un “href” (può essere contenuto in altri tag, ad esempio <li> …). Il tag deve essere presente all’interno del tag <footer>. 
+**Requisiti tecnici:** Il tag <a> deve avere l’attributo ``data-element=”privacy-policy-link”`` e contenere un “href” (può essere contenuto in altri tag, ad esempio <li> …). Il tag deve essere presente all’interno del tag <footer>. 
 
 **Esempio:**
 
@@ -94,11 +118,13 @@ Criterio C.SC.2.1
 Criterio C.SC.2.2
 -------------------
 
-**Comportamento atteso:** L'audit controlla la presenza della dichiarazione di accessibilità
+**Condizioni di successo:** il sito presenta una voce nel footer che riporta alla dichiarazione di accessibilità di AGID valida.
+
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente che sia quella contenente la dichiarazione di accessibilità (il link deve iniziare con "https://form.agid.gov.it/view/").
 
 **Template HTML su cui si effettua scraping:** scuole-home.html
 
-**Mappatura:** Il tag <a> deve avere l’attributo ``data-element=”accessibility-link”`` e contenere un “href” (può essere contenuto in altri tag, ad esempio <li> …). Il tag deve essere presente all’interno del tag <footer>. 
+**Requisiti tecnici:** Il tag <a> deve avere l’attributo ``data-element=”accessibility-link”`` e contenere un “href” (può essere contenuto in altri tag, ad esempio <li> …). Il tag deve essere presente all’interno del tag <footer>. 
 
 **Esempio:**
 
@@ -111,14 +137,33 @@ Criterio C.SC.2.2
 </footer>
 
 
+Criterio C.SC.2.3
+---------------------
+
+**Condizioni di successo:** il sito presenta solo cookie idonei come definito dalla normativa.
+
+**Modalità di verifica:** viene verificato che il dominio dei cookie identificati sia corrispondente al dominio del sito web. Se nella pagina analizzata non vengono rilevati cookie non verrà generata una tabella di risultati.
+
+
+Criterio C.SC.3.1
+---------------------
+
+**Condizioni di successo:** il sito utilizza un certificato https valido e non obsoleto secondo le raccomandazioni AGID.
+
+**Modalità di verifica:** viene verificato che il certificato https del sito sia valido e attivo.
+
+
+
 Raccomandazione R.SC.1.1
 ----------------------------
 
-**Comportamento atteso:** L'audit controlla la presenza di determinati vocaboli alla pagina "Risultati ricerca" sotto la voce "Argomenti".
+**Condizioni di successo:** gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello scuole alla voce "Le parole della scuola". 
+
+**Modalità di verifica:** tramite ricerca di specifici attributi data-element, gli argomenti identificati all'interno della funzione di ricerca del sito vengono confrontati con l'elenco di voci presente nel documento di architettura dell'informazione.
 
 **Template HTML su cui si effettua scraping:** scuole-home.html, scuole-risultati-ricerca.html
 
-**Mappatura:** Il bottone (<button>) "cerca" deve avere attributo ``data-element=”search-modal-button”`` in modo da poterne simulare l'apertura. Il tag <input> di testo deve avere attributo ``data-element=”search-modal-input”`` in modo da poter essere inserito testo di ricerca. Infine, il bottone per cercare (avvia ricerca) deve avere ``data-element=”search-submit”``. 
+**Requisiti tecnici:** Il bottone (<button>) "cerca" deve avere attributo ``data-element=”search-modal-button”`` in modo da poterne simulare l'apertura. Il tag <input> di testo deve avere attributo ``data-element=”search-modal-input”`` in modo da poter essere inserito testo di ricerca. Infine, il bottone per cercare (avvia ricerca) deve avere ``data-element=”search-submit”``. 
 La pagina risultati ricerca deve contenere un listato di argomenti <ul> con attributo ``data-element=”all-topics”``; deve contenere degli <li> (può contenere altri tag). 
 
 **Esempio:**
@@ -145,11 +190,13 @@ La pagina risultati ricerca deve contenere un listato di argomenti <ul> con attr
 Raccomandazione R.SC.1.2
 ---------------------------
 
-**Comportamento atteso:** L'audit preleva una scheda servizio casuale a partire dal listato di servizi e ne ispeziona gli elementi.
+**Condizioni di successo:** nelle schede informative di servizio le voci indicate come obbligatorie sono presenti e sono nell'ordine corretto.
+
+**Modalità di verifica:** tramite ricerca di specifici attibuti data-element, viene verificato se le voci indicate come obbligatorie all'interno del documento di architettura dell'informazione sono presenti e se le voci obbligatorie presenti nell'indice della pagina sono nell'ordine corretto. La verifica viene effettuata su una scheda servizio casualmente selezionata.
 
 **Template HTML su cui si effettua scraping:** scuole-home.html, scuola-servizi-tipologia.html, scuole-servizio-generico.html
 
-**Mappatura:** Il menù di secondo livello "Servizi" deve contenere voci (ad esempio "Servizi per il personale scolastico" e "Servizi per famiglie e studenti") entrambe con attributo ``data-element=”service-type”`` al fine di prelevare gli URL (in modo randomico) del listato servizi (contengono l’URL alla pagina scuola-servizi-tipologia), devono essere degli <a> con “href” e possono essere inclusi in altri tag (ad es: <li>).
+**Requisiti tecnici:** Il menù di secondo livello "Servizi" deve contenere voci (ad esempio "Servizi per il personale scolastico" e "Servizi per famiglie e studenti") entrambe con attributo ``data-element=”service-type”`` al fine di prelevare gli URL (in modo randomico) del listato servizi (contengono l’URL alla pagina scuola-servizi-tipologia), devono essere degli <a> con “href” e possono essere inclusi in altri tag (ad es: <li>).
 
 Dalla pagina "scuola-servizi-tipologia" le card devono contenere una tag <a> con attributo ``data-element=”service-link”``.
 
@@ -216,3 +263,11 @@ Voci delle quali viene verificata la presenza e sequenzialità all’interno del
  
  
 <p data-element="metadata">
+
+
+Raccomandazione Localizzazione IP
+-------------------------------------
+
+**Condizioni di successo:** l'indirizzo IP fa riferimento a un datacenter localizzato su territorio europeo.
+
+**Modalità di verifica:** viene verificato che la localizzazione dell'IP rientri all'interno di uno dei confini degli stati membri dell'Unione Europea.
