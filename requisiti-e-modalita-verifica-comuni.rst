@@ -1,6 +1,9 @@
 Requisiti tecnici e modalità di verifica per il modello Comuni
 ================================================================
 
+Di seguito sono riportati i criteri di conformità e le raccomandazioni verificabili tramite App di valutazione dell'adesione al modello Comuni.
+
+
 Per il corretto funzionamento dell'App di valutazione, è necessario inserire dei **data attribute** all’interno dei tag HTML del sito.
 
 .. note::
