@@ -155,7 +155,7 @@ Criterio C.SI.1.7
   <a href=”/template-servizi.html"data-element="service">Servizi</a>
 
 
-  <a data-element="service-page" href="/template-servizi-servizio.html">
+  <a data-element="service-category-link" href="/template-servizi-servizio.html">
   <h3 class="card-title t-primary title-xlarge">Agricoltura e pesca</h3>
   </a>
 
