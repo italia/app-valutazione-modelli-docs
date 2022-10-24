@@ -8,7 +8,7 @@ Per il corretto funzionamento dell'App di valutazione, è necessario inserire de
 
 .. note::
   
-  I data attribute sono già presenti nei template HTML e nei temi CMS forniti da Designers Italia.
+  I data attribute, dove possibile, sono già presenti nei materiali forniti da `Designers Italia <https://designers.italia.it/modello/comuni/>`_, sia all'interno dei template HTML che dei CMS messi a disposizione. Rimane tuttavia responsabilità dell'ente verificare che siano correttamente inseriti dove richiesto.
 
 
 La chiave generale dell’attribute è ``data-element=*`` e va inserita all’interno dei tag HTML.
@@ -195,7 +195,7 @@ Criterio C.SI.2.2
   <ul data-element="page-index">
     <li>
       <a>
-        <span>A chi è rivolto</span>
+        <span>Contatti</span>
       </a>
     </li>
     
