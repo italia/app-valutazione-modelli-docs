@@ -3,7 +3,7 @@ Cosa sono e cosa fanno
 
 Le App di valutazione dell’adesione ai modelli sono uno strumento a supporto del processo di verifica della corretta adesione ai `modelli di Designers Italia <https://designers.italia.it/modelli/>`_ per i Comuni e le scuole.
 
-Sono applicativi desktop che aiutano a valutare la qualità, le caratteristiche e la corrispondenza ad alcuni dei criteri di conformità della *misura 1.4.1 Esperienza del cittadino nei servizi pubblici digitali* per il sito comunale e scolastico, disponibile su `PA digitale 2026 <https://padigitale2026.gov.it/>`_. 
+Sono applicativi desktop che aiutano a valutare la qualità, le caratteristiche e la corrispondenza ad alcuni dei criteri di conformità della misura 1.4.1 del PNRR *Esperienza del cittadino nei servizi pubblici digitali* per il sito comunale e scolastico, disponibile su `PA digitale 2026 <https://padigitale2026.gov.it/>`_. 
 
 Sono di supporto agli sviluppatori dei siti istituzionali per verificare la corretta implementazione degli stessi, sia durante che dopo lo sviluppo, e così informare eventuali modifiche o piani di miglioramento. Le App sono di supporto anche al Dipartimento per la trasformazione digitale per la valutazione, insieme ad altri controlli manuali e semiautomatici, della conformità dei siti per l’erogazione dei fondi della misura 1.4.1.
 
