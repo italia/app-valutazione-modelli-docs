@@ -36,7 +36,7 @@ Legenda
 Sezione Velocità e tempi di risposta
 --------------------------------------
 
-Questa sezione fa riferimento nello specifico al *C.SI.4.1 - Velocità e tempi di risposta* per i siti dei Comuni e Raccomandazione progettuale *R.SC.3.1 - Velocità e tempi di risposta* per i siti delle scuole.
+Questa sezione fa riferimento nello specifico al criterio *C.SI.4.1 - Velocità e tempi di risposta* per i siti dei Comuni e alla raccomandazione progettuale *R.SC.3.1 - Velocità e tempi di risposta* per i siti delle scuole.
 
 Nella sezione *Metriche*, vengono presentati i risultati delle 6 metriche (First Contentful Paint, Speed Index, Largest Contentful Paint, Time to Interactive, Total Blocking Time, Cumulative Layout Shift) che concorrono al punteggio del criterio di conformità o della raccomandazione. 
 
@@ -48,7 +48,7 @@ Le sezioni *Opportunità*, *Diagnostica* e *Controlli superati* mostrano i risul
 Sezione criteri o raccomandazioni
 -----------------------------------
 
-Le altre sezioni del report mostrano i punteggi relativi ai criteri di conformità e alle raccomandazioni, suddivisi per tipologia (Esperienza utente, Funzionalità, Normativa, Performance, Sicurezza).
+Le altre sezioni del report mostrano i risultati relativi ai criteri di conformità e alle raccomandazioni, suddivisi per tipologia (Esperienza utente, Funzionalità, Normativa, Performance, Sicurezza).
 
 In alto vengono visualizzati i test non superati (fallimento), quelli superati ma che presentano spazi di miglioramento (tolleranza) e quelli informativi.
 
@@ -60,7 +60,7 @@ Sezione Test aggiuntivi
 
 In questa sezione viene presentato il risultato per la raccomandazione Localizzazione IP.
 
-Tutti gli altri sono test standard forniti da lighthouse. Non sono rilevanti in termini di raggiungimento dei criteri di conformità, ma rappresentano comunque indicazioni utili a valutare eventuali miglioramenti del sito.
+Tutti gli altri sono test standard forniti da Lighthouse. Non sono rilevanti in termini di raggiungimento dei criteri di conformità, ma rappresentano comunque indicazioni utili a valutare eventuali miglioramenti del sito.
 
 Il risultato e le indicazioni di alcuni di questi test sono in inglese come impostazione default di Lighthouse e non è possibile cambiare lingua.
 
