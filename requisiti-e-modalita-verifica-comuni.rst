@@ -78,7 +78,7 @@ Voci delle quali viene verificata la presenza e sequenzialità all’interno del
   <ul data-element="page-index">
     <li>
      <a>
-        <span>A chi è rivolto</span>
+        <span>Contatti</span>
      </a>
     </li>
   
