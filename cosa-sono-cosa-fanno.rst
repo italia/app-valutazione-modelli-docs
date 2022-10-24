@@ -14,9 +14,10 @@ Le app sono in **versione beta** e quindi soggette a revisioni e perfezionamenti
 Le app:
 
 * sono due, una per la valutazione del sito dei Comuni e una per la valutazione del sito delle scuole;
-* permettono la valutazione del sito in locale (ad esempio, un ambiente di sviluppo) e online (disponibile al pubblico). Non è possibile effettuare alcuni test su ambienti di sviluppo in locale;
+* sono disponibili per sistemi operativi Windows, MacOS e Linux;
+* permettono la valutazione del sito in locale (ad esempio, un ambiente di sviluppo) e online (disponibile al pubblico). Su ambienti di sviluppo in locale, non è possibile effettuare alcuni test (come la verifica del protocollo di sicurezza usato). Si consiglia, appena possibile, di effettuare la verifica tramite app su un sito online, così da poter sfruttare il report completo;
 * sono basate su `tecnologia Lighthouse <https://chrome.google.com/webstore/detail/lighthouse/blipmdconlkpinefehnmjammfjpmpbjk?hl=it>`_;
-* aiutano a valutare l’aderenza ad alcuni dei criteri di conformità, ad alcune raccomandazioni e ad altri parametri consigliati;
+* aiutano a valutare l’aderenza a criteri di conformità, raccomandazioni e altri parametri consigliati;
 * forniscono le informazioni per interpretare i risultati e apportare migliorie.
 
 Le app sono state create sulla base della conformità agli avvisi della misura 1.4.1 e nei report sono presenti riferimenti diretti ad alcuni dei criteri di conformità.
