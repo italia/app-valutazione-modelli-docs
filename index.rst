@@ -8,7 +8,7 @@ Documentazione delle App di valutazione dell’adesione ai modelli
 
 .. toctree::
    :numbered:
-   :maxdepth: 1
+   :maxdepth: 3
    :caption: Indice dei contenuti
 
    cosa-sono-cosa-fanno.rst
