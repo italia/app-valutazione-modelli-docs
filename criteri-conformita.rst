@@ -1,5 +1,5 @@
 Criteri di conformità e raccomandazioni
-==========================================
+=======================================
 
 La misura 1.4.1 del PNRR prevede l’adesione, da parte dei Comuni e delle Scuole sedi di Direttivo dislocate su tutto il territorio nazionale, agli standard previsti per l’erogazione di servizi informativi e/o transazionali al cittadino.
 

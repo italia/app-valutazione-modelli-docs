@@ -1,5 +1,5 @@
 Requisiti tecnici e modalità di verifica per il modello scuole
-======================================================================
+==============================================================
 
 Di seguito sono riportati i criteri di conformità e le raccomandazioni verificabili tramite App di valutazione dell'adesione al modello scuole.
 
@@ -18,7 +18,7 @@ NB: Per tutto ciò che viene controllato sulla base di un vocabolario si utilizz
 
 
 Criterio C.SC.1.1
---------------------
+-----------------
 **Condizioni di successo:** il sito utilizza almeno i font Titillium Web e Lora.
 
 **Modalità di verifica:** tramite ricerca dello specifico attributo data-element, viene verificata la presenza dei font all'interno di una scheda servizio casualmente selezionata.
@@ -31,21 +31,21 @@ Dalla pagina "scuola-servizi-tipologia" le card devono contenere una tag <a> con
 
 
 Criterio C.SC.1.2
------------------------
+-----------------
 
 **Condizioni di successo:** il sito usa la libreria Bootstrap Italia in una versione uguale o superiore alla 1.6.
 
 **Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
 
 Criterio C.SC.1.3
-----------------------
+-----------------
 
 **Condizioni di successo:** se è in uso il tema CMS del modello scuole, la versione utilizzata è uguale o superiore alla 2.0.
 
 **Modalità di verifica:** viene verificata la versione indicata nel file style.css ricercando la chiave "Text Domain: design_scuole_italia".
 
 Criterio C.SC.1.4
--------------------
+-----------------
 
 **Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero Scuola, Servizi, Novità, Didattica).
 
@@ -72,7 +72,7 @@ Criterio C.SC.1.4
 </ul>
 
 Criterio C.SC.1.5
---------------------
+-----------------
 
 **Condizioni di successo:** le voci del menù di secondo livello corrispondono a quelle indicate nel documento di architettura dell'informazione del modello scuole e sono nell'ordine corretto. 
 
@@ -95,7 +95,7 @@ Criterio C.SC.1.5
 </ul>
 
 Criterio C.SC.2.1
---------------------
+-----------------
 
 **Condizioni di successo:** il sito presenta una voce nel footer che riporta all'informativa privacy.
 
@@ -116,7 +116,7 @@ Criterio C.SC.2.1
 </footer>
 
 Criterio C.SC.2.2
--------------------
+-----------------
 
 **Condizioni di successo:** il sito presenta una voce nel footer che riporta alla dichiarazione di accessibilità di AGID valida.
 
@@ -138,7 +138,7 @@ Criterio C.SC.2.2
 
 
 Criterio C.SC.2.3
----------------------
+-----------------
 
 **Condizioni di successo:** il sito presenta solo cookie idonei come definito dalla normativa.
 
@@ -146,7 +146,7 @@ Criterio C.SC.2.3
 
 
 Criterio C.SC.3.1
----------------------
+-----------------
 
 **Condizioni di successo:** il sito utilizza un certificato https valido e non obsoleto secondo le raccomandazioni AGID.
 
@@ -155,7 +155,7 @@ Criterio C.SC.3.1
 
 
 Raccomandazione R.SC.1.1
-----------------------------
+------------------------
 
 **Condizioni di successo:** gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello scuole alla voce "Le parole della scuola". 
 
@@ -188,7 +188,7 @@ La pagina risultati ricerca deve contenere un listato di argomenti <ul> con attr
 
 
 Raccomandazione R.SC.1.2
----------------------------
+------------------------
 
 **Condizioni di successo:** nelle schede informative di servizio le voci indicate come obbligatorie sono presenti e sono nell'ordine corretto.
 
@@ -266,7 +266,7 @@ Voci delle quali viene verificata la presenza e sequenzialità all’interno del
 
 
 Raccomandazione Localizzazione IP
--------------------------------------
+---------------------------------
 
 **Condizioni di successo:** l'indirizzo IP fa riferimento a un datacenter localizzato su territorio europeo.
 

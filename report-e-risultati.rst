@@ -1,10 +1,10 @@
 Il report e i risultati
-===========================
+=======================
 
 Una volta effettuata l’analisi, il report si aprirà automaticamente. Il report viene salvato nella cartella indicata dall'App.
 
 Barra superiore
--------------------
+---------------
 
 .. figure:: media/barra-superiore-report.png
    :name: barra-superiore-report
@@ -22,7 +22,7 @@ Cliccando su un criterio o un gruppo, puoi saltare alla sezione del report con i
 
 
 Legenda
----------
+-------
 
 **Pallino verde:** il test è superato (successo).
 
@@ -34,7 +34,7 @@ Legenda
 
 
 Sezione Velocità e tempi di risposta
---------------------------------------
+------------------------------------
 
 Questa sezione fa riferimento nello specifico al criterio *C.SI.4.1 - Velocità e tempi di risposta* per i siti dei Comuni e alla raccomandazione progettuale *R.SC.3.1 - Velocità e tempi di risposta* per i siti delle scuole.
 
@@ -46,7 +46,7 @@ Le sezioni *Opportunità*, *Diagnostica* e *Controlli superati* mostrano i risul
 
 
 Sezione criteri o raccomandazioni
------------------------------------
+---------------------------------
 
 Le altre sezioni del report mostrano i risultati relativi ai criteri di conformità e alle raccomandazioni, suddivisi per tipologia (Esperienza utente, Funzionalità, Normativa, Performance, Sicurezza).
 
@@ -56,7 +56,7 @@ I test superati (successo) vengono raggruppati in basso.
 
 
 Sezione Test aggiuntivi
---------------------------
+-----------------------
 
 In questa sezione viene presentato il risultato per la raccomandazione Localizzazione IP.
 

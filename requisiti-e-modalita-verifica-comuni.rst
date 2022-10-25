@@ -1,5 +1,5 @@
 Requisiti tecnici e modalità di verifica per il modello Comuni
-================================================================
+==============================================================
 
 Di seguito sono riportati i criteri di conformità e le raccomandazioni verificabili tramite App di valutazione dell'adesione al modello Comuni.
 
@@ -18,7 +18,7 @@ Per tutto ciò che è un URL, per esempio FAQ o Segnalazione disservizio, l'App 
 NB: Per tutto ciò che viene controllato sulla base di un vocabolario si utilizzano controlli non case-sensitive.
 
 Criterio C.SI.1.1
---------------------------------
+-----------------
 
 **Condizioni di successo:** il sito utilizza almeno i font Titillium Web e Lora.
 
@@ -29,14 +29,14 @@ Criterio C.SI.1.1
 **Requisiti tecnici:** In homepage all’interno di un tag <a> deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio.
 
 Criterio C.SI.1.2
------------------------
+-----------------
 
 **Condizioni di successo:** il sito usa la libreria Bootstrap Italia in una versione uguale o superiore alla 2.0.
 
 **Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
 
 Criterio C.SI.1.3
--------------------------------
+-----------------
 
 **Condizioni di successo:** nelle schede informative di servizio le voci indicate come obbligatorie sono presenti e sono nell'ordine corretto.
 
@@ -91,7 +91,7 @@ Voci delle quali viene verificata la presenza e sequenzialità all’interno del
   
 
 Criterio C.SI.1.4
-----------------------
+-----------------
 
 **Condizioni di successo:** se è in uso il tema CMS del modello per i Comuni, la versione utilizzata è uguale o superiore alla 1.0.
 
@@ -99,7 +99,7 @@ Criterio C.SI.1.4
   
 
 Criterio C.SI.1.5
--------------------
+-----------------
 
 **Condizioni di successo:** gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello Comuni alla voce "Tassonomia ARGOMENTI" o al vocabolario controllato EuroVoc.
 
@@ -120,7 +120,7 @@ Criterio C.SI.1.5
   
 
 Criterio C.SI.1.6
---------------------
+-----------------
 
 **Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero Amministrazione, Novità, Servizi, Vivere il Comune).
 
@@ -140,7 +140,7 @@ Criterio C.SI.1.6
     </li>
     
 Criterio C.SI.1.7
--------------------
+-----------------
 
 **Condizioni di successo:** i titoli delle pagine di secondo livello corrispondono a quelli indicati nel documento di architettura dell'informazione del modello Comuni.
 
@@ -160,7 +160,7 @@ Criterio C.SI.1.7
   </a>
 
 Criterio C.SI.2.1
--------------------
+-----------------
 
 **Condizioni di successo:** la funzionalità di prenotazione di un appuntamento presso lo sportello è presente in tutte le schede servizio che lo richiedono.
 
@@ -200,7 +200,7 @@ Criterio C.SI.2.2
     </li>
     
 Criterio C.SI.2.3
---------------------
+-----------------
 
 **Condizioni di successo:** nel footer del sito è presente un link contenente le espressioni "FAQ" oppure "domande frequenti" che invia a una pagina di domande frequenti.
 
@@ -216,7 +216,7 @@ Criterio C.SI.2.3
 
 
 Criterio C.SI.2.4
--------------------
+-----------------
 
 **Condizioni di successo:** nel footer del sito è presente un link per la segnalazione di un disservizio che contenga le espressioni "disservizio" oppure "segnala disservizio" oppure "segnalazione disservizio".
 
@@ -232,7 +232,7 @@ Criterio C.SI.2.4
   
 
 Criterio C.SI.2.5
--------------------
+-----------------
 
 **Condizioni di successo:** la funzionalità per valutare la chiarezza informativa è presente su tutte le pagine di primo e secondo livello del sito; 
 
@@ -261,14 +261,14 @@ L’href della voce Servizi deve riportare alla pagina template-servizi.html. Al
 
 
 Criterio C.SI.3.1
---------------------
+-----------------
 
 **Condizioni di successo:** il sito presenta solo cookie idonei come definito dalla normativa.
 
 **Modalità di verifica:** viene verificato che il dominio dei cookie identificati sia corrispondente al dominio del sito web. Se nella pagina analizzata non vengono rilevati cookie non verrà generata una tabella di risultati.
 
 Criterio C.SI.3.2
--------------------
+-----------------
 
 **Condizioni di successo:** il sito presenta una voce nel footer che riporta alla dichiarazione di accessibilità di AGID valida.
 
@@ -283,7 +283,7 @@ Criterio C.SI.3.2
   <a href="#" data-element="accessibility-link">Dichiarazione di accessibilità</a>
 
 Criterio C.SI.3.3
---------------------
+-----------------
 
 **Condizioni di successo:** il sito presenta una voce nel footer che riporta all'informativa privacy.
 
@@ -316,7 +316,7 @@ Criterio C.SI.5.1
   </a>
 
 Criterio C.SI.5.2
---------------------
+-----------------
 
 **Condizioni di successo:** il sito comunale è raggiungibile senza necessità di inserimento del sottodominio “www.” e utilizza il sottodominio "comune." immediatamente seguito da uno dei domini istituzionali per il Comune presente nell'Elenco Nomi a Dominio Riservati Per i Comuni Italiani (es: comune.anzio.roma.it) o dal nome del Comune se coincidente con il nome del capoluogo di provincia (es: comune.roma.it).
 
@@ -334,7 +334,7 @@ Criterio C.SI.5.2
 
 
 Raccomandazione R.SI.1.1
------------------
+------------------------
 
 **Condizioni di successo:** le voci delle schede servizio presentano tutti i metatag richiesti dal modello.
 
