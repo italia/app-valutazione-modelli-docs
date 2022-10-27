@@ -7,10 +7,10 @@ Barra superiore
 ---------------
 
 .. figure:: media/barra-superiore-report.png
-   :name: barra-superiore-report
    :alt: La figura mostra la barra superiore del report generato dall'App di valutazione.
+   :name: barra-superiore-report
 
-
+   Report generato.
 
 Nella barra superiore, i colori degli indicatori non indicano il risultato del superamento dei test.
 
