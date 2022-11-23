@@ -25,7 +25,7 @@ Criterio C.SC.1.1
 
 **Template HTML su cui si effettua scraping:** scuole-home.html, scuola-servizi-tipologia.html, scuole-servizio-generico.html
 
-**Requisiti tecnici:** Il menù di secondo livello "Servizi" deve contenere voci (ad esempio "Servizi per il personale scolastico" e "Servizi per famiglie e studenti") entrambe con attributo data-element=”service-type” al fine di prelevare gli URL (in modo randomico) del listato servizi (contengono l’URL alla pagina scuola-servizi-tipologia), devono essere degli <a> con “href” e possono essere inclusi in altri tag (ad es: <li>).
+**Requisiti tecnici:** Il menù di secondo livello "Servizi" deve contenere voci ("Famiglie e studenti", "Personale scolastico" e "Percorsi di studio") con attributo ``data-element=”service-type”`` al fine di prelevare gli URL (in modo randomico) del listato servizi (contengono l’URL alla pagina scuola-servizi-tipologia), devono essere degli <a> con “href” e possono essere inclusi in altri tag (ad es: <li>).
 Dalla pagina "scuola-servizi-tipologia" le card devono contenere una tag <a> con attributo ``data-element=”service-link”``. 
 
 
@@ -196,7 +196,7 @@ Raccomandazione R.SC.1.2
 
 **Template HTML su cui si effettua scraping:** scuole-home.html, scuola-servizi-tipologia.html, scuole-servizio-generico.html
 
-**Requisiti tecnici:** Il menù di secondo livello "Servizi" deve contenere voci (ad esempio "Servizi per il personale scolastico" e "Servizi per famiglie e studenti") entrambe con attributo ``data-element=”service-type”`` al fine di prelevare gli URL (in modo randomico) del listato servizi (contengono l’URL alla pagina scuola-servizi-tipologia), devono essere degli <a> con “href” e possono essere inclusi in altri tag (ad es: <li>).
+**Requisiti tecnici:** Il menù di secondo livello "Servizi" deve contenere voci ("Famiglie e studenti", "Personale scolastico" e "Percorsi di studio") con attributo ``data-element=”service-type”`` al fine di prelevare gli URL (in modo randomico) del listato servizi (contengono l’URL alla pagina scuola-servizi-tipologia), devono essere degli <a> con “href” e possono essere inclusi in altri tag (ad es: <li>).
 
 Dalla pagina "scuola-servizi-tipologia" le card devono contenere una tag <a> con attributo ``data-element=”service-link”``.
 
