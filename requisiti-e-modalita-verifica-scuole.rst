@@ -19,7 +19,7 @@ NB: Per tutto ciò che viene controllato sulla base di un vocabolario si utilizz
 
 Criterio C.SC.1.1
 -----------------
-**Condizioni di successo:** il sito utilizza almeno i font Titillium Web e Lora.
+**Condizioni di successo:** tutti i titoli (heading) e tutti i paragrafi delle pagine del sito in lingua italiana devono usare esclusivamente i font Titillium Web, Lora e Roboto Mono.
 
 **Modalità di verifica:** tramite ricerca dello specifico attributo data-element, viene verificata la presenza dei font all'interno di una scheda servizio casualmente selezionata.
 
@@ -74,7 +74,7 @@ Criterio C.SC.1.4
 Criterio C.SC.1.5
 -----------------
 
-**Condizioni di successo:** le voci del menù di secondo livello corrispondono a quelle indicate nel documento di architettura dell'informazione del modello scuole e sono nell'ordine corretto. 
+**Condizioni di successo:** le voci del menù di secondo livello corrispondono a quelle indicate nel documento di architettura dell'informazione del modello scuole. 
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la correttezza e l'ordine delle voci del menù di secondo livello riferite alla voce di primo livello "Scuola".
 
@@ -118,7 +118,7 @@ Criterio C.SC.2.1
 Criterio C.SC.2.2
 -----------------
 
-**Condizioni di successo:** il sito presenta una voce nel footer che riporta alla dichiarazione di accessibilità di AGID valida.
+**Condizioni di successo:** il sito presenta una voce nel footer che riporta alla dichiarazione di accessibilità.
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente che sia quella contenente la dichiarazione di accessibilità (il link deve iniziare con "https://form.agid.gov.it/view/").
 
