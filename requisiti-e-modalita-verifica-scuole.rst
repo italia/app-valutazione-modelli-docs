@@ -21,7 +21,7 @@ Criterio C.SC.1.1
 -----------------
 **Condizioni di successo:** tutti i titoli (heading) e tutti i paragrafi delle pagine del sito in lingua italiana devono usare esclusivamente i font Titillium Web, Lora e Roboto Mono.
 
-**Modalità di verifica:** tramite ricerca dello specifico attributo data-element, viene verificata la presenza dei font all'interno di una scheda servizio casualmente selezionata.
+**Modalità di verifica:** tramite ricerca dello specifico attributo data-element, viene verificato che i font richiesti siano i primi a venir utilizzati all'interno di tutti gli <h> e <p> in una scheda servizio casualmente selezionata.
 
 **Template HTML su cui si effettua scraping:** scuole-home.html, scuola-servizi-tipologia.html, scuole-servizio-generico.html
 
@@ -42,7 +42,7 @@ Criterio C.SC.1.3
 
 **Condizioni di successo:** se è in uso il tema CMS del modello scuole, la versione utilizzata è uguale o superiore alla 2.0.
 
-**Modalità di verifica:** viene verificata la versione indicata nel file style.css ricercando la chiave "Text Domain: design_scuole_italia".
+**Modalità di verifica:** viene verificato l'uso del tema CMS del modello e la versione in uso ricercando il testo commentato presente nel `file style.css del tema Wordpress <https://github.com/italia/design-scuole-wordpress-theme/blob/main/style.css>`_, se presente.
 
 Criterio C.SC.1.4
 -----------------
@@ -76,7 +76,7 @@ Criterio C.SC.1.5
 
 **Condizioni di successo:** le voci del menù di secondo livello corrispondono a quelle indicate nel documento di architettura dell'informazione del modello scuole. 
 
-**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la correttezza e l'ordine delle voci del menù di secondo livello riferite alla voce di primo livello "Scuola".
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la correttezza delle voci del menù di secondo livello riferite alla voce di primo livello "Scuola".
 
 **Template HTML su cui si effettua scraping:** scuole-home.html
 
