@@ -48,16 +48,7 @@ Criterio C.SI.1.3
 
 **Esempio:**
    
-   <li>
-     &nbsp;&nbsp;<a href="/template-servizi.html">
-     &nbsp;&nbsp;<span>Servizi</span>
-    &nbsp;</a>
-   </li>
-
-   <div>
-    &nbsp;<h3><a href="/ template-dettaglio-servizio.html" data-element="service-link">Abbandono di rifiuti in aree private</a></h3>
-     &nbsp;<p>Titolo servizio…</p>
-   </div>
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-a.html
 
 
 All’interno della scheda servizio devono esserci i seguenti attributi:
@@ -73,21 +64,17 @@ Voci delle quali viene verificata la presenza: titolo del servizio, categoria de
 
 Voci delle quali viene verificata la presenza e sequenzialità all’interno dell’indice della pagina: “A chi è rivolto”, “Come fare”, “Cosa serve”, “Cosa si ottiene”, “Tempi e scadenze”, “Accedi al servizio”, “Condizioni di servizio” e “Contatti”. 
 
-**Esempio:**
+**Esempi:**
 
-  <ul data-element="page-index">
-    <li>
-     <a>
-        <span>Contatti</span>
-     </a>
-    </li>
-  
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-b.html
 
-  <h1 data-element="service-title">Iscrizione alla Scuola dell’infanzia</h1>
-  
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-c.html
 
-  <p data-element="service-description">Descrizione</p>
-  <span data-element="service-status">Servizio attivo</span>
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-d.html
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-e.html
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-f.html
   
 
 Criterio C.SI.1.4
@@ -109,14 +96,12 @@ Criterio C.SI.1.5
 
 **Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-topics"`` che riporta alla pagina template-argomenti.html. In template-argomenti deve esserci una lista di argomenti (tag <a>) con l’attributo ``data-element="topic-element"`` che contengono del testo con il nome dell’argomento. 
 
-**Esempio:**
+**Esempi:**
 
-  <a href="/template-argomenti.html" 
-    <span> Tutti gli argomenti...</span>
-  </a>
+.. literalinclude:: esempi-codice-comuni/c-si-1-5-a.html
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-5-b.html
   
-
-  <a href="#" data-element="topic-element"><h3>Animale domestico</h3></a>
   
 
 Criterio C.SI.1.6
@@ -132,12 +117,7 @@ Criterio C.SI.1.6
 
 **Esempio:**
 
-  <ul data-element="main-navigation">
-    <li>
-      <a>
-        <span>Amministrazione</span>
-     </a>
-    </li>
+.. literalinclude:: esempi-codice-comuni/c-si-1-6.html
     
 Criterio C.SI.1.7
 -----------------
@@ -150,14 +130,11 @@ Criterio C.SI.1.7
 
 **Requisiti tecnici:** In homepage, la voce di menù “Servizi” deve essere un tag <a> con un un attributo ``data-element="all-services"``. L’href della voce Servizi deve riportare alla pagina template-servizi.html. All’interno della pagina, sotto la voce “Categoria” le card devono contenere degli <a> con l’attributo ``data-element="service-category-link"``. Verrà prelevato il titolo testuale della card.
 
-**Esempio:**
+**Esempi:**
 
-  <a href=”/template-servizi.html"data-element="service">Servizi</a>
+.. literalinclude:: esempi-codice-comuni/c-si-1-7-a.html
 
-
-  <a data-element="service-category-link" href="/template-servizi-servizio.html">
-  <h3 class="card-title t-primary title-xlarge">Agricoltura e pesca</h3>
-  </a>
+.. literalinclude:: esempi-codice-comuni/c-si-1-7-b.html
 
 Criterio C.SI.2.1
 -----------------
@@ -171,12 +148,7 @@ Criterio C.SI.2.1
 
 **Esempio:**
 
-  <li>
-    <a href="#" data-element="appointment-booking">
-      <svg class="icon icon-primary icon-sm">
-      </svg><span>Prenota appuntamento</span>
-   </a>
-  </li>
+.. literalinclude:: esempi-codice-comuni/c-si-2-1.html
 
 
 Criterio C.SI.2.2
@@ -192,12 +164,7 @@ Criterio C.SI.2.2
 
 **Esempio:**
 
-  <ul data-element="page-index">
-    <li>
-      <a>
-        <span>Contatti</span>
-      </a>
-    </li>
+.. literalinclude:: esempi-codice-comuni/c-si-2-2.html
     
 Criterio C.SI.2.3
 -----------------
@@ -212,7 +179,7 @@ Criterio C.SI.2.3
 
 **Esempio:**
 
-  <a href="#" data-element="faq">Leggi le FAQ</a>
+.. literalinclude:: esempi-codice-comuni/c-si-2-3.html
 
 
 Criterio C.SI.2.4
@@ -228,7 +195,7 @@ Criterio C.SI.2.4
 
 **Esempio:**
 
-  <a href="#" data-element="report-inefficiency">Segnalazione disservizio</a>
+.. literalinclude:: esempi-codice-comuni/c-si-2-4.html
   
 
 Criterio C.SI.2.5
@@ -243,21 +210,13 @@ Criterio C.SI.2.5
 **Requisiti tecnici:** In homepage all’interno del menù le voci di primo livello devono essere degli <a> con i seguenti tag: ``data-element="management"``, ``data-element="all-services"``, ``data-element="news"``, ``data-element="live"``. L’href deve riportare alle pagine di primo livello in cui deve esserci un componente (un wrapper) come un <div> che contiene l’attributo ``data-element="feedback"``. 
 L’href della voce Servizi deve riportare alla pagina template-servizi.html. All’interno della pagina, sotto la voce “Categoria” le card devono contenere degli <a> con l’attributo ``data-element="service-category-link"`` che riportano alla pagina di secondo livello servizio in cui deve esserci un componente (un wrapper) come un <div> che contiene l’attributo ``data-element="feedback"``.
 
-**Esempio:**
+**Esempi:**
   
-  <a href=”/template-servizi.html" data-element="all-services">Servizi</a>
+.. literalinclude:: esempi-codice-comuni/c-si-2-5-a.html
 
+.. literalinclude:: esempi-codice-comuni/c-si-2-5-b.html
 
-  <a data-element="service-category-link" href="/template-servizi-servizio.html">
-  <h3 class="card-title t-primary title-xlarge">Agricoltura e pesca</h3>
-  </a>
-
-
-  <div data-element="feedback">
-    <div>
-      <div>
-        <h2>Quanto sono utili le informazioni in questa pagina?</h2>
-      </div>
+.. literalinclude:: esempi-codice-comuni/c-si-2-5-c.html
 
 
 Criterio C.SI.3.1
@@ -280,7 +239,7 @@ Criterio C.SI.3.2
 
 **Esempio:**
 
-  <a href="#" data-element="accessibility-link">Dichiarazione di accessibilità</a>
+.. literalinclude:: esempi-codice-comuni/c-si-3-2.html
 
 Criterio C.SI.3.3
 -----------------
@@ -295,7 +254,7 @@ Criterio C.SI.3.3
 
 **Esempio:**
 
-  <a href="#" data-element="privacy-policy-link">Informativa privacy</a>
+.. literalinclude:: esempi-codice-comuni/c-si-3-3.html
 
 
 Criterio C.SI.5.1
@@ -311,9 +270,7 @@ Criterio C.SI.5.1
 
 **Esempio:**
 
-  <a href="#" data-element=”personal-area-login”>
-    <span> Accedi all'area personale</span>
-  </a>
+.. literalinclude:: esempi-codice-comuni/c-si-5-1.html
 
 Criterio C.SI.5.2
 -----------------
@@ -328,9 +285,8 @@ Criterio C.SI.5.2
 
 **Esempio:**
 
-  <a href="#" data-element=”personal-area-login”>
-    <span> Accedi all'area personale</span>
-  </a>
+.. literalinclude:: esempi-codice-comuni/c-si-5-2.html
+
 
 
 Raccomandazione R.SI.1.1
@@ -346,23 +302,4 @@ Raccomandazione R.SI.1.1
 
 **Esempio:**
 
-  <script data-element="metatag" type="application/ld+json">
-  {
-    "name": "Iscrizione alla Scuola dell’infanzia",
-      "serviceType": "P1Y",
-    "serviceOperator": {
-      "name": "Lorem"
-    },
-    "areaServed": {
-      "name": "Lorem ipsum"
-    },
-    "audience": {
-      "name": ""
-    },
-    "availableChannel": {
-      "serviceUrl": "Lorem ipsum",
-      "serviceLocation": {
-        …
-      }
-    }
-  }
+.. literalinclude:: esempi-codice-comuni/r-si-1-1.html
