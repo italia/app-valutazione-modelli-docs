@@ -48,16 +48,7 @@ Criterio C.SI.1.3
 
 **Esempio:**
    
-   <li>
-     &nbsp;&nbsp;<a href="/template-servizi.html">
-     &nbsp;&nbsp;<span>Servizi</span>
-    &nbsp;</a>
-   </li>
-
-   <div>
-    &nbsp;<h3><a href="/ template-dettaglio-servizio.html" data-element="service-link">Abbandono di rifiuti in aree private</a></h3>
-     &nbsp;<p>Titolo servizio…</p>
-   </div>
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-a.html
 
 
 All’interno della scheda servizio devono esserci i seguenti attributi:
@@ -73,21 +64,17 @@ Voci delle quali viene verificata la presenza: titolo del servizio, categoria de
 
 Voci delle quali viene verificata la presenza e sequenzialità all’interno dell’indice della pagina: “A chi è rivolto”, “Come fare”, “Cosa serve”, “Cosa si ottiene”, “Tempi e scadenze”, “Accedi al servizio”, “Condizioni di servizio” e “Contatti”. 
 
-**Esempio:**
+**Esempi:**
 
-  <ul data-element="page-index">
-    <li>
-     <a>
-        <span>Contatti</span>
-     </a>
-    </li>
-  
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-b.html
 
-  <h1 data-element="service-title">Iscrizione alla Scuola dell’infanzia</h1>
-  
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-c.html
 
-  <p data-element="service-description">Descrizione</p>
-  <span data-element="service-status">Servizio attivo</span>
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-d.html
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-e.html
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-f.html
   
 
 Criterio C.SI.1.4
