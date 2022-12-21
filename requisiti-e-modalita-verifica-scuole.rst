@@ -57,19 +57,7 @@ Criterio C.SC.1.4
 
 **Esempio:**
 
-<ul data-element="menu">
-  <li>
-    <a href="#">
-      Scuola
-    </a>
- </li>
- <li>
-    <a href="#">
-      Servizi
-    </a>
- </li>
- …
-</ul>
+.. literalinclude:: esempi-codice-scuole/c-sc-1-4.html
 
 Criterio C.SC.1.5
 -----------------
@@ -84,15 +72,8 @@ Criterio C.SC.1.5
 
 **Esempio:**
 
-<ul data-element="school-submenu">
-  <li>
-    <a href="#">Presentazione</a>
-  </li>
-  <li>
-    <a href="#">I luoghi della scuola</a>
-  </li>
-  …
-</ul>
+.. literalinclude:: esempi-codice-scuole/c-sc-1-5.html
+
 
 Criterio C.SC.2.1
 -----------------
@@ -107,13 +88,7 @@ Criterio C.SC.2.1
 
 **Esempio:**
 
-<footer>
-…
-<li>
-<a href="#" data-element="privacy-policy-link">Privacy Policy</a>
-</li>
-…
-</footer>
+.. literalinclude:: esempi-codice-scuole/c-sc-2-1.html
 
 Criterio C.SC.2.2
 -----------------
@@ -128,13 +103,7 @@ Criterio C.SC.2.2
 
 **Esempio:**
 
-<footer>
-…
-<li>
-<a href="#" data-element="accessibility-link">Dichiarazioni di accessibilita</a>
-</li>
-…
-</footer>
+.. literalinclude:: esempi-codice-scuole/c-sc-2-2.html
 
 
 Criterio C.SC.2.3
@@ -168,23 +137,7 @@ La pagina risultati ricerca deve contenere un listato di argomenti <ul> con attr
 
 **Esempio:**
 
-<button type="button" data-element="search-modal-button">
-<input data-element="search-modal-input" placeholder="Cerca servizi, notizie o documenti">
-<button type="button data-element="search-submit">
- 
-<ul data-element="all-topics">
-  <li>
-    <div class="custom">
-       <label class="custom-control-label"> Verso il liceo</label>
-    </div>
-  </li>
-  <li>
-    <div class="custom">
-       <label class="custom-control-label">Comunicati</label>
-    </div>
-  </li>
-…
-</ul>
+.. literalinclude:: esempi-codice-scuole/r-sc-1-1.html
 
 
 Raccomandazione R.SC.1.2
@@ -217,52 +170,7 @@ Voci delle quali viene verificata la presenza e sequenzialità all’interno del
 
 **Esempio:**
 
-<a href="/scuole-servizio-tipologia.html" data-element="service-type"> Servizi per il personale scolastico</a>
- 
-<div>
-<a href="/design-scuole-pagine-statiche/build/scuole-serviziogenerico.html" data-element="service-link">Ricevimento genitori</a>
-<a href="/design-scuole-pagine-statiche/build/scuole-servizio-generico.html" data-element="service-link">PagoPa</a>
-…
-</div>
- 
-<h1 data-element="service-title">Titolo del servizio, esempio di titolo</h1>
-<p data-element="service-description">Titolo alternativo / Sottotitolo di un servizio, esempio di titolo alternativo / sottotitolo</p>
- 
-<ol data-element="breadcrumb">
-  <li><a href="#" title="Vai alla pagina: Home">Home</a></li>
-  <li><a href="#" title="Vai alla pagina: Servizi">Servizi</a></li>
-  <li><span>Servizio mensa</span></li>
-</ol>
- 
-<h3 class="h6" data-element="used-for">A cosa serve</h3>
- 
-<div>
-  <a href="#" title="Vai all'argomento: Famiglia" data-element="topic-list">Famiglia</a>
-  <a href="#" title="Vai all'argomento: Pagamenti" data-element="topic-list"
->Pagamenti</a>
-  <a href="#" title="Vai all'argomento: Alimentazione" data-element="topic-list"
->Alimentazione</a>
-</div>
- 
- 
-<ul data-element="places">
-  <li>
-    <div class="location-title">
-      <span>Indirizzo</span>
-    </div>
-    <div class="location-content">
-      <p>Via Vaglia, 6, 00139 - Roma RM</p>
-    </div>
-  </li>
- 
-<div data-element="structures">
-  <div>
-    <a href="https://www.google.it">
-…
- 
- 
- 
-<p data-element="metadata">
+.. literalinclude:: esempi-codice-scuole/r-sc-1-2.html
 
 
 Raccomandazione Localizzazione IP
