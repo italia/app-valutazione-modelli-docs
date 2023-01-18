@@ -10,9 +10,11 @@ Barra superiore
    :alt: La figura mostra la barra superiore del report generato dall'App di valutazione.
    :name: barra-superiore-report
 
-   Report generato.
+   Barra superiore del report.
 
-Nella barra superiore, i colori degli indicatori non indicano il risultato del superamento dei test.
+.. attention::
+
+   Nella barra superiore, i colori e il punteggio degli indicatori **non indicano** il risultato del superamento dei test.
 
 Il punteggio è valido solo per **Velocità e tempi risposta** (Criterio *C.SI.4.1 - Velocità e tempi di risposta* per i siti dei Comuni e Raccomandazione progettuale *R.SC.3.1 - Velocità e tempi di risposta* per i siti delle scuole. 
 
