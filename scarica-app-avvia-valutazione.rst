@@ -7,7 +7,13 @@ Per scaricare l'app e avviare una valutazione:
    
 1. `Vai sul repository GitHub <https://github.com/italia/pa-website-validator/releases>`_.
 
-2. Individua l'app corretta in base al modello di riferimento (comuni/scuole), sistema operativo (macOS/windows/linux) e processore (intel/arm64/x64) e clicca per scaricare il file zip.
+2. Individua l'app corretta in base al modello di riferimento (comuni/scuole), sistema operativo (macOS/windows/linux) e processore (intel/arm64/x64) e clicca per scaricare il file zip. Assicurati che la release sia l'ultima disponibile, contrassegnata dall'etichetta verde "Latest".
+
+.. figure:: media/repo-github.png
+   :alt: La figura mostra dove inserire l'url del sito nell'App di valutazione.
+   :name: repo-github
+
+   La lista dei file di installazione.
 
 3. Estrai il file zip sul tuo computer.
 
