@@ -52,7 +52,7 @@ Per i siti dei Comuni soltanto, nel caso di punteggio totale inferiore a 50, è 
 
 Le sezioni *Opportunità* (2), *Diagnostica* (3) e *Controlli superati* (4) mostrano i risultati di altri test che lighthouse svolge in automatico. Possono essere utili a valutare miglioramenti del sito.
 
-.. figure:: media/altrovelocita.png
+.. figure:: media/altro-velocita.png
    :alt: La sezione del report che il presenta i risultati di altri test relativi alla velocità del sito.
    :name: barra-superiore-report
 
