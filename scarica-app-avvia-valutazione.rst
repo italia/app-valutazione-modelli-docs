@@ -38,6 +38,12 @@ Per scaricare l'app e avviare una valutazione:
    La finestra nelle impostazioni del mac dove dare i permessi per l'app.
       
       Su *Windows*, al messaggio di avviso sulla sicurezza dell'app, clicca sul testo 'Maggiori informazioni'. Nella seconda finestra di dialogo, clicca su 'Esegui comunque'.
+      
+.. figure:: media/avviso-windows.png
+   :alt: La figura mostra la procedura per consentire i permessi su windows.
+   :name: avviso-windows
+
+   La finestra di dialogo dove dare i permessi su Windows per aprire l'app.
 
 6. Quando richiesto, nella finestra di comando, inserisci l'URL del sito su cui condurre l'analisi e premi invio. L’URL deve comprendere il protocollo (http:// o https://).
    
