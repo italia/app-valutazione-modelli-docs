@@ -17,6 +17,6 @@ Gli obiettivi sono stati definiti per assicurare l’aderenza ai principi conten
 
 
 .. attention::
-  Per il corretto funzionamento dell'app e svolgimento delle valutazioni, è necessario, in fase di sviluppo dei siti, tenere conto dei `requisiti di funzionamento per il modello Comuni <app-valutazione-modelli-docs/requisiti-e-modalita-verifica-comuni.rst>`_ e dei `requisiti di funzionamento per il modello scuole <app-valutazione-modelli-docs/requisiti-e-modalita-verifica-scuole.rst>`_.
+  Per il corretto funzionamento dell'app e svolgimento delle valutazioni, è necessario, in fase di sviluppo dei siti, tenere conto dei `requisiti di funzionamento per il modello Comuni <../requisiti-e-modalita-verifica-comuni.html>`_ e dei `requisiti di funzionamento per il modello scuole <../requisiti-e-modalita-verifica-scuole.html>`_.
 
 
