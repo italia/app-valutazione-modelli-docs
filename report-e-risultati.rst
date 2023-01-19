@@ -14,7 +14,7 @@ Barra superiore
 
 .. attention::
 
-   Nella barra superiore, i colori e il punteggio degli indicatori **non indicano** il risultato del superamento dei test.
+   Nella barra superiore, i colori e il punteggio degli indicatori **non indicano** il risultato del superamento dei test. Il risultato dei test viene indicato dal messaggio "Risultato" nella tabella di ogni test singolo e dalla relativa icona (verde, gialla, rossa).
 
 Il punteggio è valido solo per **Velocità e tempi risposta** (Criterio *C.SI.4.1 - Velocità e tempi di risposta* per i siti dei Comuni e Raccomandazione progettuale *R.SC.3.1 - Velocità e tempi di risposta* per i siti delle scuole. 
 
@@ -77,12 +77,12 @@ I test superati (successo) vengono raggruppati in basso (2).
    
 Per ogni test effettuato sui criteri di conformità, è possibile espandere la sezione per trovare informazioni aggiuntive:
 
-- il nome della categoria di appartenenza (1)
-- il codice, il titolo e la descrizione del criterio di conformità (2)
-- le condizioni di successo per superare il test (3)
-- le modalità di verifica, ovvero in che modo l'app effettua il test (4)
-- i link ai riferimenti tecnici e normativi (5)
-- il risultato dettagliato del test, con le eventuali specifiche per migliorare il punteggio (6)
+- il nome della categoria di appartenenza (1);
+- il codice, il titolo e la descrizione del criterio di conformità (2);
+- le condizioni di successo per superare il test dell'App di valutazione, ma che non corrispondono necessariamente alle condizioni per superare il criterio di conformità (3);
+- le modalità di verifica, ovvero in che modo l'app effettua il test (4);
+- i link ai riferimenti tecnici e normativi (5);
+- il risultato dettagliato del test, con le eventuali specifiche per migliorare il punteggio (6).
 
 .. figure:: media/criteri-conformita-dettaglio.png
    :alt: Le informazioni di dettaglio per ogni test riguardante i criteri di conformità.
