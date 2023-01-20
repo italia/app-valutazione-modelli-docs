@@ -37,7 +37,9 @@ Per scaricare l'app e avviare una valutazione:
 
    La finestra nelle impostazioni del mac dove dare i permessi per l'app.
       
+      
       Su *Windows*, al messaggio di avviso sulla sicurezza dell'app, clicca sul testo 'Maggiori informazioni'. Nella seconda finestra di dialogo, clicca su 'Esegui comunque'.
+      
       
 .. figure:: media/avviso-windows.png
    :alt: La figura mostra la procedura per consentire i permessi su windows.
@@ -45,15 +47,19 @@ Per scaricare l'app e avviare una valutazione:
 
    La finestra di dialogo dove dare i permessi su Windows per aprire l'app.
 
+
 6. Quando richiesto, nella finestra di comando, inserisci l'URL del sito su cui condurre l'analisi e premi invio. L’URL deve comprendere il protocollo (http:// o https://).
+
    
 .. figure:: media/1-url.png
    :alt: La figura mostra dove inserire l'url del sito nell'App di valutazione.
    :name: 1-url
 
    Dove inserire l'url del sito nell'App di valutazione.
+   
 
 7. Usando le frecce sulla tastiera, sposta il cursore per selezionare se il sito è in un ambiente locale (sito in fase di sviluppo) o di produzione (visibile al pubblico) e premi invio.
+
    
 .. figure:: media/2-ambiente.png
    :alt: La figura mostra dove selezionare nell'App di valutazione l'ambiente su cui è ospitato il sito che si vuole analizzare.
