@@ -22,14 +22,17 @@ Per scaricare l'app e avviare una valutazione:
 5. Se richiesto, dai l'autorizzazione ad aprire il file. 
       
       Su *mac*, clicca su 'Apri' nella finestra di dialogo. 
+      
 
 .. figure:: media/permessi-mac-short.png
    :alt: La figura mostra la procedura per consentire i permessi su mac.
    :name: permessi-mac-short
 
    La finestra di dialogo dove dare i permessi su mac per aprire l'app.
+   
       
       Se il pulsante Apri non è disponibile, è necessario andare in Preferenze di sistema > Sicurezza e Privacy. Nella tab 'Generali', assicurati sia selezionata l'opzione 'App Store e sviluppatori identificati' sotto la voce 'Consenti app scaricate da' . Se la finestra è oscurata e non è possibile effettuare modifiche, clicca sul lucchetto in basso a sinistra e inserisci la tua password. Troverai un messaggio riguardante il file che hai appena cercato di aprire. Clicca su 'Apri comunque'. Potrebbe comparire un'ulteriore finestra di dialogo dove è necessario cliccare su 'Apri'.
+      
       
 .. figure:: media/permessi-mac-long.png
    :alt: La figura mostra la procedura per consentire i permessi su mac.
