@@ -21,7 +21,7 @@ Per scaricare l'app e avviare una valutazione:
    
 5. Se richiesto, dai l'autorizzazione ad aprire il file. 
       
-      Su *mac*, clicca su 'Apri' nella finestra di dialogo. 
+Su *mac*, clicca su 'Apri' nella finestra di dialogo. 
       
 
 .. figure:: media/permessi-mac-short.png
@@ -31,7 +31,7 @@ Per scaricare l'app e avviare una valutazione:
    La finestra di dialogo dove dare i permessi su mac per aprire l'app.
    
       
-      Se il pulsante Apri non è disponibile, è necessario andare in Preferenze di sistema > Sicurezza e Privacy. Nella tab 'Generali', assicurati sia selezionata l'opzione 'App Store e sviluppatori identificati' sotto la voce 'Consenti app scaricate da' . Se la finestra è oscurata e non è possibile effettuare modifiche, clicca sul lucchetto in basso a sinistra e inserisci la tua password. Troverai un messaggio riguardante il file che hai appena cercato di aprire. Clicca su 'Apri comunque'. Potrebbe comparire un'ulteriore finestra di dialogo dove è necessario cliccare su 'Apri'.
+Se il pulsante Apri non è disponibile, è necessario andare in Preferenze di sistema > Sicurezza e Privacy. Nella tab 'Generali', assicurati sia selezionata l'opzione 'App Store e sviluppatori identificati' sotto la voce 'Consenti app scaricate da' . Se la finestra è oscurata e non è possibile effettuare modifiche, clicca sul lucchetto in basso a sinistra e inserisci la tua password. Troverai un messaggio riguardante il file che hai appena cercato di aprire. Clicca su 'Apri comunque'. Potrebbe comparire un'ulteriore finestra di dialogo dove è necessario cliccare su 'Apri'.
       
       
 .. figure:: media/permessi-mac-long.png
@@ -41,7 +41,7 @@ Per scaricare l'app e avviare una valutazione:
    La finestra nelle impostazioni del mac dove dare i permessi per l'app.
       
       
-      Su *Windows*, al messaggio di avviso sulla sicurezza dell'app, clicca sul testo 'Maggiori informazioni'. Nella seconda finestra di dialogo, clicca su 'Esegui comunque'.
+Su *Windows*, al messaggio di avviso sulla sicurezza dell'app, clicca sul testo 'Maggiori informazioni'. Nella seconda finestra di dialogo, clicca su 'Esegui comunque'.
       
       
 .. figure:: media/avviso-windows.png
