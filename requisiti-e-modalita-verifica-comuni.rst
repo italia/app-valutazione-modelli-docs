@@ -54,6 +54,7 @@ Criterio C.SI.1.3
 All’interno della scheda servizio devono esserci i seguenti attributi:
 
 * ``data-element="page-index"``: Per controllo sequenzialità (e presenza) voci – deve essere un tag <ul> con l’attributo che contiene altri <li> e degli <a>. Voci controllate: "A chi è rivolto", "Come fare", "Cosa serve", "Cosa si ottiene", "Tempi e scadenze";
+* ``data-element=”breadcrumb”``: Controllo presenza della categoria del servizio - viene controllata la breadcrumb <ul>/<ol> con attributo data-element=”breadcrumb” che contiene i tag <li> che possono contenere altri tag;
 * ``data-element="service-title"``: Controllo presenza titolo – può essere un qualsiasi tag che contenga testo (h1, p etc..);
 * ``data-element="service-description"``: Controllo presenza descrizione – può essere un qualsiasi tag che contenga testo (h1, p etc..);
 * ``data-element="service-status"``: Controllo status del servizio – può essere un qualsiasi tag che contenga testo (h1, p etc..). La label deve contenere ALMENO il testo: attivo/disattivo/non attivo;
