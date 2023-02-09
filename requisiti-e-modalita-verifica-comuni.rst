@@ -33,7 +33,22 @@ Criterio C.SI.1.2
 
 **Condizioni di successo:** il sito usa la libreria Bootstrap Italia in una versione uguale o superiore alla 2.0.
 
-**Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
+**Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION. La verifica viene effettuata su N pagine servizio, N pagine di primo livello, N pagine di secondo livello e nella pagina “Accedi all’area riservata”.
+
+**Requisiti tecnici:** In homepage, all’interno del menù principale, le voci del menù devono avere i seguenti attributi che riportano alle rispettive pagine di primo livello:
+
+- “Amministrazione”: ``data-element=”management”``
+- “Novità”: ``data-element=”news”``
+- “Servizi”: ``data-element=”all-services”``
+- “Vivere il Comune”: ``data-element=”live”``
+
+All’interno delle pagine di secondo livello su ogni elemento che riporta ad una pagina di secondo livello deve esserci il relativo attributo per atterrare nelle pagine di secondo livello (deve essere un tag <a> che contiene l’href alle pagine di secondo livello: ``data-element=”management-category-link”``, data-element=”news-category-link”, data-element=”service-category-link” (gli <a> possono contenere altri tag a livello testuale). Quando si atterra sulla pagina di primo livello “Servizi” bisogna inserire l’attributo ``data-element=”load-other-cards”`` sul bottone per caricare i servizi in modo da poter avere il listato completo (NB: deve essere una chiamata AJAX che aggiorna i risultati in pagina). Per l’area riservata serve l’attributo: ``data-element=”personal-area-login”`` che deve essere un <a> che contenere l’href alla pagina di atterraggio.  
+
+**Esempi:**
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-2-a.html
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-2-b.html
 
 Criterio C.SI.1.3
 -----------------
