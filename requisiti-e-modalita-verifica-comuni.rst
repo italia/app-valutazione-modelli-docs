@@ -33,7 +33,9 @@ Criterio C.SI.1.2
 
 **Condizioni di successo:** il sito usa la libreria Bootstrap Italia in una versione uguale o superiore alla 2.0.
 
-**Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION. La verifica viene effettuata su N pagine servizio, N pagine di primo livello, N pagine di secondo livello e nella pagina “Accedi all’area riservata”.
+**Modalità di verifica:** viene verificata la presenza della libreria bootstrap in versione corretta e la presenza di alcune classi CSS sulla homepage, N pagine di primo livello e N pagine di secondo livello, N schede servizio, e nella pagina “Accedi all’area riservata”.
+
+La verifica viene effettuata su N pagine servizio, N pagine di primo livello, N pagine di secondo livello e nella pagina “Accedi all’area riservata”.
 
 **Requisiti tecnici:** In homepage, all’interno del menù principale, le voci del menù devono avere i seguenti attributi che riportano alle rispettive pagine di primo livello:
 
@@ -55,11 +57,13 @@ Criterio C.SI.1.3
 
 **Condizioni di successo:** nelle schede informative di servizio le voci indicate come obbligatorie sono presenti e sono nell'ordine corretto.
 
-**Modalità di verifica:** viene verificato se le voci indicate come obbligatorie all'interno del documento di architettura dell'informazione sono presenti. Inoltre viene verificato se le voci obbligatorie presenti nell'indice della pagina sono nell'ordine corretto. La verifica viene effettuata su una scheda servizio casualmente selezionata, ricercando le voci indicate nella documentazione del modello tramite specifici attributi data-element.
+**Modalità di verifica:** viene verificato se le voci indicate come obbligatorie all'interno del documento di architettura dell'informazione sono presenti. Inoltre viene verificato se le voci obbligatorie presenti nell'indice della pagina sono nell'ordine corretto. La verifica viene effettuata su N schede servizio casualmente selezionata, ricercando le voci indicate nella documentazione del modello tramite specifici attributi data-element.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
-**Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. 
+**Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina "Servizi" dove è presenta la lista dei servizi. All’interno della pagina Servizi, i link che inviano ai servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano alla corrispondente scheda servizio. 
+
+Quando si atterra sulla pagina di primo livello “Servizi” bisogna inserire l’attributo ``data-element=”load-other-cards”`` sul bottone per caricare altr  servizi, se presenti, in modo da poter avere la lista completa (NB: deve essere una chiamata AJAX che aggiorna i risultati in pagina).
 
 **Esempio:**
    
@@ -68,17 +72,71 @@ Criterio C.SI.1.3
 
 All’interno della scheda servizio devono esserci i seguenti attributi:
 
-* ``data-element="page-index"``: Per controllo sequenzialità (e presenza) voci – deve essere un tag <ul> con l’attributo che contiene altri <li> e degli <a>. Voci controllate: "A chi è rivolto", "Come fare", "Cosa serve", "Cosa si ottiene", "Tempi e scadenze";
-* ``data-element=”breadcrumb”``: Controllo presenza della categoria del servizio - viene controllata la breadcrumb <ul>/<ol> con attributo data-element=”breadcrumb” che contiene i tag <li> che possono contenere altri tag;
+* ``data-element="page-index"``: PPer controllo sequenzialità (e presenza) voci all’interno dell’indice di pagina – deve essere un tag <ul> con l’attributo che contiene altri <li> e degli <a>. Le voci di cui viene verificata la sequenzialità e presenza nell’indice sono: "A chi è rivolto", "Come fare", "Cosa serve", "Cosa si ottiene", "Tempi e scadenze", “Accedi al servizio”, “Condizioni di servizio”, “Contatti”.
+* ``data-element=”breadcrumb”``: Controllo presenza della categoria del servizio nella breadcrumb- viene controllata la breadcrumb <ul>/<ol> con attributo data-element=”breadcrumb” che contiene i tag <li> che possono contenere altri tag. Deve essere un testo di almeno 3 caratteri successivo al livello /Servizi/;
 * ``data-element="service-title"``: Controllo presenza titolo – può essere un qualsiasi tag che contenga testo (h1, p etc..);
 * ``data-element="service-description"``: Controllo presenza descrizione – può essere un qualsiasi tag che contenga testo (h1, p etc..);
-* ``data-element="service-status"``: Controllo status del servizio – può essere un qualsiasi tag che contenga testo (h1, p etc..). La label deve contenere ALMENO il testo: attivo/disattivo/non attivo;
-* ``data-element="service-topic"``: Controllo tag – un tag <a> che può contenere anche altri tag;
+* ``data-element="service-status"``: Controllo status del servizio – può essere un qualsiasi tag che contenga testo (h1, p etc..);
+* ``data-element="service-topic"``: Controllo tag – un tag <a> che può contenere anche altri tag. Deve esserne presente almeno uno;
 * ``data-element="service-area"``: Controllo presenza area responsabile del servizio  - un tag <a> che contiene l’attributo.
+* ``data-element=”service-addressed”``: da inserire nella sezione “A chi è rivolto” nel tag HTML contenente il testo. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri;
+* ``data-element=”service-how-to”``: da inserire nella sezione “Come fare” nel tag HTML contenente il testo. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri;
+* data-element=”service-needed”: da inserire nella sezione “Cosa serve” nel tag HTML contenente il testo. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri; 
+* ``data-element=”service-achieved”``: da inserire nella sezione “Cosa si ottiene” nel tag HTML contenente il testo. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri;
+* ``data-element=”service-calendar-text”``: da inserire nella sezione “Tempi e scadenze” nel tag HTML contenente il testo al di fuori del componente calendario. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri;
+* ``data-element=”service-generic-access”``: da inserire nella sezione “Accedi al servizio” nel tag HTML contenente il testo al di fuori dei bottoni di accesso alla prenotazione oppure accesso online. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri.
 
-Voci delle quali viene verificata la presenza: titolo del servizio, categoria del servizio (contenuto breadcrumb), stato del servizio, descrizione breve, “A chi è rivolto”, “Come fare”, “Cosa serve”, “Cosa si ottiene”, “Tempi e scadenze”, “Accedi al servizio” (Canale fisico), “Condizioni di servizio”, “Contatti”, "Unità Organizzativa responsabile" e argomenti.
+**Esempio**:
 
-Voci delle quali viene verificata la presenza e sequenzialità all’interno dell’indice della pagina: “A chi è rivolto”, “Come fare”, “Cosa serve”, “Cosa si ottiene”, “Tempi e scadenze”, “Accedi al servizio”, “Condizioni di servizio” e “Contatti”. 
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-g.html
+
+Attributi relativi ai componenti su cui controllare la presenza del componente:
+
+* ``data-element=”service-calendar-list”``: da inserire nella sezione “Tempi e scadenze” nel tag HTML contenente il componente calendario
+* ``data-element=”service-generic-access”``:da inserire nella sezione “Accedi al servizio” nel tag HTML contenente un componente diverso dai bottoni di accesso alla prenotazione oppure accesso online.,
+* ``data-element=”service-booking-access”``:da inserire nella sezione “Accedi al servizio” nel tag HTML contenente il bottone di accesso alla prenotazione,
+* ``data-element=”service-online-access”``:da inserire nella sezione “Accedi al servizio” nel tag HTML contenente il bottone di accesso online al servizio
+* ``data-element=”service-file”``: da inserire nella sezione “Condizioni di servizio” nel tag HTML contenente il link del file da scaricare
+* ``data-element=”service-area”``:da inserire nella sezione “Contatti” nel tag HTML contenente la card con Unità organizzativa o i punti di contatto (mail, telefono, indirizzo)
+
+Possono essere generici componenti con un contenitore (ad esempio, un <div>).
+
+**Esempio**:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-h.html
+
+
+N.B.: Per quanto riguarda la sezione “Tempi e scadenze” e “Accedi al servizio” l’audit darà esito positivo in queste sezioni se almeno una delle condizioni sopra riportate sono rispettate per le rispettive sezioni. 
+
+
+Voci delle quali viene verificata la presenza all’interno della pagina:
+
+- Categoria del servizio (la tipologia di servizio indicata nella breadcrumb), 
+- Titolo del servizio,
+- Stato del servizio (nel caso in cui il servizio non è attivo deve essere indicato il Motivo dello stato),
+- Descrizione breve,
+- A chi è rivolto,
+- Come fare,
+- Cosa serve,
+- Cosa si ottiene,
+- Tempi e scadenze,
+- Accedi al servizio,
+- Condizioni di servizio,
+- Contatti (indicando l’Unità Organizzativa responsabile),
+- Argomenti
+
+
+Voci delle quali viene verificata la presenza e sequenzialità all’interno dell’indice della pagina: 
+
+- A chi è rivolto,
+- Come fare,
+- Cosa serve,
+- Cosa si ottiene,
+- Tempi e scadenze,
+- Accedi al servizio,
+- Condizioni di servizio,
+- Contatti.
+
 
 **Esempi:**
 
@@ -144,7 +202,7 @@ Criterio C.SI.1.7
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html
 
-**Requisiti tecnici:** In homepage, la voce di menù “Servizi” deve essere un tag <a> con un un attributo ``data-element="all-services"``. L’href della voce Servizi deve riportare alla pagina template-servizi.html. All’interno della pagina, sotto la voce “Categoria” le card devono contenere degli <a> con l’attributo ``data-element="service-category-link"``. Verrà prelevato il titolo testuale della card.
+**Requisiti tecnici:** In homepage, la voce di menù “Servizi” deve essere un tag <a> con un un attributo ``data-element="all-services"``, la voce di menù “Amministrazione” con un attributo ``data-element="management"``, la voce di menù “Novità” con attributo ``data-element="news"``, la voce di menù “Vivere il comune” con l’attributo ``data-element="live"``. All’interno delle pagine, sotto la voce “Categoria” le card devono contenere degli <a> con l’attributo ``data-element="service-category-link"`` per i servizi, ``data-element="management-category-link"`` per la sezione “Amministrazione”, ``data-element="news-category-link"`` per la sezione “Novità”, e per queste verrà prelevato il titolo testuale della card. Atterrati nella pagina a cui riporta la sezione “Vivere il comune” bisogna inserire gli attributi: ``data-element=”live-button-locations”`` e ``data-element=”live-button-events”`` nei bottoni per atterrare nelle pagine in cui verrà controllato il titolo tramite l’attributo ``data-element=”page-name”`` (che sarà un <p> o un <h1>, etc.). 
 
 **Esempi:**
 
@@ -240,7 +298,11 @@ Criterio C.SI.3.1
 
 **Condizioni di successo:** il sito presenta solo cookie idonei come definito dalla normativa.
 
-**Modalità di verifica:** viene verificato che il dominio dei cookie identificati sia corrispondente al dominio del sito web. Se nella pagina analizzata non vengono rilevati cookie non verrà generata una tabella di risultati.
+**Modalità di verifica:** L'audit controlla il dominio dei cookie sull’homepage, su N schede servizio, su N pagine di primo livello, su N pagine di secondo livello e per la sezione “Vivere il comune” solo nella pagina a cui si viene portati all’onclick di “Tutti gli eventi” nella quale vengono prelevate le pagine di terzo livello.
+
+**Requisiti tecnici:** In homepage, all’interno del menù principale le voci “Amministrazione”, “Novità”, “Servizi” e “Vivere il comune”, che riportano alle rispettive pagine di primo livello, devono avere i seguenti attributi: ``data-element=”management”``, ``data-element=”news”``, ``data-element=”all-services”``. All’interno delle pagine di secondo livello su ogni elemento che riporta ad una pagina di secondo livello deve esserci il relativo attributo per atterrare nelle pagine di secondo livello (deve essere un tag <a> che contiene l’href alle pagine di secondo livello: ``data-element=”management-category-link”``, ``data-element=”news-category-link”``, ``data-element=”service-category-link”`` (gli <a> possono contenere altri tag a livello testuale). Quando si atterra sulla pagina di primo livello “Servizi” bisogna inserire l’attributo ``data-element=”load-other-cards”`` sul bottone per caricare i servizi in modo da poter avere il listato completo (NB: deve essere una chiamata AJAX che aggiorna i risultati in pagina). 
+Per la voce di primo livello “Vivere il comune” deve esserci l’attributo ``data-element=”live”`` e quando si attera in pagina bisogna inserire l’attributo ``data-element=”live-button-events”`` sul bottone che riporta a “Tutti gli eventi” (il bottone deve contenere l’href alla pagina nell’onclick). Atterrati sulla pagina a cui riporta il bottone il listato di eventi deve avere l’attributo ``data-element=”event-link”`` (che deve essere un <a> che contiene l’href alla pagina di terzo livello) e l’attributo ``data-element=”load-other-cards”`` per caricare tutti gli eventi. 
+
 
 Criterio C.SI.3.2
 -----------------
