@@ -55,9 +55,9 @@ All’interno delle pagine di secondo livello su ogni elemento che riporta ad un
 Criterio C.SI.1.3
 -----------------
 
-**Condizioni di successo:** nelle schede informative di servizio le voci indicate come obbligatorie sono presenti e sono nell'ordine corretto.
+**Condizioni di successo:** nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e, dove richiesto, sono nell'ordine corretto.
 
-**Modalità di verifica:** viene verificato se le voci indicate come obbligatorie all'interno del documento di architettura dell'informazione sono presenti. Inoltre viene verificato se le voci obbligatorie presenti nell'indice della pagina sono nell'ordine corretto. La verifica viene effettuata su N schede servizio casualmente selezionata, ricercando le voci indicate nella documentazione del modello tramite specifici attributi data-element.
+**Modalità di verifica:** viene verificato se le voci indicate come obbligatorie all'interno del documento di architettura dell'informazione sono presenti e nell'ordine corretto, ricercandole all'interno della pagina e dell'indice tramite specifici data-element. Per essere ritenute valide, le voci devono avere contenuti associati della tipologia indicata all'interno del documento di architettura dell'informazione. La verifica viene effettuata su N schede servizio casualmente selezionata, ricercando le voci indicate nella documentazione del modello tramite specifici attributi data-element.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
@@ -296,9 +296,9 @@ L’href della voce Servizi deve riportare alla pagina template-servizi.html. Al
 Criterio C.SI.3.1
 -----------------
 
-**Condizioni di successo:** il sito presenta solo cookie idonei come definito dalla normativa.
+**Condizioni di successo:** il dominio di tutti i cookie già presenti nel sito, ovvero senza che sia stata espressa una preferenza da parte dell’utente riguardo il loro uso, è corrispondente al dominio del sito web del Comune.
 
-**Modalità di verifica:** L'audit controlla il dominio dei cookie sull’homepage, su N schede servizio, su N pagine di primo livello, su N pagine di secondo livello e per la sezione “Vivere il comune” solo nella pagina a cui si viene portati all’onclick di “Tutti gli eventi” nella quale vengono prelevate le pagine di terzo livello.
+**Modalità di verifica:** viene verificato che al caricamento di ogni pagina analizzata il dominio dei cookie identificati sia corrispondente al dominio del sito web. L'audit controlla il dominio dei cookie sull’homepage, su N schede servizio, su N pagine di primo livello, su N pagine di secondo livello e per la sezione “Vivere il comune” solo nella pagina a cui si viene portati all’onclick di “Tutti gli eventi” nella quale vengono prelevate le pagine di terzo livello.
 
 **Requisiti tecnici:** In homepage, all’interno del menù principale le voci “Amministrazione”, “Novità”, “Servizi” e “Vivere il comune”, che riportano alle rispettive pagine di primo livello, devono avere i seguenti attributi: ``data-element=”management”``, ``data-element=”news”``, ``data-element=”all-services”``. All’interno delle pagine di secondo livello su ogni elemento che riporta ad una pagina di secondo livello deve esserci il relativo attributo per atterrare nelle pagine di secondo livello (deve essere un tag <a> che contiene l’href alle pagine di secondo livello: ``data-element=”management-category-link”``, ``data-element=”news-category-link”``, ``data-element=”service-category-link”`` (gli <a> possono contenere altri tag a livello testuale). Quando si atterra sulla pagina di primo livello “Servizi” bisogna inserire l’attributo ``data-element=”load-other-cards”`` sul bottone per caricare i servizi in modo da poter avere il listato completo (NB: deve essere una chiamata AJAX che aggiorna i risultati in pagina). 
 Per la voce di primo livello “Vivere il comune” deve esserci l’attributo ``data-element=”live”`` e quando si attera in pagina bisogna inserire l’attributo ``data-element=”live-button-events”`` sul bottone che riporta a “Tutti gli eventi” (il bottone deve contenere l’href alla pagina nell’onclick). Atterrati sulla pagina a cui riporta il bottone il listato di eventi deve avere l’attributo ``data-element=”event-link”`` (che deve essere un <a> che contiene l’href alla pagina di terzo livello) e l’attributo ``data-element=”load-other-cards”`` per caricare tutti gli eventi. 
@@ -307,9 +307,9 @@ Per la voce di primo livello “Vivere il comune” deve esserci l’attributo `
 Criterio C.SI.3.2
 -----------------
 
-**Condizioni di successo:** il sito presenta una voce nel footer che riporta alla dichiarazione di accessibilità di AGID valida.
+**Condizioni di successo:** il sito presenta una voce nel footer che riporta a una dichiarazione di accessibilità AgID valida per il sito.
 
-**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente che sia quella contenente la dichiarazione di accessibilità (il link deve iniziare con "https://form.agid.gov.it/view/").
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente, che l'url della pagina di destinazione inizi con "https://form.agid.gov.it/view/" e che la pagina contenga l'url del sito del Comune.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html
 
