@@ -33,9 +33,30 @@ Criterio C.SI.1.2
 
 **Condizioni di successo:** il sito usa la libreria Bootstrap Italia in una versione uguale o superiore alla 2.0.
 
-**Modalità di verifica:** viene verificata la presenza della libreria bootstrap in versione corretta e la presenza di alcune classi CSS sulla homepage, N pagine di primo livello e N pagine di secondo livello, N schede servizio, e nella pagina “Accedi all’area riservata”.
+**Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso, individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION. La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello, N schede servizio e nella pagina “Accedi all’area riservata”.
 
-La verifica viene effettuata su N pagine servizio, N pagine di primo livello, N pagine di secondo livello e nella pagina “Accedi all’area riservata”.
+Nella pagina analizzata deve essere presente almeno una tra le seguenti classi CSS di Bootstrap Italia: 
+
+.it-header-wrapper
+.it-nav-wrapper
+.navbar
+.it-brand-title
+.row
+.col
+.card
+.container
+.variable-gutters
+.section
+.font-serif
+.font-sans-serif
+.font-monospace
+.lead
+.it-list
+.link-list
+.link-list-wrapper
+.list-item
+.text-primary
+.text-secondary  
 
 **Requisiti tecnici:** In homepage, all’interno del menù principale, le voci del menù devono avere i seguenti attributi che riportano alle rispettive pagine di primo livello:
 
@@ -196,9 +217,9 @@ Criterio C.SI.1.6
 Criterio C.SI.1.7
 -----------------
 
-**Condizioni di successo:** i titoli delle pagine di secondo livello corrispondono a quelli indicati nel documento di architettura dell'informazione del modello Comuni.
+**Condizioni di successo:** i titoli delle pagine di secondo livello corrispondono a quelli indicati nel capitolo "Conformità al modello Comuni" della Documentazione del Modello Comuni.
 
-**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, vengono confrontati i titoli delle categorie di servizi presentati nella pagina di primo livello "Servizi" con i titoli richiesti dal modello nell'elenco Tassonomia categorie dei servizi del documento di architettura dell'informazione.
+**Modalità di verifica:** tramite ricerca di specifici attributi data-element, viene verificato che i titoli delle card usate per rimandare alle pagine di secondo livello siano corretti e presenti sulle rispettive pagine genitore di primo livello. Nel caso della pagina di primo livello "Vivere il Comune", viene verificato che i titoli delle pagine di secondo livello raggiungibili da questa siano corretti. Nel conteggio vengono incluse anche le pagine di secondo livello raggiungibili da pagine di primo livello non indicate nella documentazione
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html
 
