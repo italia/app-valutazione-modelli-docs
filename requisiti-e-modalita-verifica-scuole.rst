@@ -35,7 +35,35 @@ Criterio C.SC.1.2
 
 **Condizioni di successo:** il sito usa la libreria Bootstrap Italia in una versione uguale o superiore alla 1.6.
 
-**Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
+**Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso, individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION. La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello e N schede servizio.
+
+Nella pagina analizzata deve essere presente almeno una tra le seguenti classi CSS di Bootstrap Italia:
+
+.row
+.col
+.card
+.container
+.variable-gutters
+.section
+.font-serif
+.font-sans-serif
+.font-monospace
+.lead
+.it-list
+.link-list
+.link-list-wrapper
+.list-item
+.text-primary
+.text-secondary
+
+**Requisiti tecnici**:
+
+Per il retrieve delle pagine di primo livello inserire gli attributi:
+* ``data-element=”overview”`` alle voci “Panoramica” del menù;
+* ``data-element=”school-submenu”``, ``data-element=”services-submenu”``, ``data-element=”news-submenu”``, ``data-element=”teaching-submenu”``,  ``data-element=”custom-submenu”`` (che devono essere dei  tag <ul> composti da <li> che possono contenere altri tag, come degli <a>) per il retrieve delle pagine di secondo livello;
+* data-element=”service-type” per atterrare sulle pagine servizi che devono contenere sul paginatore l’attributo data-element=”pager-link” (che deve essere un <a> che contiene un href alla pagina successiva) per poter scorrere tutti i servizi  e nelle pagine servizi le card devono contenere data-element=”service-link” per atterrare sui servizi.
+
+
 
 Criterio C.SC.1.3
 -----------------
