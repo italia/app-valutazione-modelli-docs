@@ -356,37 +356,6 @@ Criterio C.SI.3.3
 .. literalinclude:: esempi-codice-comuni/c-si-3-3.html
 
 
-Criterio C.SI.5.1
------------------
-
-**Condizioni di successo:** il sito utilizza un certificato https valido e non obsoleto secondo le raccomandazioni AGID.
-
-**Modalità di verifica:** viene verificato che il certificato https del sito sia valido e attivo.
-
-**Template HTML su cui si effettua scraping:** template-homepage.html
-
-**Requisiti tecnici:** In homepage all’interno di un tag <a> deve esserci l'attributo ``data-element="personal-area-login"``. 
-
-**Esempio:**
-
-.. literalinclude:: esempi-codice-comuni/c-si-5-1.html
-
-Criterio C.SI.5.2
------------------
-
-**Condizioni di successo:** il sito comunale è raggiungibile senza necessità di inserimento del sottodominio “www.” e utilizza il sottodominio "comune." immediatamente seguito da uno dei domini istituzionali per il Comune presente nell'Elenco Nomi a Dominio Riservati Per i Comuni Italiani (es: comune.anzio.roma.it) o dal nome del Comune se coincidente con il nome del capoluogo di provincia (es: comune.roma.it).
-
-**Modalità di verifica:** viene verificato che il dominio utilizzato dal sito sia presente nell'Elenco Nomi a Dominio Riservati per i Comuni Italiani o sia un nome di capoluogo di provincia e che immediatamente prima di questo sia utilizzato il sottodominio "comune.".
-
-**Template HTML su cui si effettua scraping:** template-homepage.html
-
-**Requisiti tecnici:** In homepage all’interno di un tag <a> deve esserci l'attributo ``data-element="personal-area-login"``. 
-
-**Esempio:**
-
-.. literalinclude:: esempi-codice-comuni/c-si-5-2.html
-
-
 
 Raccomandazione R.SI.1.1
 ------------------------
