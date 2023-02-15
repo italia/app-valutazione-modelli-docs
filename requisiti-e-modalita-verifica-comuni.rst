@@ -206,6 +206,14 @@ Criterio C.SI.1.6
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito, il loro ordine e confrontate con quanto indicato nel documento di architettura dell'informazione, applicando una tolleranza di massimo 3 voci aggiuntive.
 
+Viene verificata la presenza e la sequenzialità delle seguenti voci:
+
+- *Amministrazione*
+- *Novità*
+- *Servizi*
+- *Vivere il Comune* o *Vivere {nome_Comune}*
+
+
 **Template HTML  su cui si effettua scraping:** template-homepage.html
 
 **Requisiti tecnici:** In template-homepage deve esserci un <ul> con l’attributo ``data-element=”main-navigation”`` che contenga degli <li> e degli <a> in cui ci sono le label (può contenere altri tag). 
@@ -219,7 +227,14 @@ Criterio C.SI.1.7
 
 **Condizioni di successo:** i titoli delle pagine di secondo livello corrispondono a quelli indicati nel capitolo "Conformità al modello Comuni" della Documentazione del Modello Comuni.
 
-**Modalità di verifica:** tramite ricerca di specifici attributi data-element, viene verificato che i titoli delle card usate per rimandare alle pagine di secondo livello siano corretti e presenti sulle rispettive pagine genitore di primo livello. Nel caso della pagina di primo livello "Vivere il Comune", viene verificato che i titoli delle pagine di secondo livello raggiungibili da questa siano corretti. Nel conteggio vengono incluse anche le pagine di secondo livello raggiungibili da pagine di primo livello non indicate nella documentazione
+**Modalità di verifica:** tramite ricerca di specifici attributi data-element, viene verificato che i titoli delle card usate per rimandare alle pagine di secondo livello siano corretti e presenti sulle rispettive pagine genitore di primo livello. Nel caso della pagina di primo livello "Vivere il Comune", viene verificato che i titoli delle pagine di secondo livello raggiungibili da questa siano corretti. Nel conteggio vengono incluse anche le pagine di secondo livello raggiungibili da pagine di primo livello non indicate nella documentazione.
+
+I titoli che vengono verificati sono:
+
+- Per la sezione Amministrazione, “Organi di governo”, “Aree amministrative”, “Uffici”, “Enti e fondazioni”, “Politici”, “Personale amministrativo”, “Documenti e dati”;
+- Per la sezione Novità, “Notizie”, “Comunicati”, “Avvisi”
+- Per la sezione Servizi, “Educazione e formazione”, “Salute, benessere e assistenza”, “Vita lavorativa”, “Mobilità e trasporti”, “Catasto e urbanistica”, “Anagrafe e stato civile”, “Turismo”, “Giustizia e sicurezza pubblica”, “Tributi, finanze e contravvenzioni”, “Cultura e tempo libero”, “Ambiente”, “Imprese e commercio”, “Autorizzazioni”, “Appalti pubblici”, “Agricoltura e pesca”;
+- Per la sezione Vivere il Comune o Vivere {nome_comune}, “Luoghi”, “Eventi”.
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html
 
