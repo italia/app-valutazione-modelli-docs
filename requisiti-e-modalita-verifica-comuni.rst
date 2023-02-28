@@ -4,38 +4,80 @@ Requisiti tecnici e modalità di verifica per il modello Comuni
 Di seguito sono riportati i criteri di conformità e le raccomandazioni verificabili tramite App di valutazione dell'adesione al modello Comuni.
 
 
-Per il corretto funzionamento dell'App di valutazione, è necessario inserire dei **data attribute** all’interno dei tag HTML del sito.
+Per il corretto funzionamento dell'App di valutazione, è necessario inserire dei **data attribute** all’interno dei tag HTML del sito. Questi vengono indicati separatamente per ognuno dei criteri. Alcuni data attribute sono valgono per più criteri.
+
+La chiave generale dei data attribute è ``data-element=*`` e va inserita all’interno dei tag HTML.
+
 
 .. note::
   
   I data attribute, dove possibile, sono già presenti nei materiali forniti da `Designers Italia <https://designers.italia.it/modello/comuni/>`_, sia all'interno dei template HTML che dei CMS messi a disposizione. Rimane tuttavia responsabilità dell'ente verificare che siano correttamente inseriti dove richiesto.
+  
+.. note::
+  
+  Per tutto ciò che è un URL, per esempio FAQ o Segnalazione disservizio, l'App controlla anche che l’URL nell’href del componente non sia nullo e, per alcuni casi specifici, che sia in HTTPS e che riporti ad una pagina “funzionante”. 
+ 
+.. note::
+
+  Per tutto ciò che viene controllato sulla base di un vocabolario si utilizzano controlli non case-sensitive.
+  
+
+Criterio C.SI.1.1 - Coerenza dell’utilizzo dei font (librerie di caratteri)
+--------------------------------------------------------------------------------
+
+**Condizioni di successo:** tutti i titoli (heading) e tutti i paragrafi delle pagine del sito in lingua italiana utilizzano esclusivamente i font Titillium Web, Lora o Roboto Mono come font di default.
+
+**Modalità di verifica:** tramite ricerca di specifici attributi data-element, nelle pagine analizzate viene verificato che i font di default siano quelli richiesti all'interno di tutti gli <h> e <p>. La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello, N pagine di terzo livello “Scheda servizio” e nella pagina di accesso  all’area riservata”.
+
+**Requisiti tecnici:**
+
+*Caricamento pagina di accesso all’area riservata*:
+
+In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenente il link alla pagina.
+
+*Caricamento pagine primo livello*:
+
+In homepage, per poter identificare i link alle pagine di primo livello, nel menù principale identificato dal tag <div class="navbar"> i link alle pagine di primo livello devono contenere all'interno del tag <a class="nav-link"> i seguenti attributi:
+
+- "Amministrazione": ``data-element="management"``
+- "Novità": ``data-element="news"``
+- "Servizi": ``data-element="all-services"``
+- "Vivere il Comune": ``data-element="live"``
+- Eventuali voci aggiuntive: ``data-element=”custom-submenu”``
+
+L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
 
 
-La chiave generale dell’attribute è ``data-element=*`` e va inserita all’interno dei tag HTML.
+*Caricamento pagine di secondo livello*:
 
-Per tutto ciò che è un URL, per esempio FAQ o Segnalazione disservizio, l'App controlla anche che l’URL nell’href del componente non sia nullo e, per alcuni casi specifici, che sia in HTTPS (vedi dettagli audit) e che riporti ad una pagina “funzionante”.
+Per il caricamento delle pagine di secondo livello è necessario che i data-element alle pagine di primo livello siano correttamente posizionati all'interno dei link delle pagine di primo livello nel menù principale.
 
-NB: Per tutto ciò che viene controllato sulla base di un vocabolario si utilizzano controlli non case-sensitive.
+La pagina di primo livello "Amministrazione", identificata grazie al ``data-element="management"``, dovrà contenere il ``data-element="management-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
 
-Criterio C.SI.1.1
------------------
+La pagina di primo livello "Novità", identificata grazie al ``data-element="news"``, dovrà contenere il ``data-element="news-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
 
-**Condizioni di successo:** il sito utilizza almeno i font Titillium Web e Lora.
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
 
-**Modalità di verifica:** tramite ricerca dello specifico attributo data-element, viene verificata la presenza dei font all'interno di una scheda servizio casualmente selezionata.
+La pagina di primo livello "Vivere il comune", identificata grazie al ``data-element="live"``, dovrà contenere due bottoni. Il bottone che porta alla pagina di secondo livello "Eventi" dovrà contenere ``data-element="live-button-events"`` e il bottone che porta alla pagina di secondo livello "Luoghi" dovrà contenere ``data-element="live-button-locations"``. Per entrambi i bottoni il data-element dovrà essere posizionato sul tag <button> e all'interno dell'attributo "onclick" del bottone dovrà essere presente il link alla pagina di secondo livello. La mancata individuazione di almeno un link attraverso questi data-element porta all'impossibilità di esecuzione dell'audit.
 
-**Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
+Nel caso fossero presenti delle voci aggiuntive di primo livello esse vengono identificate attraverso il ``data-element=”custom-submenu”``. In ognuna di queste pagine è necessaria la presenza del ``data-element=”custom-category-link”`` all’interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello.
 
-**Requisiti tecnici:** In homepage all’interno di un tag <a> deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio.
 
-Criterio C.SI.1.2
------------------
+*Caricamento pagine di terzo livello "Scheda servizio"*:
 
-**Condizioni di successo:** il sito usa la libreria Bootstrap Italia in una versione uguale o superiore alla 2.0.
+Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
-**Modalità di verifica:** viene verificata la presenza della libreria Bootstrap Italia e la versione in uso, individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION. La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello, N schede servizio e nella pagina “Accedi all’area riservata”.
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
-Nella pagina analizzata deve essere presente almeno una tra le seguenti classi CSS di Bootstrap Italia: 
+
+Criterio C.SI.1.2 - Libreria di elementi di interfaccia
+----------------------------------------------------------
+
+**Condizioni di successo:** la libreria Bootstrap Italia è presente e in uso in una versione uguale o superiore alla 2.0.
+
+**Modalità di verifica:** in ogni pagina analizzata viene verificata la presenza della libreria Bootstrap Italia e la versione in uso, individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
+
+Inoltre ogni pagina analizzata deve utilizzare almeno una tra le seguenti classi CSS di Bootstrap Italia
 
 .it-header-wrapper
 .it-nav-wrapper
@@ -56,16 +98,56 @@ Nella pagina analizzata deve essere presente almeno una tra le seguenti classi C
 .link-list-wrapper
 .list-item
 .text-primary
-.text-secondary  
+.text-secondary
 
-**Requisiti tecnici:** In homepage, all’interno del menù principale, le voci del menù devono avere i seguenti attributi che riportano alle rispettive pagine di primo livello:
+La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello, N pagine di terzo livello “Scheda servizio”, nella pagina di accesso all’area riservata e nella pagina della funzionalità di prenotazione appuntamento.
 
-- “Amministrazione”: ``data-element=”management”``
-- “Novità”: ``data-element=”news”``
-- “Servizi”: ``data-element=”all-services”``
-- “Vivere il Comune”: ``data-element=”live”``
+**Requisiti tecnici:** 
 
-All’interno delle pagine di secondo livello su ogni elemento che riporta ad una pagina di secondo livello deve esserci il relativo attributo per atterrare nelle pagine di secondo livello (deve essere un tag <a> che contiene l’href alle pagine di secondo livello: ``data-element=”management-category-link”``, data-element=”news-category-link”, data-element=”service-category-link” (gli <a> possono contenere altri tag a livello testuale). Quando si atterra sulla pagina di primo livello “Servizi” bisogna inserire l’attributo ``data-element=”load-other-cards”`` sul bottone per caricare i servizi in modo da poter avere il listato completo (NB: deve essere una chiamata AJAX che aggiorna i risultati in pagina). Per l’area riservata serve l’attributo: ``data-element=”personal-area-login”`` che deve essere un <a> che contenere l’href alla pagina di atterraggio.  
+*Caricamento pagina di accesso all’area riservata*:
+
+In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenete il link alla pagina.
+
+
+*Caricamento pagina di prenotazione appuntamenti*:
+
+Per caricare la pagina prenotazione appuntamenti è necessario che il ``data-element=”all-service”`` sia posizionato in homepage nel link della pagina di primo livello “Servizi”. In questa pagina di primo livello il link alla pagina di prenotazione appuntamenti deve contenere il ``data-element="appointment-booking"`` nel tag <a> contenente il link alla pagina.
+
+
+*Caricamento pagine primo livello*:
+
+In homepage, per poter identificare i link alle pagine di primo livello, nel menù principale identificato dal tag <div class="navbar"> i link alle pagine di primo livello devono contenere all'interno del tag <a class="nav-link"> i seguenti attributi:
+
+- "Amministrazione": ``data-element="management"``
+- "Novità": ``data-element="news"``
+- "Servizi": ``data-element="all-services"``
+- "Vivere il Comune": ``data-element="live"``
+- Eventuali voci aggiuntive: ``data-element=”custom-submenu”``
+
+L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
+
+
+*Caricamento pagine di secondo livello*:
+
+Per il caricamento delle pagine di secondo livello è necessario che i data-element alle pagine di primo livello siano correttamente posizionati all'interno dei link delle pagine di primo livello nel menù principale.
+
+La pagina di primo livello "Amministrazione", identificata grazie al ``data-element="management"``, dovrà contenere il ``data-element="management-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Novità", identificata grazie al ``data-element="news"``, dovrà contenere il ``data-element="news-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Vivere il comune", identificata grazie al ``data-element="live"``, dovrà contenere due bottoni. Il bottone che porta alla pagina di secondo livello "Eventi" dovrà contenere ``data-element="live-button-events"`` e il bottone che porta alla pagina di secondo livello "Luoghi" dovrà contenere ``data-element="live-button-locations"``. Per entrambi i bottoni il data-element dovrà essere posizionato sul tag <button> e all'interno dell'attributo "onclick" del bottone dovrà essere presente il link alla pagina di secondo livello. La mancata individuazione di almeno un link attraverso questi data-element porta all'impossibilità di esecuzione dell'audit.
+
+Nel caso fossero presenti delle voci aggiuntive di primo livello esse vengono identificate attraverso il data-element=”custom-submenu”. In ognuna di queste pagine è necessaria la presenza del data-element=”custom-category-link” all’interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello.
+
+
+*Caricamento pagine di terzo livello "Scheda servizio"*:
+
+Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
 
 **Esempi:**
 
@@ -73,66 +155,76 @@ All’interno delle pagine di secondo livello su ogni elemento che riporta ad un
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-2-b.html
 
-Criterio C.SI.1.3
------------------
+
+Criterio C.SI.1.3 - Schede informative di servizio per il cittadino
+------------------------------------------------------------------------
 
 **Condizioni di successo:** nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e, dove richiesto, sono nell'ordine corretto.
 
 **Modalità di verifica:** viene verificato se le voci indicate come obbligatorie all'interno del documento di architettura dell'informazione sono presenti e nell'ordine corretto, ricercandole all'interno della pagina e dell'indice tramite specifici data-element. Per essere ritenute valide, le voci devono avere contenuti associati della tipologia indicata all'interno del documento di architettura dell'informazione. La verifica viene effettuata su N schede servizio casualmente selezionata, ricercando le voci indicate nella documentazione del modello tramite specifici attributi data-element.
 
-**Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
+**Requisiti tecnici:**
 
-**Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina "Servizi" dove è presenta la lista dei servizi. All’interno della pagina Servizi, i link che inviano ai servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano alla corrispondente scheda servizio. 
+*Caricamento pagine di terzo livello "Scheda servizio"*:
 
-Quando si atterra sulla pagina di primo livello “Servizi” bisogna inserire l’attributo ``data-element=”load-other-cards”`` sul bottone per caricare altr  servizi, se presenti, in modo da poter avere la lista completa (NB: deve essere una chiamata AJAX che aggiorna i risultati in pagina).
+Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il data-element="load-other-cards". La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 **Esempio:**
    
 .. literalinclude:: esempi-codice-comuni/c-si-1-3-a.html
 
+*Controllo della presenza e ordine delle voci nelle “Schede servizio”*:
 
-All’interno della scheda servizio devono esserci i seguenti attributi:
+Per le pagine di terzo livello di servizi è necessaria la presenza del ``data-element="page-index"`` nell'indice della pagina identificato dal tag <ul>. Da questo indice vengono caricate le voci che si trovano dentro i tag <a> di ogni riga dell'indice indicata dal tag <li>. Le voci per le quali viene controllata la presenza nell'indice e il loro ordinamento sono:
 
-* ``data-element="page-index"``: PPer controllo sequenzialità (e presenza) voci all’interno dell’indice di pagina – deve essere un tag <ul> con l’attributo che contiene altri <li> e degli <a>. Le voci di cui viene verificata la sequenzialità e presenza nell’indice sono: "A chi è rivolto", "Come fare", "Cosa serve", "Cosa si ottiene", "Tempi e scadenze", “Accedi al servizio”, “Condizioni di servizio”, “Contatti”.
-* ``data-element=”breadcrumb”``: Controllo presenza della categoria del servizio nella breadcrumb- viene controllata la breadcrumb <ul>/<ol> con attributo data-element=”breadcrumb” che contiene i tag <li> che possono contenere altri tag. Deve essere un testo di almeno 3 caratteri successivo al livello /Servizi/;
-* ``data-element="service-title"``: Controllo presenza titolo – può essere un qualsiasi tag che contenga testo (h1, p etc..);
-* ``data-element="service-description"``: Controllo presenza descrizione – può essere un qualsiasi tag che contenga testo (h1, p etc..);
-* ``data-element="service-status"``: Controllo status del servizio – può essere un qualsiasi tag che contenga testo (h1, p etc..);
-* ``data-element="service-topic"``: Controllo tag – un tag <a> che può contenere anche altri tag. Deve esserne presente almeno uno;
-* ``data-element="service-area"``: Controllo presenza area responsabile del servizio  - un tag <a> che contiene l’attributo.
-* ``data-element=”service-addressed”``: da inserire nella sezione “A chi è rivolto” nel tag HTML contenente il testo. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri;
-* ``data-element=”service-how-to”``: da inserire nella sezione “Come fare” nel tag HTML contenente il testo. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri;
-* data-element=”service-needed”: da inserire nella sezione “Cosa serve” nel tag HTML contenente il testo. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri; 
-* ``data-element=”service-achieved”``: da inserire nella sezione “Cosa si ottiene” nel tag HTML contenente il testo. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri;
-* ``data-element=”service-calendar-text”``: da inserire nella sezione “Tempi e scadenze” nel tag HTML contenente il testo al di fuori del componente calendario. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri;
-* ``data-element=”service-generic-access”``: da inserire nella sezione “Accedi al servizio” nel tag HTML contenente il testo al di fuori dei bottoni di accesso alla prenotazione oppure accesso online. Deve essere un **<div>** che contiene **<p>** di almeno 3 caratteri.
+- "A chi è rivolto"
+- "Come fare"
+- "Cosa serve"
+- "Cosa si ottiene"
+- "Tempi e scadenze"
+- "Accedi al servizio",
+- "Condizioni di servizio"
+- "Contatti"
 
-**Esempio**:
+Per queste voci viene anche controllata la presenza di contenuto nella relativa sezione in pagina. Se la sezione non viene individuata la relativa voce risulterà mancante nella reportistica. In particolare:
+
+- "A chi è rivolto": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-addressed"`` e che questo abbia almeno 3 caratteri;
+- "Come fare": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-how-to"`` e che questo abbia almeno 3 caratteri;
+- "Cosa serve": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-needed"`` e che questo abbia almeno 3 caratteri;
+- "Cosa si ottiene": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-achieved"`` e che questo abbia almeno 3 caratteri;
+- "Tempi e scadenze": viene controllata la presenza di un <p> contenuto nel <div> con ``data-element="service-calendar-text"`` e che questo abbia almeno 3 caratteri in un testo al di fuori del componente calendario oppure viene controllata la presenza del componente calendario individuando in pagina il tag <div> con ``data-element="service-calendar-list"``. È necessaria solo una di queste due condizioni per confermare la presenza della relativa sezione;
+- "Accedi al servizio": viene controllata la presenza in pagina di almeno uno tra i componenti "Prenota appuntamento" (un tag <button> con ``data-element="service-booking-access"`` per il bottone che porta alla pagina di prenotazione appuntamenti), "Accesso online" (un tag <button> con ``data-element="service-online-access"`` per il bottone che porta alla pagina di accesso online), "Generic access" (un tag HTML con ``data-element="service-generic-access"`` per un componente diverso da quelli sopra identificati). È necessaria solo una di queste tre condizioni per confermare la presenza della relativa sezione;
+- "Condizioni di servizio": viene controllata la presenza di un tag <a> con ``data-element="service-file"`` contenente il link al file dei "Termini e condizioni di servizio";
+- "Contatti": viene controllata la presenza di un tag <div> con ``data-element="service-area"`` che identifica i contatti.
+
+
+Viene inoltre controllata la presenza di altri componenti al di fuori dell'indice:
+
+- "Titolo": viene controllata la presenza di un tag HTML con ``data-element="service-title"`` che identifica il titolo del servizio e che questo abbia almeno 3 caratteri;
+- "Descrizione": viene controllata la presenza di un tag HTML con ``data-element="service-description"`` che identifica la descrizione del servizio e che questo abbia almeno 3 caratteri;
+- "Stato": viene controllata la presenza di un tag HTML con ``data-element="service-status"`` che identifica lo stato del servizio;
+- "Tassonomie argomenti": viene controllata la presenza di almeno un tag <a> con ``data-element="service-topic"`` che identificano gli argomenti del servizio (es. Turismo);
+- "Categoria del servizio": viene controllata la presenza di un tag HTML con ``data-element="breadcrumb"`` che identifica la breadcrumb. In questo componente vengono individuati i testi relativi ai vari <li> e viene controllata la presenza di almeno 3 caratteri nel testo successivo a "Servizi";
+- "Area": viene controllata la presenza di un tag HTML con ``data-element="service-area"`` che identifica l'area responsabile del servizio e che questo abbia almeno 3 caratteri.
+
+
+*Esempio*:
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-3-g.html
-
-Attributi relativi ai componenti su cui controllare la presenza del componente:
-
-* ``data-element=”service-calendar-list”``: da inserire nella sezione “Tempi e scadenze” nel tag HTML contenente il componente calendario
-* ``data-element=”service-generic-access”``:da inserire nella sezione “Accedi al servizio” nel tag HTML contenente un componente diverso dai bottoni di accesso alla prenotazione oppure accesso online.,
-* ``data-element=”service-booking-access”``:da inserire nella sezione “Accedi al servizio” nel tag HTML contenente il bottone di accesso alla prenotazione,
-* ``data-element=”service-online-access”``:da inserire nella sezione “Accedi al servizio” nel tag HTML contenente il bottone di accesso online al servizio
-* ``data-element=”service-file”``: da inserire nella sezione “Condizioni di servizio” nel tag HTML contenente il link del file da scaricare
-* ``data-element=”service-area”``:da inserire nella sezione “Contatti” nel tag HTML contenente la card con Unità organizzativa o i punti di contatto (mail, telefono, indirizzo)
-
-Possono essere generici componenti con un contenitore (ad esempio, un <div>).
-
-**Esempio**:
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-3-h.html
 
 
-N.B.: Per quanto riguarda la sezione “Tempi e scadenze” e “Accedi al servizio” l’audit darà esito positivo in queste sezioni se almeno una delle condizioni sopra riportate sono rispettate per le rispettive sezioni. 
+.. note::
+
+  Per quanto riguarda la sezione “Tempi e scadenze” e “Accedi al servizio” l’audit darà esito positivo in queste sezioni se almeno una delle condizioni sopra riportate sono rispettate per le rispettive sezioni.
 
 
 Voci delle quali viene verificata la presenza all’interno della pagina:
 
-- Categoria del servizio (la tipologia di servizio indicata nella breadcrumb), 
+- Categoria del servizio (la tipologia di servizio indicata nella breadcrumb),
 - Titolo del servizio,
 - Stato del servizio (nel caso in cui il servizio non è attivo deve essere indicato il Motivo dello stato),
 - Descrizione breve,
@@ -144,10 +236,9 @@ Voci delle quali viene verificata la presenza all’interno della pagina:
 - Accedi al servizio,
 - Condizioni di servizio,
 - Contatti (indicando l’Unità Organizzativa responsabile),
-- Argomenti
+- Argomenti.
 
-
-Voci delle quali viene verificata la presenza e sequenzialità all’interno dell’indice della pagina: 
+Voci delle quali viene verificata la presenza e sequenzialità all’interno dell’indice della pagina:
 
 - A chi è rivolto,
 - Come fare,
@@ -159,7 +250,7 @@ Voci delle quali viene verificata la presenza e sequenzialità all’interno del
 - Contatti.
 
 
-**Esempi:**
+*Esempi:*
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-3-b.html
 
@@ -172,22 +263,32 @@ Voci delle quali viene verificata la presenza e sequenzialità all’interno del
 .. literalinclude:: esempi-codice-comuni/c-si-1-3-f.html
   
 
-Criterio C.SI.1.4
------------------
+Criterio C.SI.1.4 - Utilizzo di temi per CMS (Content Management System)
+----------------------------------------------------------------------------
 
 **Condizioni di successo:** se è in uso il tema CMS del modello per i Comuni, la versione utilizzata è uguale o superiore alla 1.0.
 
-**Modalità di verifica:** viene verificata la versione indicata nel file style.css ricercando la chiave "Text Domain: design_comuni_italia".
+**Modalità di verifica:** viene verificata in qualsiasi file .css in homepage la versione e la presenza di un testo specifico.
+
+Il testo ricercato nei file .css è:
+
+/*!
+Theme Name: [contenuto]
+Author: [contenuto]
+Description: Design Comuni Italia [contenuto] [parola “WordPress” o “Drupal”] [contenuto]
+Version: [numero della versione]
+License: [contenuto]
+Text Domain: design_comuni_italia
+*/
+
   
 
-Criterio C.SI.1.5
------------------
+Criterio C.SI.1.5 - Vocabolari controllati
+---------------------------------------------
 
 **Condizioni di successo:** gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello Comuni alla voce "Tassonomia ARGOMENTI" o al vocabolario controllato EuroVoc.
 
 **Modalità di verifica:** gli argomenti identificati all'interno della funzione di ricerca del sito vengono confrontati con l'elenco di voci presente nel documento di architettura dell'informazione e con il vocabolario controllato EuroVoc, usando nella ricerca specifici attributi data-element.
-
-**Template HTML su cui si effettua scraping:** template-homepage.html, template-argomenti.html
 
 **Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-topics"`` che riporta alla pagina template-argomenti.html. In template-argomenti deve esserci una lista di argomenti (tag <a>) con l’attributo ``data-element="topic-element"`` che contengono del testo con il nome dell’argomento. 
 
@@ -199,8 +300,8 @@ Criterio C.SI.1.5
   
   
 
-Criterio C.SI.1.6
------------------
+Criterio C.SI.1.6 - Voci di menù di primo livello
+-------------------------------------------------------
 
 **Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero Amministrazione, Novità, Servizi, Vivere il Comune).
 
@@ -221,9 +322,10 @@ Viene verificata la presenza e la sequenzialità delle seguenti voci:
 **Esempio:**
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-6.html
+
     
-Criterio C.SI.1.7
------------------
+Criterio C.SI.1.7 - Titoli delle pagine di secondo livello
+---------------------------------------------------------------
 
 **Condizioni di successo:** i titoli delle pagine di secondo livello corrispondono a quelli indicati nel capitolo "Conformità al modello Comuni" della Documentazione del Modello Comuni.
 
@@ -236,9 +338,29 @@ I titoli che vengono verificati sono:
 - Per la sezione Servizi, “Educazione e formazione”, “Salute, benessere e assistenza”, “Vita lavorativa”, “Mobilità e trasporti”, “Catasto e urbanistica”, “Anagrafe e stato civile”, “Turismo”, “Giustizia e sicurezza pubblica”, “Tributi, finanze e contravvenzioni”, “Cultura e tempo libero”, “Ambiente”, “Imprese e commercio”, “Autorizzazioni”, “Appalti pubblici”, “Agricoltura e pesca”;
 - Per la sezione Vivere il Comune o Vivere {nome_comune}, “Luoghi”, “Eventi”.
 
-**Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html
+**Requisiti tecnici:** 
 
-**Requisiti tecnici:** In homepage, la voce di menù “Servizi” deve essere un tag <a> con un un attributo ``data-element="all-services"``, la voce di menù “Amministrazione” con un attributo ``data-element="management"``, la voce di menù “Novità” con attributo ``data-element="news"``, la voce di menù “Vivere il comune” con l’attributo ``data-element="live"``. All’interno delle pagine, sotto la voce “Categoria” le card devono contenere degli <a> con l’attributo ``data-element="service-category-link"`` per i servizi, ``data-element="management-category-link"`` per la sezione “Amministrazione”, ``data-element="news-category-link"`` per la sezione “Novità”, e per queste verrà prelevato il titolo testuale della card. Atterrati nella pagina a cui riporta la sezione “Vivere il comune” bisogna inserire gli attributi: ``data-element=”live-button-locations”`` e ``data-element=”live-button-events”`` nei bottoni per atterrare nelle pagine in cui verrà controllato il titolo tramite l’attributo ``data-element=”page-name”`` (che sarà un <p> o un <h1>, etc.). 
+*Caricamento pagine primo livello*:
+
+In homepage, per poter identificare i link alle pagine di primo livello, nel menù principale identificato dal tag <div class="navbar"> i link alle pagine di primo livello devono contenere all'interno del tag <a class="nav-link"> i seguenti attributi:
+
+- "Amministrazione": ``data-element="management"``
+- "Novità": ``data-element="news"``
+- "Servizi": ``data-element="all-services"``
+- "Vivere il Comune": ``data-element="live"``
+- Eventuali voci aggiuntive: ``data-element=”custom-submenu”``
+
+L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
+
+
+*Caricamento voci di secondo livello*:
+
+- "Amministrazione": nella pagina di primo livello, le card sotto la voce “Categoria” dovranno contenere un tag <a> con ``data-element=”management-category-link”`` dal quale verrà prelevato il testo;
+- "Novità": nella pagina di primo livello, le card sotto la voce “Categoria” dovranno contenere un tag <a> con ``data-element=”news-category-link”`` dal quale verrà prelevato il testo.
+- "Servizi": nella pagina di primo livello, le card sotto la voce “Categoria” dovranno contenere un tag <a> con ``data-element=”service-category-link”`` dal quale verrà prelevato il testo.
+- "Vivere il Comune": la pagina di primo livello dovrà contenere due bottoni. Il bottone che porta alla pagina di secondo livello "Eventi" dovrà contenere ``data-element="live-button-events"`` e il bottone che porta alla pagina di secondo livello "Luoghi" dovrà contenere ``data-element="live-button-locations"``. Per entrambi i bottoni il data-element dovrà essere posizionato sul tag <button> e all'interno dell'attributo "onclick" del bottone dovrà essere presente il link alla pagina di secondo livello. In queste pagine di secondo livello dovrà essere presente un tag HTML con ``data-element=”page-name”`` che identifica il titolo della pagina.
+- Eventuali voci aggiuntive: nel caso il sito avesse voci di menù di primo livello aggiuntive esse dovranno contenere il ``data-element=”custom-submenu”``. In queste pagine è necessario inserire il ``data-element=”custom-category-link”`` per le card sotto la voce “Categoria”.
+
 
 **Esempi:**
 
@@ -246,23 +368,40 @@ I titoli che vengono verificati sono:
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-7-b.html
 
-Criterio C.SI.2.1
------------------
+
+Criterio C.SI.2.1 - Prenotazione appuntamenti
+------------------------------------------------------
 
 **Condizioni di successo:** la funzionalità di prenotazione di un appuntamento presso lo sportello è presente in tutte le schede servizio che lo richiedono.
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza del componente "Prenota appuntamento" all'interno di una scheda servizio selezionata casualmente. Questo test non ha una condizione di fallimento in quanto dipende dal servizio specifico. analizzato; 
-**Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
-**Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l'attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina “Servizi” i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. Nella pagina dettaglio servizio deve esserci un tag <a> che contiene l’attributo ``data-element="appointment-booking"``. Il tag può essere contenuto in altri (esempio: <li>).
+**Requisiti tecnici:**
+
+*Caricamento pagina primo livello*:
+
+In homepage, per poter identificare il link alla pagina di primo livello "Servizi", nel menù principale identificato dal tag <div class="navbar"> il link alla pagina deve contenere, all'interno del tag <a class="nav-link">, il ``data-element="all-services"``.
+
+L'assenza del data-element porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
+
+*Caricamento pagine di terzo livello "Scheda servizio"*:
+
+Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+*Controllo breadcrumb*:
+
+Nelle schede servizio e anche nella pagina di primo livello “Servizi” deve esserci un tag <a> che contiene l’attributo ``data-element="appointment-booking"``. Nella pagina identificata dal link è necessaria la presenza di un tag <ul>/<ol> con ``data-element=”breadcrumb”`` contenente altri tags <li>. Viene recuperato il testo da questi tags e viene controllata la presenza di un testo con almeno 3 caratteri successivo al livello “/Servizi”.
+
 
 **Esempio:**
 
 .. literalinclude:: esempi-codice-comuni/c-si-2-1.html
 
 
-Criterio C.SI.2.2
------------------
+Criterio C.SI.2.2 - Richiesta di assistenza / contatti
+----------------------------------------------------------
 
 **Condizioni di successo:** i contatti dell'ufficio preposto all'erogazione del servizio sono presenti in tutte le schede servizio.
 
@@ -270,14 +409,25 @@ Criterio C.SI.2.2
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
-**Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l'attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi, i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. All’interno della pagina di dettaglio servizio deve esserci un attributo ``data-element="page-index"`` – deve essere un tag <ul> – con l’attributo che contiene altri <li> che contenga la label “Contatti”.
+**Requisiti tecnici:**
+
+*Caricamento pagine di terzo livello "Scheda servizio"*:
+
+Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+*Controllo sui contatti*:
+
+All’interno della pagina di dettaglio servizio deve esserci tag <ul> con zzdata-element="page-index"zz contenente altri tags <li> con la label “Contatti”. E nella pagina è necessaria la presenza di un componente che contiene ``data-element=”service-area”``.
 
 **Esempio:**
 
 .. literalinclude:: esempi-codice-comuni/c-si-2-2.html
     
-Criterio C.SI.2.3
------------------
+    
+Criterio C.SI.2.3 - Richiesta di assistenza / domande frequenti
+----------------------------------------------------------------------------
 
 **Condizioni di successo:** nel footer del sito è presente un link contenente le espressioni "FAQ" oppure "domande frequenti" che invia a una pagina di domande frequenti.
 
@@ -292,8 +442,8 @@ Criterio C.SI.2.3
 .. literalinclude:: esempi-codice-comuni/c-si-2-3.html
 
 
-Criterio C.SI.2.4
------------------
+Criterio C.SI.2.4 - Segnalazione disservizio
+-----------------------------------------------
 
 **Condizioni di successo:** nel footer del sito è presente un link per la segnalazione di un disservizio che contenga le espressioni "disservizio" oppure "segnala disservizio" oppure "segnalazione disservizio".
 
@@ -308,8 +458,8 @@ Criterio C.SI.2.4
 .. literalinclude:: esempi-codice-comuni/c-si-2-4.html
   
 
-Criterio C.SI.2.5
------------------
+Criterio C.SI.2.5 - Valutazione dell’esperienza d’uso, chiarezza delle pagine informative
+--------------------------------------------------------------------------------------------
 
 **Condizioni di successo:** la funzionalità per valutare la chiarezza informativa è presente su tutte le pagine di primo e secondo livello del sito; 
 
@@ -317,8 +467,49 @@ Criterio C.SI.2.5
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-servizi-servizio.html
 
-**Requisiti tecnici:** In homepage all’interno del menù le voci di primo livello devono essere degli <a> con i seguenti tag: ``data-element="management"``, ``data-element="all-services"``, ``data-element="news"``, ``data-element="live"``. L’href deve riportare alle pagine di primo livello in cui deve esserci un componente (un wrapper) come un <div> che contiene l’attributo ``data-element="feedback"``. 
-L’href della voce Servizi deve riportare alla pagina template-servizi.html. All’interno della pagina, sotto la voce “Categoria” le card devono contenere degli <a> con l’attributo ``data-element="service-category-link"`` che riportano alla pagina di secondo livello servizio in cui deve esserci un componente (un wrapper) come un <div> che contiene l’attributo ``data-element="feedback"``.
+**Requisiti tecnici:** 
+
+*Caricamento pagine primo livello*:
+
+In homepage, per poter identificare i link alle pagine di primo livello, nel menù principale identificato dal tag <div class="navbar"> i link alle pagine di primo livello devono contenere all'interno del tag <a class="nav-link"> i seguenti attributi:
+
+- "Amministrazione": data-element="management"
+- "Novità": data-element="news"
+- "Servizi": data-element="all-services"
+- "Vivere il Comune": data-element="live"
+- Eventuali voci aggiuntive: ``data-element=”custom-submenu”``
+
+L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
+
+
+*Caricamento pagine di secondo livello*:
+
+Per il caricamento delle pagine di secondo livello è necessario che i data-element alle pagine di primo livello siano correttamente posizionati all'interno dei link delle pagine di primo livello nel menù principale.
+
+La pagina di primo livello "Amministrazione", identificata grazie al ``data-element="management"``, dovrà contenere il ``data-element="management-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Novità", identificata grazie al ``data-element="news"``, dovrà contenere il ``data-element="news-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Vivere il comune", identificata grazie al ``data-element="live"``, dovrà contenere due bottoni. Il bottone che porta alla pagina di secondo livello "Eventi" dovrà contenere ``data-element="live-button-events"`` e il bottone che porta alla pagina di secondo livello "Luoghi" dovrà contenere ``data-element="live-button-locations"``. Per entrambi i bottoni il data-element dovrà essere posizionato sul tag <button> e all'interno dell'attributo "onclick" del bottone dovrà essere presente il link alla pagina di secondo livello. La mancata individuazione di almeno un link attraverso questi data-element porta all'impossibilità di esecuzione dell'audit.
+
+Nel caso fossero presenti delle voci aggiuntive di primo livello esse vengono identificate attraverso il ``data-element=”custom-submenu”``. In ognuna di queste pagine è necessaria la presenza del ``data-element=”custom-category-link”`` all’interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello.
+
+
+*Controllo componente di valutazione*:
+
+All’interno delle pagine di primo e secondo livello verrà analizzato il componente che contiene l’attributo ``data-element=”feedback”``. La presenza di questo componente è obbligatoria per il risultato positivo di questo audit.
+
+Di questo componente con ``data-element=”feedback”`` vengono analizzate le sue parti:
+
+- Domanda iniziale: individuato attraverso l’attributo ``data-element=”feedback-title”``. Questo è da inserire all’interno dell’<h2> che contiene la domanda iniziale;
+- Scala di valutazione: individuati attraverso l’attributo ``data-element=”feedback-rate-{N}”`` nella <label> del input. {N} viene sostituito con il valore di quel input. (es: data-element= “feedback-rate-1”, associato al valore minimo “1”);
+- Componente di follow up positivo: questo componente comprende tutte le parti per permettere all’utente di fornire un feedback positivo. Esso viene individuato attraverso l’attributo ``data-element=”feedback-rating-positive”`` nel <fieldset> che contiene domanda e risposte. Per la domanda viene inserito l’attributo ``data-element=”feedback-rating-question”`` nella <legend> contente la domanda. Per le risposte viene inserito l’attributo ``data-element=”feedback-rating-answer”`` nella <label> contenente ogni risposta. 
+- Componente di follow up negativo: questo componente comprende tutte le parti per permettere all’utente di fornire un feedback negativo. Esso viene individuato attraverso l’attributo ``data-element=”feedback-rating-negative”`` nel <fieldset> che contiene domanda e risposte. Per la domanda viene inserito l’attributo ``data-element=”feedback-rating-question”`` nella <legend> contente la domanda. Per le risposte viene inserito l’attributo ``data-element=”feedback-rating-answer”`` nella <label> contenente ogni risposta;
+- Campo di testo libero: individuato attraverso l’attributo ``data-element=”feedback-input-text”`` dentro <input> della casella di testo per fornire una risposta libera alla fine del feedback. 
+
+
 
 **Esempi:**
   
@@ -329,25 +520,99 @@ L’href della voce Servizi deve riportare alla pagina template-servizi.html. Al
 .. literalinclude:: esempi-codice-comuni/c-si-2-5-c.html
 
 
-Criterio C.SI.3.1
------------------
+Criterio C.SI.2.6 - Valutazione dell'esperienza d'uso, chiarezza informativa della scheda di servizio
+----------------------------------------------------------------------------------------------------------------
+
+
+**Requisiti tecnici**:
+
+*Caricamento pagine di terzo livello "Scheda servizio"*:
+
+Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link alla pagina di primo livello nel menù principale.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio". Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+
+*Controllo componente di valutazione*:
+
+All’interno delle pagine di primo e secondo livello verrà analizzato il componente che contiene l’attributo ``data-element=”feedback”``. La presenza di questo componente è obbligatoria per il risultato positivo di questo audit.
+
+Di questo componente con ``data-element=”feedback”`` vengono analizzate le sue parti:
+
+- Domanda iniziale: individuato attraverso l’attributo ``data-element=”feedback-title”``. Questo è da inserire all’interno dell’<h2> che contiene la domanda iniziale.
+- Scala di valutazione: individuati attraverso l’attributo ``data-element=”feedback-rate-{N}”`` nella <label> del input. {N} viene sostituito con il valore di quel input. (es: data-element= “feedback-rate-1”, associato al valore “1”);
+- Componente di follow up positivo: questo componente comprende tutte le parti per permettere all’utente di fornire un feedback positivo. Esso viene individuato attraverso l’attributo ``data-element=”feedback-rating-positive”`` nel <fieldset> che contiene domanda e risposte. Per la domanda viene inserito l’attributo ``data-element=”feedback-rating-question”`` nella <legend> contente la domanda. Per le risposte viene inserito l’attributo ``data-element=”feedback-rating-answer”`` nella <label> contenente ogni risposta;
+- Componente di follow up negativo: questo componente comprende tutte le parti per permettere all’utente di fornire un feedback negativo. Esso viene individuato attraverso l’attributo ``data-element=”feedback-rating-negative”`` nel <fieldset> che contiene domanda e risposte. Per la domanda viene inserito l’attributo ``data-element=”feedback-rating-question”`` nella <legend> contente la domanda. Per le risposte viene inserito l’attributo ``data-element=”feedback-rating-answer”`` nella <label> contenente ogni risposta;
+- Campo di testo libero: individuato attraverso l’attributo ``data-element=”feedback-input-text”`` dentro <input> della casella di testo per fornire una risposta libera alla fine del feedback.
+
+
+
+Criterio C.SI.3.1 - Cookie
+----------------------------------
 
 **Condizioni di successo:** il dominio di tutti i cookie già presenti nel sito, ovvero senza che sia stata espressa una preferenza da parte dell’utente riguardo il loro uso, è corrispondente al dominio del sito web del Comune.
 
 **Modalità di verifica:** viene verificato che al caricamento di ogni pagina analizzata il dominio dei cookie identificati sia corrispondente al dominio del sito web. L'audit controlla il dominio dei cookie sull’homepage, su N schede servizio, su N pagine di primo livello, su N pagine di secondo livello e per la sezione “Vivere il comune” solo nella pagina a cui si viene portati all’onclick di “Tutti gli eventi” nella quale vengono prelevate le pagine di terzo livello.
 
-**Requisiti tecnici:** In homepage, all’interno del menù principale le voci “Amministrazione”, “Novità”, “Servizi” e “Vivere il comune”, che riportano alle rispettive pagine di primo livello, devono avere i seguenti attributi: ``data-element=”management”``, ``data-element=”news”``, ``data-element=”all-services”``. All’interno delle pagine di secondo livello su ogni elemento che riporta ad una pagina di secondo livello deve esserci il relativo attributo per atterrare nelle pagine di secondo livello (deve essere un tag <a> che contiene l’href alle pagine di secondo livello: ``data-element=”management-category-link”``, ``data-element=”news-category-link”``, ``data-element=”service-category-link”`` (gli <a> possono contenere altri tag a livello testuale). Quando si atterra sulla pagina di primo livello “Servizi” bisogna inserire l’attributo ``data-element=”load-other-cards”`` sul bottone per caricare i servizi in modo da poter avere il listato completo (NB: deve essere una chiamata AJAX che aggiorna i risultati in pagina). 
-Per la voce di primo livello “Vivere il comune” deve esserci l’attributo ``data-element=”live”`` e quando si attera in pagina bisogna inserire l’attributo ``data-element=”live-button-events”`` sul bottone che riporta a “Tutti gli eventi” (il bottone deve contenere l’href alla pagina nell’onclick). Atterrati sulla pagina a cui riporta il bottone il listato di eventi deve avere l’attributo ``data-element=”event-link”`` (che deve essere un <a> che contiene l’href alla pagina di terzo livello) e l’attributo ``data-element=”load-other-cards”`` per caricare tutti gli eventi. 
+**Requisiti tecnici:**
+
+*Caricamento pagina di accesso all’area riservata*:
+
+In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenete il link alla pagina.
+
+*Caricamento pagina di prenotazione appuntamenti*:
+
+Per caricare la pagina prenotazione appuntamenti è necessario che il ``data-element=”all-service”`` sia posizionato in homepage nel link della pagina di primo livello “Servizi”. In questa pagina di primo livello il link alla pagina di prenotazione appuntamenti deve contenere il ``data-element="appointment-booking"`` nel tag <a> contenente il link alla pagina.
+
+*Caricamento pagine primo livello*:
+
+In homepage, per poter identificare i link alle pagine di primo livello, nel menù principale identificato dal tag <div class="navbar"> i link alle pagine principali devono contenere all'interno del tag <a class="nav-link"> i seguenti attributi:
+
+- "Amministrazione": ``data-element="management"``
+- "Novità": ``data-element="news"``
+- "Servizi": ``data-element="all-services"``
+- "Vivere il Comune": ``data-element="live"``
+- Eventuali voci aggiuntive: ``data-element=”custom-submenu”``
+
+L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
+
+*Caricamento pagine di secondo livello*:
+
+Per il caricamento delle pagine di secondo livello è necessario che i data-element alle pagine di primo livello siano correttamente posizionati all'interno dei link delle pagine di primo livello nel menù principale.
+
+La pagina di primo livello "Amministrazione", identificata grazie al ``data-element="management"``, dovrà contenere il ``data-element="management-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Novità", identificata grazie al ``data-element="news"``, dovrà contenere il ``data-element="news-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Vivere il comune", identificata grazie al ``data-element="live"``, dovrà contenere due bottoni. Il bottone che porta alla pagina di secondo livello "Eventi" dovrà contenere ``data-element="live-button-events"`` e il bottone che porta alla pagina di secondo livello "Luoghi" dovrà contenere ``data-element="live-button-locations"``. Per entrambi i bottoni il data-element dovrà essere posizionato sul tag <button> e all'interno dell'attributo "onclick" del bottone dovrà essere presente il link alla pagina di secondo livello. La mancata individuazione di almeno un link attraverso questi data-element porta all'impossibilità di esecuzione dell'audit.
+
+Nel caso fossero presenti delle voci aggiuntive di primo livello esse vengono identificate attraverso il ``data-element=”custom-submenu”``. In ognuna di queste pagine è necessaria la presenza del ``data-element=”custom-category-link”`` all’interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello.
 
 
-Criterio C.SI.3.2
------------------
+*Caricamento pagine di terzo livello "Scheda servizio"*:
+
+Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+
+*Caricamento pagine di quarto livello "Evento"*:
+
+Per il caricamento di queste pagine di quarto livello è necessario che il ``data-element=”live”`` della pagina di primo livello "Vivere il Comune" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale e che il ``data-element="live-button-events"`` sia correttamente posizionato nel bottone che porta alla pagina di secondo livello “Eventi”.
+
+La pagina di secondo livello "Eventi", dovrà contenere il ``data-element="event-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di quarto livello degli eventi. Se nella pagina è presente un bottone che permette di caricare altri link agli eventi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. 
+
+
+
+
+Criterio C.SI.3.2 - Dichiarazione di accessibilità
+-------------------------------------------------------
 
 **Condizioni di successo:** il sito presenta una voce nel footer che riporta a una dichiarazione di accessibilità AgID valida per il sito.
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente, che l'url della pagina di destinazione inizi con "https://form.agid.gov.it/view/" e che la pagina contenga l'url del sito del Comune.
-
-**Template HTML su cui si effettua scraping:** template-homepage.html
 
 **Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla dichiarazione di accessibilità. Il tag <a> deve avere l’attributo ``data-element="accessibility-link"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
@@ -355,8 +620,9 @@ Criterio C.SI.3.2
 
 .. literalinclude:: esempi-codice-comuni/c-si-3-2.html
 
-Criterio C.SI.3.3
------------------
+
+Criterio C.SI.3.3 - Informativa privacy
+--------------------------------------------
 
 **Condizioni di successo:** il sito presenta una voce nel footer che riporta all'informativa privacy.
 
@@ -371,9 +637,31 @@ Criterio C.SI.3.3
 .. literalinclude:: esempi-codice-comuni/c-si-3-3.html
 
 
+Criterio C.SI.3.4 - Licenza e attribuzione
+-------------------------------------------------
 
-Raccomandazione R.SI.1.1
-------------------------
+**Requisiti tecnici**:
+
+All’interno del footer della homepage(tag <footer>) deve esserci un tag <a> che contiene l’href alla pagina delle note legali. Il tag <a> deve avere l’attributo ``data-element="legal-notes"``. L’<a> può essere contenuto in altri tag, esempio <li>.
+
+All’interno della pagina individuata da questo link dovrà essere presente un tag HTML con ``data-element=”legal-notes-section”`` che identifica il titolo della sezione da analizzare e uno o più tag <p> con ``data-element=”legal-notes-body”`` associati a ogni <p> contenente il testo della sezione.
+
+
+
+Criterio C.SI.5.2 - Dominio istituzionale
+--------------------------------------------
+
+
+**Requisiti tecnici**:
+
+*Caricamento pagina di accesso all’area riservata*:
+
+In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenete il link alla pagina.
+
+
+
+Raccomandazione R.SI.1.1 - Metatag
+---------------------------------------
 
 **Condizioni di successo:** le voci delle schede servizio presentano tutti i metatag richiesti dal modello.
 
@@ -381,7 +669,16 @@ Raccomandazione R.SI.1.1
 
 **Template HTML su cui si effettua scraping:** template-homepage.html, template-servizi.html, template-dettaglio-servizio.html
 
-**Requisiti tecnici:** In homepage all’interno di un tag <a> deve esserci l’attributo ``data-element="all-services"`` che riporta alla pagina con il listato servizi. All’interno della pagina servizi i servizi devono essere degli <a> con l’attributo ``data-element="service-link"`` che riportano al dettaglio servizio. All’interno dell’HTML della pagina servizio deve esserci un attributo <script> che contiene come valore un JSON di metatag. Il tag <script> deve avere l'attributo ``data-element="metatag"``.
+**Requisiti tecnici:** 
+
+*Caricamento pagine di terzo livello "Scheda servizio"*:
+
+Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+All’interno dell’HTML delle pagine “Scheda servizio” deve esserci un attributo <script> che contiene come valore un JSON di metatag. Il tag <script> deve avere l'attributo ``data-element="metatag"``.
+
 
 **Esempio:**
 
