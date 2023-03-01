@@ -149,11 +149,6 @@ Per il caricamento di queste pagine di terzo livello è necessario che il data-e
 La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 
-**Esempi:**
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-2-a.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-2-b.html
 
 
 Criterio C.SI.1.3 - Schede informative di servizio per il cittadino
@@ -171,9 +166,6 @@ Per il caricamento di queste pagine di terzo livello è necessario che il data-e
 
 La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il data-element="load-other-cards". La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
-**Esempio:**
-   
-.. literalinclude:: esempi-codice-comuni/c-si-1-3-a.html
 
 *Controllo della presenza e ordine delle voci nelle “Schede servizio”*:
 
@@ -210,21 +202,6 @@ Viene inoltre controllata la presenza di altri componenti al di fuori dell'indic
 - "Argomenti": viene controllata la presenza di almeno un tag <a> con ``data-element="service-topic"`` che identificano gli argomenti del servizio (es. Turismo).
 
 
-*Esempi*:
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-3-g.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-3-h.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-3-b.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-3-c.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-3-d.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-3-e.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-3-f.html
   
 
 Criterio C.SI.1.4 - Utilizzo di temi per CMS (Content Management System)
@@ -257,11 +234,6 @@ Criterio C.SI.1.5 - Vocabolari controllati
 
 **Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-topics"`` che riporta alla pagina template-argomenti.html. In template-argomenti deve esserci una lista di argomenti (tag <a>) con l’attributo ``data-element="topic-element"`` che contengono del testo con il nome dell’argomento. 
 
-**Esempi:**
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-5-a.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-5-b.html
   
   
 
@@ -282,9 +254,7 @@ Viene verificata la presenza e la sequenzialità delle seguenti voci:
 
 **Requisiti tecnici:** In template-homepage deve esserci un <ul> con l’attributo ``data-element=”main-navigation”`` che contenga degli <li> e degli <a> in cui ci sono le label (può contenere altri tag). 
 
-**Esempio:**
 
-.. literalinclude:: esempi-codice-comuni/c-si-1-6.html
 
     
 Criterio C.SI.1.7 - Titoli delle pagine di secondo livello
@@ -325,11 +295,6 @@ L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali v
 - Eventuali voci aggiuntive: nel caso il sito avesse voci di menù di primo livello aggiuntive esse dovranno contenere il ``data-element=”custom-submenu”``. In queste pagine è necessario inserire il ``data-element=”custom-category-link”`` per le card sotto la voce “Categoria”.
 
 
-**Esempi:**
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-7-a.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-1-7-b.html
 
 
 Criterio C.SI.2.1 - Prenotazione appuntamenti
@@ -355,10 +320,6 @@ La pagina di primo livello "Servizi", identificata grazie al ``data-element="all
 
 
 
-**Esempio:**
-
-.. literalinclude:: esempi-codice-comuni/c-si-2-1.html
-
 
 Criterio C.SI.2.2 - Richiesta di assistenza / contatti
 ----------------------------------------------------------
@@ -379,9 +340,7 @@ La pagina di primo livello "Servizi", identificata grazie al ``data-element="all
 
 All’interno della pagina di terzo livello “Scheda servizio” deve esserci tag <ul> con ``data-element="page-index"`` contenente altri tags <li> con la label “Contatti”. All’interno della pagina la sezione che identifica i contatti deve contenere un componente che abbia l’attributo ``data-element=”service-area”``.
 
-**Esempio:**
 
-.. literalinclude:: esempi-codice-comuni/c-si-2-2.html
     
     
 Criterio C.SI.2.3 - Richiesta di assistenza / domande frequenti
@@ -393,9 +352,7 @@ Criterio C.SI.2.3 - Richiesta di assistenza / domande frequenti
 
 **Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla sezione FAQ. Il tag <a> deve avere l’attributo ``data-element="faq"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
-**Esempio:**
 
-.. literalinclude:: esempi-codice-comuni/c-si-2-3.html
 
 
 Criterio C.SI.2.4 - Segnalazione disservizio
@@ -409,9 +366,7 @@ Criterio C.SI.2.4 - Segnalazione disservizio
 
 **Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla Segnalazione disservizio. Il tag <a> deve avere l’attributo ``data-element="report-inefficiency"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
-**Esempio:**
 
-.. literalinclude:: esempi-codice-comuni/c-si-2-4.html
   
 
 Criterio C.SI.2.5 - Valutazione dell’esperienza d’uso, chiarezza delle pagine informative
@@ -466,13 +421,6 @@ Di questo componente con ``data-element=”feedback”`` vengono analizzate le s
 
 
 
-**Esempi:**
-  
-.. literalinclude:: esempi-codice-comuni/c-si-2-5-a.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-2-5-b.html
-
-.. literalinclude:: esempi-codice-comuni/c-si-2-5-c.html
 
 
 Criterio C.SI.2.6 - Valutazione dell'esperienza d'uso, chiarezza informativa della scheda di servizio
@@ -574,9 +522,7 @@ Criterio C.SI.3.2 - Dichiarazione di accessibilità
 
 **Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla dichiarazione di accessibilità. Il tag <a> deve avere l’attributo ``data-element="accessibility-link"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
-**Esempio:**
 
-.. literalinclude:: esempi-codice-comuni/c-si-3-2.html
 
 
 Criterio C.SI.3.3 - Informativa privacy
@@ -588,9 +534,7 @@ Criterio C.SI.3.3 - Informativa privacy
 
 **Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla privacy policy. Il tag <a> deve avere l’attributo ``data-element="privacy-policy-link"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
-**Esempio:**
 
-.. literalinclude:: esempi-codice-comuni/c-si-3-3.html
 
 
 Criterio C.SI.3.4 - Licenza e attribuzione
@@ -613,17 +557,17 @@ All’interno della pagina individuata da questo link dovrà essere presente un 
 Criterio C.SI.4.1 - Velocità e tempi di risposta
 --------------------------------------------------
 
-*Condizioni di successo*: il sito presenta livelli di prestazioni (media pesata di 6 metriche standard) pari o superiori a 50. Se il punteggio è inferiore a 50, il Comune deve pubblicare sul sito un “Piano di miglioramento del sito” raggiungibile dal footer che mostri, per ciascuna voce che impatta negativamente le prestazioni, le azioni future di miglioramento e le relative tempistiche di realizzazione attese.
+**Condizioni di successo**: il sito presenta livelli di prestazioni (media pesata di 6 metriche standard) pari o superiori a 50. Se il punteggio è inferiore a 50, il Comune deve pubblicare sul sito un “Piano di miglioramento del sito” raggiungibile dal footer che mostri, per ciascuna voce che impatta negativamente le prestazioni, le azioni future di miglioramento e le relative tempistiche di realizzazione attese.
 
-*Modalità di verifica*: l’homepage del sito viene testata in modalità “mobile” con Lighthouse.
+**Modalità di verifica**: l’homepage del sito viene testata in modalità “mobile” con Lighthouse.
 
 
 Criterio C.SI.5.1 - Certificato HTTPS
 -----------------------------------------
 
-*Condizioni di successo*: il sito utilizza un certificato https valido e non obsoleto secondo le raccomandazioni AgID;
+**Condizioni di successo**: il sito utilizza un certificato https valido e non obsoleto secondo le raccomandazioni AgID;
 
-*Modalità di verifica*: viene verificato che il certificato https dell’homepage sia valido e attivo.
+**Modalità di verifica**: viene verificato che il certificato https dell’homepage sia valido e attivo.
 
 
 
@@ -663,8 +607,6 @@ I metatag ricercati sono i seguenti:
 - il nome del comune nell’attributo json ``availableChannel>serviceLocation>address>addressLocality``.
 
 
-
-
 **Requisiti tecnici:** 
 
 *Caricamento e verifica nelle pagine di terzo livello "Scheda servizio"*:
@@ -676,9 +618,7 @@ La pagina di primo livello "Servizi", identificata grazie al ``data-element="all
 All’interno dell’HTML delle pagine “Scheda servizio” deve esserci un attributo <script> che contiene come valore un JSON di metatag. Il tag <script> deve avere l'attributo ``data-element="metatag"``.
 
 
-**Esempio:**
 
-.. literalinclude:: esempi-codice-comuni/r-si-1-1.html
 
 
 Test aggiuntivi - Localizzazione IP
