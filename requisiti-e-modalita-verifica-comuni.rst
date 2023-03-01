@@ -79,26 +79,26 @@ Criterio C.SI.1.2 - Libreria di elementi di interfaccia
 
 Inoltre ogni pagina analizzata deve utilizzare almeno una tra le seguenti classi CSS di Bootstrap Italia:
 
-.it-header-wrapper
-.it-nav-wrapper
-.navbar
-.it-brand-title
-.row
-.col
-.card
-.container
-.variable-gutters
-.section
-.font-serif
-.font-sans-serif
-.font-monospace
-.lead
-.it-list
-.link-list
-.link-list-wrapper
-.list-item
-.text-primary
-.text-secondary
+- .it-header-wrapper
+- .it-nav-wrapper
+- .navbar
+- .it-brand-title
+- .row
+- .col
+- .card
+- .container
+- .variable-gutters
+- .section
+- .font-serif
+- .font-sans-serif
+- .font-monospace
+- .lead
+- .it-list
+- .link-list
+- .link-list-wrapper
+- .list-item
+- .text-primary
+- .text-secondary
 
 La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello, N pagine di terzo livello “Scheda servizio”, nella pagina di accesso all’area riservata e nella pagina della funzionalità di prenotazione appuntamento.
 
@@ -213,14 +213,7 @@ Criterio C.SI.1.4 - Utilizzo di temi per CMS (Content Management System)
 
 Il testo ricercato nei file .css è:
 
-/*!
-Theme Name: [nome_tema]
-Author: [nome_autore]
-Description: Design Comuni Italia [testo_descrizione_tema che deve contenere la parola “WordPress” o “Drupal”]
-Version: [numero_versione]
-License: [nome_licenza]
-Text Domain: design_comuni_italia
-*/
+.. literalinclude:: esempi-codice-comuni/c-si-1-4.html
 
 
   
