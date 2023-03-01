@@ -70,10 +70,11 @@ Su *Windows*, al messaggio di avviso sulla sicurezza dell'app, clicca sul testo 
    
    Selezione dell'ambiente su cui è ospitato il sito che si vuole analizzare.
    
+8. Usando le frecce sulla tastiera, sposta il cursore per selezionare se vuoi condurre un'analisi approfondita (vengono valutate tutte le pagine trovate delle categorie specificate) o un'analisi veloce (vengono valutate alcune pagine selezionate casualmente).
 
-8. Attendi qualche secondo che l'app inizi l'analisi. Per il completamento ci vorranno circa 3 minuti.
+9. Attendi qualche secondo che l’app inizi l’analisi. Per il completamento ci vorranno fino a 10 minuti, in base al tipo di analisi scelta e alla dimensione del sito.
 
-9. Consulta il report che si aprirà automaticamente al termine dell'analisi. Il report viene salvato nella cartella indicata dall'app.
+10. Consulta il report che si aprirà automaticamente al termine dell'analisi. Il report viene salvato nella cartella indicata dall'app.
 
 .. figure:: media/3-cartella-report.png
    :alt: La figura mostra dove selezionare nell'App di valutazione l'ambiente su cui è ospitato il sito che si vuole analizzare.
