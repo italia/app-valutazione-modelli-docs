@@ -79,22 +79,22 @@ Criterio C.SC.1.2 - Libreria di elementi di interfaccia
 
 Inoltre ogni pagina analizzata deve presentare almeno una tra le seguenti classi CSS di Bootstrap Italia:
 
-.row 
-.col 
-.card 
-.container 
-.variable-gutters 
-.section 
-.font-serif 
-.font-sans-serif 
-.font-monospace 
-.lead 
-.it-list 
-.link-list 
-.link-list-wrapper 
-.list-item 
-.text-primary 
-.text-secondary
+- .row 
+- .col 
+- .card 
+- .container 
+- .variable-gutters 
+- .section 
+- .font-serif 
+- .font-sans-serif 
+- .font-monospace 
+- .lead 
+- .it-list 
+- .link-list 
+- .link-list-wrapper 
+- .list-item 
+- .text-primary 
+- .text-secondary
 
 La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello e N pagine di terzo livello “Scheda servizio”.
 
@@ -153,14 +153,7 @@ Criterio C.SC.1.3 - Utilizzo di temi per CMS (Content Management System)
 
 Il testo ricercato nei file .css è:
 
-/*!
-Theme Name: [nome_tema]
-Author: [nome_autore]
-Description: Design Scuole Italia [descrizione_tema che contiene la parola “WordPress”]
-Version: [numero_versione]
-License: [nome_licenza]
-Text Domain: design_scuole_italia
-*/
+.. literalinclude:: esempi-codice-scuole/c-sc-1-3.html
 
 
 Criterio C.SC.1.4 - Voci di menù di primo livello
