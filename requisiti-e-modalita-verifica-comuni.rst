@@ -194,8 +194,8 @@ Per queste voci viene anche controllata la presenza di contenuto nella relativa 
 - "Come fare": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-how-to"`` e che questo abbia almeno 3 caratteri;
 - "Cosa serve": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-needed"`` e che questo abbia almeno 3 caratteri;
 - "Cosa si ottiene": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-achieved"`` e che questo abbia almeno 3 caratteri;
-- "Tempi e scadenze": viene controllata la presenza di un <p> contenuto nel <div> con ``data-element="service-calendar-text"`` e che questo abbia almeno 3 caratteri in un testo al di fuori del componente calendario oppure viene controllata la presenza del componente calendario individuando in pagina il tag <div> con ``data-element="service-calendar-list"``. È necessaria solo una di queste due condizioni per confermare la presenza della relativa sezione;
-- "Accedi al servizio": viene controllata la presenza in pagina di almeno uno tra i componenti "Prenota appuntamento" (un tag <button> con ``data-element="service-booking-access"`` per il bottone che porta alla pagina di prenotazione appuntamenti), "Accesso online" (un tag <button> con ``data-element="service-online-access"`` per il bottone che porta alla pagina di accesso online), "Generic access" (un tag HTML con ``data-element="service-generic-access"`` per un componente diverso da quelli sopra identificati). È necessaria solo una di queste tre condizioni per confermare la presenza della relativa sezione;
+- "Tempi e scadenze": per confermare la presenza in pagina della relativa sezione è sufficiente sia presente uno di questi 2 componenti: "Testo"(è necessario un <p> contenuto nel <div> con data-element="service-calendar-text" e che questo abbia almeno 3 caratteri in un testo al di fuori del componente calendario) e "Calendario" (un componente calendario contenuto in un tag <div> con data-element="service-calendar-list");
+- "Accedi al servizio": per confermare la presenza in pagina della relativa sezione è sufficiente sia presente uno di questi 3 componenti: "Prenota appuntamento" (un tag <button> con ``data-element="service-booking-access"`` per il bottone che porta alla pagina di prenotazione appuntamenti), "Accesso online" (un tag <button> con ``data-element="service-online-access"`` per il bottone che porta alla pagina di accesso online), "Accesso generico" (un tag HTML con ``data-element="service-generic-access"`` per un componente diverso da quelli sopra identificati);
 - "Condizioni di servizio": viene controllata la presenza di un tag <a> con ``data-element="service-file"`` contenente il link al file dei "Termini e condizioni di servizio";
 - "Contatti": viene controllata la presenza di un tag <div> con ``data-element="service-area"`` che identifica i contatti.
 
@@ -270,7 +270,7 @@ Criterio C.SI.1.6 - Voci di menù di primo livello
 
 **Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero "Amministrazione", "Novità", "Servizi", "Vivere il Comune" oppure "Vivere [nome del Comune]").
 
-**Modalità di verifica:** ricercando uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito e il loro ordine, confrontandole con quanto indicato nel documento di architettura dell'informazione.
+**Modalità di verifica:** ricercando uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito e il loro ordine, confrontandole con quanto indicato nella Documentazione del modello Comuni.
 
 Viene verificata la presenza e la sequenzialità delle seguenti voci:
 
@@ -318,10 +318,10 @@ L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali v
 
 *Caricamento voci di secondo livello*:
 
-- "Amministrazione": nella pagina di primo livello, le card sotto la voce “Categoria” dovranno contenere un tag <a> con ``data-element=”management-category-link”`` dal quale verrà prelevato il testo;
-- "Novità": nella pagina di primo livello, le card sotto la voce “Categoria” dovranno contenere un tag <a> con ``data-element=”news-category-link”`` dal quale verrà prelevato il testo.
-- "Servizi": nella pagina di primo livello, le card sotto la voce “Categoria” dovranno contenere un tag <a> con ``data-element=”service-category-link”`` dal quale verrà prelevato il testo.
-- "Vivere il Comune": la pagina di primo livello dovrà contenere due bottoni. Il bottone che porta alla pagina di secondo livello "Eventi" dovrà contenere ``data-element="live-button-events"`` e il bottone che porta alla pagina di secondo livello "Luoghi" dovrà contenere ``data-element="live-button-locations"``. Per entrambi i bottoni il data-element dovrà essere posizionato sul tag <button> e all'interno dell'attributo "onclick" del bottone dovrà essere presente il link alla pagina di secondo livello. In queste pagine di secondo livello dovrà essere presente un tag HTML con ``data-element=”page-name”`` che identifica il titolo della pagina.
+- "Amministrazione": nella pagina di primo livello, le card sotto la voce “Categoria” dovranno contenere un tag <a> con ``data-element=”management-category-link”`` dal quale verrà prelevato il testo. La mancata individuazione di almeno una voce attraverso questo data-element porta all’impossibilità di esecuzione dell’audit;
+- "Novità": nella pagina di primo livello, le card sotto la voce “Categoria” dovranno contenere un tag <a> con ``data-element=”news-category-link”`` dal quale verrà prelevato il testo. La mancata individuazione di almeno una voce attraverso questo data-element porta all’impossibilità di esecuzione dell’audit;
+- "Servizi": nella pagina di primo livello, le card sotto la voce “Categoria” dovranno contenere un tag <a> con ``data-element=”service-category-link”`` dal quale verrà prelevato il testo. La mancata individuazione di almeno una voce attraverso questo data-element porta all’impossibilità di esecuzione dell’audit;
+- "Vivere il Comune": la pagina di primo livello dovrà contenere due bottoni. Il bottone che porta alla pagina di secondo livello "Eventi" dovrà contenere ``data-element="live-button-events"`` e il bottone che porta alla pagina di secondo livello "Luoghi" dovrà contenere ``data-element="live-button-locations"``. Per entrambi i bottoni il data-element dovrà essere posizionato sul tag <button> e all'interno dell'attributo "onclick" del bottone dovrà essere presente il link alla pagina di secondo livello. In queste pagine di secondo livello dovrà essere presente un tag HTML con ``data-element=”page-name”`` che identifica il titolo della pagina. La mancata individuazione di almeno una voce attraverso questo data-element porta all’impossibilità di esecuzione dell’audit;
 - Eventuali voci aggiuntive: nel caso il sito avesse voci di menù di primo livello aggiuntive esse dovranno contenere il ``data-element=”custom-submenu”``. In queste pagine è necessario inserire il ``data-element=”custom-category-link”`` per le card sotto la voce “Categoria”.
 
 
@@ -605,9 +605,9 @@ Criterio C.SI.3.4 - Licenza e attribuzione
 
 **Requisiti tecnici**:
 
-All’interno del footer della homepage(tag <footer>) deve esserci un tag <a> che contiene l’href alla pagina delle note legali. Il tag <a> deve avere l’attributo ``data-element="legal-notes"``. L’<a> può essere contenuto in altri tag, esempio <li>.
+All’interno del footer della homepage (tag <footer>) deve esserci un tag <a> che contiene l’href alla pagina delle note legali. Il tag <a> deve avere l’attributo ``data-element="legal-notes"``. L’<a> può essere contenuto in altri tag, esempio <li>.
 
-All’interno della pagina individuata da questo link dovrà essere presente un tag HTML con ``data-element=”legal-notes-section”`` che identifica il titolo della sezione da analizzare e uno o più tag <p> con ``data-element=”legal-notes-body”`` associati a ogni <p> contenente il testo della sezione.
+All’interno della pagina individuata da questo link dovrà essere presente un tag HTML con l’attributo ``data-element=”legal-notes-section”`` da inserire nell’<h> contenente il titolo  della sezione da analizzare e uno o più tag <p> con attributo ``data-element=”legal-notes-body”`` inseriti in ogni <p> contenente il testo della sezione da analizzare.
 
 
 Criterio C.SI.4.1 - Velocità e tempi di risposta
