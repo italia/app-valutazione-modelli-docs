@@ -35,6 +35,11 @@ Criterio C.SI.1.1 - Coerenza dell’utilizzo dei font (librerie di caratteri)
 
 In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenente il link alla pagina.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-1-a.html
+
+
 *Caricamento pagine primo livello*:
 
 In homepage, per poter identificare i link alle pagine di primo livello, nel menù principale identificato dal tag <div class="navbar"> i link alle pagine di primo livello devono contenere all'interno del tag <a class="nav-link"> i seguenti attributi:
@@ -46,6 +51,10 @@ In homepage, per poter identificare i link alle pagine di primo livello, nel men
 - Eventuali voci aggiuntive: ``data-element=”custom-submenu”``
 
 L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-1-b.html
 
 
 *Caricamento pagine di secondo livello*:
@@ -63,11 +72,21 @@ La pagina di primo livello "Vivere il comune", identificata grazie al ``data-ele
 Nel caso fossero presenti delle voci aggiuntive di primo livello esse vengono identificate attraverso il ``data-element=”custom-submenu”``. In ognuna di queste pagine è necessaria la presenza del ``data-element=”custom-category-link”`` all’interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello.
 
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-1-c.html
+
+
 *Caricamento pagine di terzo livello "Scheda servizio"*:
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
 La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-1-d.html
 
 
 Criterio C.SI.1.2 - Libreria di elementi di interfaccia
@@ -108,10 +127,18 @@ La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di 
 
 In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenete il link alla pagina.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-2-a.html
+
 
 *Caricamento pagina di prenotazione appuntamenti*:
 
 Per caricare la pagina prenotazione appuntamenti è necessario che il ``data-element=”all-service”`` sia posizionato in homepage nel link della pagina di primo livello “Servizi”. In questa pagina di primo livello il link alla pagina di prenotazione appuntamenti deve contenere il ``data-element="appointment-booking"`` nel tag <a> contenente il link alla pagina.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-2-b.html
 
 
 *Caricamento pagine primo livello*:
@@ -125,6 +152,10 @@ In homepage, per poter identificare i link alle pagine di primo livello, nel men
 - Eventuali voci aggiuntive: ``data-element=”custom-submenu”``
 
 L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-2-c.html
 
 
 *Caricamento pagine di secondo livello*:
@@ -141,12 +172,20 @@ La pagina di primo livello "Vivere il comune", identificata grazie al ``data-ele
 
 Nel caso fossero presenti delle voci aggiuntive di primo livello esse vengono identificate attraverso il data-element=”custom-submenu”. In ognuna di queste pagine è necessaria la presenza del data-element=”custom-category-link” all’interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-2-d.html
+
 
 *Caricamento pagine di terzo livello "Scheda servizio"*:
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
 La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-2-e.html
 
 
 
@@ -165,6 +204,10 @@ Criterio C.SI.1.3 - Schede informative di servizio per il cittadino
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
 La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il data-element="load-other-cards". La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-a.html
 
 
 *Controllo della presenza e ordine delle voci nelle “Schede servizio”*:
@@ -202,6 +245,9 @@ Viene inoltre controllata la presenza di altri componenti al di fuori dell'indic
 - "Argomenti": viene controllata la presenza di almeno un tag <a> con ``data-element="service-topic"`` che identificano gli argomenti del servizio (es. Turismo).
 
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-3-b.html
   
 
 Criterio C.SI.1.4 - Utilizzo di temi per CMS (Content Management System)
@@ -227,7 +273,11 @@ Criterio C.SI.1.5 - Vocabolari controllati
 
 **Requisiti tecnici:** In homepage, all’interno di un tag <a>, deve esserci l’attributo ``data-element="all-topics"`` che riporta alla pagina template-argomenti.html. In template-argomenti deve esserci una lista di argomenti (tag <a>) con l’attributo ``data-element="topic-element"`` che contengono del testo con il nome dell’argomento. 
 
-  
+Esempi:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-5-a.html
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-5-b.html
   
 
 Criterio C.SI.1.6 - Voci di menù di primo livello
@@ -247,7 +297,9 @@ Viene verificata la presenza e la sequenzialità delle seguenti voci:
 
 **Requisiti tecnici:** In template-homepage deve esserci un <ul> con l’attributo ``data-element=”main-navigation”`` che contenga degli <li> e degli <a> in cui ci sono le label (può contenere altri tag). 
 
+Esempio:
 
+.. literalinclude:: esempi-codice-comuni/c-si-1-6.html
 
     
 Criterio C.SI.1.7 - Titoli delle pagine di secondo livello
@@ -278,6 +330,10 @@ In homepage, per poter identificare i link alle pagine di primo livello, nel men
 
 L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-7-a.html
+
 
 *Caricamento voci di secondo livello*:
 
@@ -287,6 +343,10 @@ L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali v
 - "Vivere il Comune": la pagina di primo livello dovrà contenere due bottoni. Il bottone che porta alla pagina di secondo livello "Eventi" dovrà contenere ``data-element="live-button-events"`` e il bottone che porta alla pagina di secondo livello "Luoghi" dovrà contenere ``data-element="live-button-locations"``. Per entrambi i bottoni il data-element dovrà essere posizionato sul tag <button> e all'interno dell'attributo "onclick" del bottone dovrà essere presente il link alla pagina di secondo livello. In queste pagine di secondo livello dovrà essere presente un tag HTML con ``data-element=”page-name”`` che identifica il titolo della pagina. La mancata individuazione di almeno una voce attraverso questo data-element porta all’impossibilità di esecuzione dell’audit;
 - Eventuali voci aggiuntive: nel caso il sito avesse voci di menù di primo livello aggiuntive esse dovranno contenere il ``data-element=”custom-submenu”``. In queste pagine è necessario inserire il ``data-element=”custom-category-link”`` per le card sotto la voce “Categoria”.
 
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-7-b.html
 
 
 
@@ -305,11 +365,35 @@ In homepage, per poter identificare il link alla pagina di primo livello "Serviz
 
 L'assenza del data-element porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-2-1-a.html
+
+
 *Caricamento pagine di terzo livello "Scheda servizio"*:
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
 La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-2-1-b.html
+
+
+*Controllo presenza prenotazione appuntamenti*:
+
+Nella pagina di primo livello “Servizi”, identificata grazie al ``data-element="all-services"``, dovrà contenere un tag <a> con ``data-element="appointment-booking"``.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-2-1-c.html
+
+Ogni “Scheda servizio”, identificata dal ``data-element="service-link"``, dovrà contenere un tag <a> con ``data-element="appointment-booking"`` e in aggiunta può contenere un bottone con ``data-element="service-booking-access"``.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-2-1-d.html
 
 
 
@@ -329,11 +413,18 @@ Per il caricamento di queste pagine di terzo livello è necessario che il data-e
 
 La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-2-2-a.html
+
+
 *Controllo sui contatti*:
 
 All’interno della pagina di terzo livello “Scheda servizio” deve esserci tag <ul> con ``data-element="page-index"`` contenente altri tags <li> con la label “Contatti”. All’interno della pagina la sezione che identifica i contatti deve contenere un componente che abbia l’attributo ``data-element=”service-area”``.
 
+Esempio:
 
+.. literalinclude:: esempi-codice-comuni/c-si-2-2-b.html
     
     
 Criterio C.SI.2.3 - Richiesta di assistenza / domande frequenti
@@ -345,7 +436,9 @@ Criterio C.SI.2.3 - Richiesta di assistenza / domande frequenti
 
 **Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla sezione FAQ. Il tag <a> deve avere l’attributo ``data-element="faq"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
+Esempio:
 
+.. literalinclude:: esempi-codice-comuni/c-si-2-3.html
 
 
 Criterio C.SI.2.4 - Segnalazione disservizio
@@ -357,7 +450,9 @@ Criterio C.SI.2.4 - Segnalazione disservizio
 
 **Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla Segnalazione disservizio. Il tag <a> deve avere l’attributo ``data-element="report-inefficiency"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
+Esempio:
 
+.. literalinclude:: esempi-codice-comuni/c-si-2-4.html
   
 
 Criterio C.SI.2.5 - Valutazione dell’esperienza d’uso, chiarezza delle pagine informative
@@ -382,6 +477,10 @@ In homepage, per poter identificare i link alle pagine di primo livello, nel men
 
 L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-2-5-a.html
+
 
 *Caricamento pagine di secondo livello*:
 
@@ -397,6 +496,10 @@ La pagina di primo livello "Vivere il comune", identificata grazie al ``data-ele
 
 Nel caso fossero presenti delle voci aggiuntive di primo livello esse vengono identificate attraverso il ``data-element=”custom-submenu”``. In ognuna di queste pagine è necessaria la presenza del ``data-element=”custom-category-link”`` all’interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-2-5-b.html
+
 
 *Controllo componente di valutazione*:
 
@@ -410,7 +513,9 @@ Di questo componente con ``data-element=”feedback”`` vengono analizzate le s
 - Componente di follow up negativo: questo componente comprende tutte le parti per permettere all’utente di fornire un feedback negativo. Esso viene individuato attraverso l’attributo ``data-element=”feedback-rating-negative”`` nel <fieldset> che contiene domanda e risposte. Per la domanda viene inserito l’attributo ``data-element=”feedback-rating-question”`` nella <legend> contente la domanda. Per le risposte viene inserito l’attributo ``data-element=”feedback-rating-answer”`` nella <label> contenente ogni risposta;
 - Campo di testo libero: individuato attraverso l’attributo ``data-element=”feedback-input-text”`` dentro <input> della casella di testo per fornire una risposta libera alla fine del feedback. 
 
+Esempio:
 
+.. literalinclude:: esempi-codice-comuni/c-si-2-5-c.html
 
 
 
@@ -429,6 +534,10 @@ Per il caricamento di queste pagine di terzo livello è necessario che il data-e
 
 La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio". Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-2-6-a.html
+
 
 *Controllo componente di valutazione*:
 
@@ -442,6 +551,9 @@ Di questo componente con ``data-element=”feedback”`` vengono analizzate le s
 - Componente di follow up negativo: questo componente comprende tutte le parti per permettere all’utente di fornire un feedback negativo. Esso viene individuato attraverso l’attributo ``data-element=”feedback-rating-negative”`` nel <fieldset> che contiene domanda e risposte. Per la domanda viene inserito l’attributo ``data-element=”feedback-rating-question”`` nella <legend> contente la domanda. Per le risposte viene inserito l’attributo ``data-element=”feedback-rating-answer”`` nella <label> contenente ogni risposta;
 - Campo di testo libero: individuato attraverso l’attributo ``data-element=”feedback-input-text”`` dentro <input> della casella di testo per fornire una risposta libera alla fine del feedback.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-2-6-b.html
 
 
 Criterio C.SI.3.1 - Cookie
@@ -457,9 +569,19 @@ Criterio C.SI.3.1 - Cookie
 
 In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenete il link alla pagina.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-3-1-a.html
+
+
 *Caricamento pagina di prenotazione appuntamenti*:
 
 Per caricare la pagina prenotazione appuntamenti è necessario che il ``data-element=”all-service”`` sia posizionato in homepage nel link della pagina di primo livello “Servizi”. In questa pagina di primo livello il link alla pagina di prenotazione appuntamenti deve contenere il ``data-element="appointment-booking"`` nel tag <a> contenente il link alla pagina.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-3-1-b.html
+
 
 *Caricamento pagine primo livello*:
 
@@ -472,6 +594,11 @@ In homepage, per poter identificare i link alle pagine di primo livello, nel men
 - Eventuali voci aggiuntive: ``data-element=”custom-submenu”``
 
 L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-3-1-c.html
+
 
 *Caricamento pagine di secondo livello*:
 
@@ -487,12 +614,20 @@ La pagina di primo livello "Vivere il comune", identificata grazie al ``data-ele
 
 Nel caso fossero presenti delle voci aggiuntive di primo livello esse vengono identificate attraverso il ``data-element=”custom-submenu”``. In ognuna di queste pagine è necessaria la presenza del ``data-element=”custom-category-link”`` all’interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-3-1-d.html
+
 
 *Caricamento pagine di terzo livello "Scheda servizio"*:
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
 La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-3-1-e.html
 
 
 *Caricamento pagine di quarto livello "Evento"*:
@@ -501,7 +636,9 @@ Per il caricamento di queste pagine di quarto livello è necessario che il ``dat
 
 La pagina di secondo livello "Eventi", dovrà contenere il ``data-element="event-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di quarto livello degli eventi. Se nella pagina è presente un bottone che permette di caricare altri link agli eventi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. 
 
+Esempio:
 
+.. literalinclude:: esempi-codice-comuni/c-si-3-1-f.html
 
 
 Criterio C.SI.3.2 - Dichiarazione di accessibilità
@@ -513,7 +650,9 @@ Criterio C.SI.3.2 - Dichiarazione di accessibilità
 
 **Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla dichiarazione di accessibilità. Il tag <a> deve avere l’attributo ``data-element="accessibility-link"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
+Esempio:
 
+.. literalinclude:: esempi-codice-comuni/c-si-3-2.html
 
 
 Criterio C.SI.3.3 - Informativa privacy
@@ -525,6 +664,9 @@ Criterio C.SI.3.3 - Informativa privacy
 
 **Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla privacy policy. Il tag <a> deve avere l’attributo ``data-element="privacy-policy-link"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-3-3.html
 
 
 
@@ -543,6 +685,10 @@ Criterio C.SI.3.4 - Licenza e attribuzione
 All’interno del footer della homepage (tag <footer>) deve esserci un tag <a> che contiene l’href alla pagina delle note legali. Il tag <a> deve avere l’attributo ``data-element="legal-notes"``. L’<a> può essere contenuto in altri tag, esempio <li>.
 
 All’interno della pagina individuata da questo link dovrà essere presente un tag HTML con l’attributo ``data-element=”legal-notes-section”`` da inserire nell’<h> contenente il titolo  della sezione da analizzare e uno o più tag <p> con attributo ``data-element=”legal-notes-body”`` inseriti in ogni <p> contenente il testo della sezione da analizzare.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-3-4.html
 
 
 Criterio C.SI.4.1 - Velocità e tempi di risposta
@@ -575,6 +721,10 @@ Criterio C.SI.5.2 - Dominio istituzionale
 
 In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenete il link alla pagina.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-5-2.html
+
 
 
 Raccomandazione R.SI.1.1 - Metatag
@@ -606,9 +756,16 @@ Per il caricamento di queste pagine di terzo livello è necessario che il data-e
 
 La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/r-si-1-1-a.html
+
+
 All’interno dell’HTML delle pagine “Scheda servizio” deve esserci un attributo <script> che contiene come valore un JSON di metatag. Il tag <script> deve avere l'attributo ``data-element="metatag"``.
 
+Esempio:
 
+.. literalinclude:: esempi-codice-comuni/r-si-1-1-b.html
 
 
 
