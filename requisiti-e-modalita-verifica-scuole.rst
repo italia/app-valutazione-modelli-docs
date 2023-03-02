@@ -214,8 +214,6 @@ Criterio C.SC.2.2 - Dichiarazione di accessibilità
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente che sia quella contenente la dichiarazione di accessibilità (il link deve iniziare con "https://form.agid.gov.it/view/").
 
-**Template HTML su cui si effettua scraping:** scuole-home.html
-
 **Requisiti tecnici:** Il tag <a> deve avere l’attributo ``data-element=”accessibility-link”`` e contenere un “href” (può essere contenuto in altri tag, ad esempio <li> …). Il tag deve essere presente all’interno del tag <footer>. 
 
 **Esempio:**
@@ -289,7 +287,7 @@ Criterio C.SC.3.1 - Certificato HTTPS
 
 
 
-Raccomandazione R.SC.1.1 - - Vocabolari controllati
+Raccomandazione R.SC.1.1 - Vocabolari controllati
 ------------------------------------------------------
 
 **Condizioni di successo:** gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello scuole alla voce "Le parole della scuola" e l’elenco completo degli argomenti utilizzati è presente nella pagina dei risultati di ricerca.
@@ -335,9 +333,9 @@ All'interno delle pagine di terzo livello "schede servizio" è necessaria la pre
 Per queste voci (ad eccezione di "Contatti") viene anche controllata la presenza di contenuto nella relativa sezione in pagina. Se la sezione non viene individuata la relativa voce risulterà mancante nella reportistica. In particolare:
 
 - "Cos'è": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-what-is"`` e che questo abbia almeno 3 caratteri;
-- "Come si accede al servizio": per confermare la presenza in pagina della relativa sezione è sufficiente sia presente uno di questi 3 componenti: "Prenota appuntamento" (un tag <button> con ``data-element="service-booking-access"`` per il bottone che porta alla pagina di prenotazione appuntamenti), "Accesso online" (un tag <button> con ``data-element="service-online-access"`` per il bottone che porta alla pagina di accesso online), "Accesso generico" (un tag HTML con ``data-element="service-generic-access"`` per un componente diverso da quelli sopra identificati);
+- "Come si accede al servizio": per confermare la presenza in pagina della relativa sezione è sufficiente sia presente uno di questi 3 componenti: "Prenota appuntamento" (un tag <button> con ``data-element="service-booking-access"`` per il bottone che porta alla pagina di prenotazione appuntamenti), "Accesso online" (un tag <button> con ``data-element="service-online-access"`` per il bottone che porta alla pagina di accesso online) e/o "Accesso generico" (un tag HTML con ``data-element="service-generic-access"`` per un componente diverso da quelli sopra identificati);
 - "Cosa serve": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-needed"`` e che questo abbia almeno 3 caratteri;
-- "Tempi e scadenze": per confermare la presenza in pagina della relativa sezione è sufficiente sia presente uno di questi 2 componenti: "Testo" (è necessario un <p> contenuto nel <div> con ``data-element=“service-calendar-text”`` e che questo abbia almeno 3 caratteri in un testo al di fuori del componente calendario) e "Calendario" (un componente calendario contenuto in un tag <div> con ``data-element=“service-calendar-list”``).
+- "Tempi e scadenze": per confermare la presenza in pagina della relativa sezione è sufficiente sia presente uno di questi 2 componenti: "Testo" (è necessario un <p> contenuto nel <div> con ``data-element=“service-calendar-text”`` e che questo abbia almeno 3 caratteri in un testo al di fuori del componente calendario) e/o "Calendario" (un componente calendario contenuto in un tag <div> con ``data-element=“service-calendar-list”``).
 - "Ulteriori informazioni": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-more-info"`` e che questo abbia almeno 3 caratteri.
 
 Viene inoltre controllata la presenza di altri componenti al di fuori dell'indice:
@@ -382,7 +380,7 @@ Raccomandazione R.SC.2.2 - Licenza e attribuzione
 
 **Modalità di verifica**: ricercando uno specifico attributo "data-element", viene verificato che la pagina delle note legali sia raggiungibile dal footer e che questa contenga una sezione intitolata "Licenza dei contenuti" riportante la seguente dicitura
 
-*“In applicazione del principio open by default ai sensi dell’articolo 52 del decreto legislativo 7 marzo 2005, n. 82 (CAD) e salvo dove diversamente specificato (compresi i contenuti incorporati di terzi), i dati, i documenti e le informazioni pubblicati sul sito sono rilasciati con `licenza CC-BY 4.0 <https://creativecommons.org/licenses/by/4.0/legalcode.it>`_. Gli utenti sono quindi liberi di condividere (riprodurre, distribuire, comunicare al pubblico, esporre in pubblico), rappresentare, eseguire e recitare questo materiale con qualsiasi mezzo e formato e modificare (trasformare il materiale e utilizzarlo per opere derivate) per qualsiasi fine, anche commerciale con il solo onere di attribuzione, senza apporre restrizioni aggiuntive.”*
+“In applicazione del principio open by default ai sensi dell’articolo 52 del decreto legislativo 7 marzo 2005, n. 82 (CAD) e salvo dove diversamente specificato (compresi i contenuti incorporati di terzi), i dati, i documenti e le informazioni pubblicati sul sito sono rilasciati con `licenza CC-BY 4.0 <https://creativecommons.org/licenses/by/4.0/legalcode.it>`_. Gli utenti sono quindi liberi di condividere (riprodurre, distribuire, comunicare al pubblico, esporre in pubblico), rappresentare, eseguire e recitare questo materiale con qualsiasi mezzo e formato e modificare (trasformare il materiale e utilizzarlo per opere derivate) per qualsiasi fine, anche commerciale con il solo onere di attribuzione, senza apporre restrizioni aggiuntive.”
 
 **Requisiti tecnici**: All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla pagina delle note legali. Il tag <a> deve avere l’attributo data-element="legal-notes". L’<a> può essere contenuto in altri tag, esempio <li>. All’interno della pagina individuata da questo link dovrà essere presente un tag HTML con l’attributo ``data–element=”legal-notes-section”`` da inserire nel <h> contenente il titolo della sezione da analizzare e uno o più tag <p> con attributo data-element=”legal-notes-body” inseriti in ogni <p> contenente il testo della sezione da analizzare.
 
