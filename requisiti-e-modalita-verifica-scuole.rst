@@ -278,6 +278,11 @@ Pagina di primo livello "Servizi":
 .. literalinclude:: esempi-codice-scuole/c-sc-1-1-b.html
 
 
+I luoghi della scuola:
+
+.. literalinclude:: esempi-codice-scuole/c-sc-2-3.html
+
+
 Criterio C.SC.3.1 - Certificato HTTPS
 ------------------------------------------
 
