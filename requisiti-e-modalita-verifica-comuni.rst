@@ -576,7 +576,7 @@ Esempio:
 
 *Caricamento pagina di prenotazione appuntamenti*:
 
-Per caricare la pagina prenotazione appuntamenti è necessario che il ``data-element=”all-service”`` sia posizionato in homepage nel link della pagina di primo livello “Servizi”. In questa pagina di primo livello il link alla pagina di prenotazione appuntamenti deve contenere il ``data-element="appointment-booking"`` nel tag <a> contenente il link alla pagina.
+Per caricare la pagina prenotazione appuntamenti è necessario che il ``data-element=”all-services”`` sia posizionato in homepage nel link della pagina di primo livello “Servizi”. In questa pagina di primo livello il link alla pagina di prenotazione appuntamenti deve contenere il ``data-element="appointment-booking"`` nel tag <a> contenente il link alla pagina.
 
 Esempio:
 
