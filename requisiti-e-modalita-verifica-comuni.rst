@@ -186,8 +186,8 @@ Per queste voci viene anche controllata la presenza di contenuto nella relativa 
 - "Come fare": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-how-to"`` e che questo abbia almeno 3 caratteri;
 - "Cosa serve": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-needed"`` e che questo abbia almeno 3 caratteri;
 - "Cosa si ottiene": viene controllata la presenza di un tag <p> contenuto nel <div> con ``data-element="service-achieved"`` e che questo abbia almeno 3 caratteri;
-- "Tempi e scadenze": per confermare la presenza in pagina della relativa sezione è sufficiente sia presente uno di questi 2 componenti: "Testo"(è necessario un <p> contenuto nel <div> con data-element="service-calendar-text" e che questo abbia almeno 3 caratteri in un testo al di fuori del componente calendario) e "Calendario" (un componente calendario contenuto in un tag <div> con data-element="service-calendar-list");
-- "Accedi al servizio": per confermare la presenza in pagina della relativa sezione è sufficiente sia presente uno di questi 3 componenti: "Prenota appuntamento" (un tag <button> con ``data-element="service-booking-access"`` per il bottone che porta alla pagina di prenotazione appuntamenti), "Accesso online" (un tag <button> con ``data-element="service-online-access"`` per il bottone che porta alla pagina di accesso online), "Accesso generico" (un tag HTML con ``data-element="service-generic-access"`` per un componente diverso da quelli sopra identificati);
+- "Tempi e scadenze": per confermare la presenza in pagina della relativa sezione è sufficiente sia presente uno di questi 2 componenti: "Testo"(è necessario un <p> contenuto nel <div> con data-element="service-calendar-text" e che questo abbia almeno 3 caratteri in un testo al di fuori del componente calendario) e/o "Calendario" (un componente calendario contenuto in un tag <div> con data-element="service-calendar-list");
+- "Accedi al servizio": per confermare la presenza in pagina della relativa sezione è sufficiente sia presente uno di questi 3 componenti: "Prenota appuntamento" (un tag <button> con ``data-element="service-booking-access"`` per il bottone che porta alla pagina di prenotazione appuntamenti), "Accesso online" (un tag <button> con ``data-element="service-online-access"`` per il bottone che porta alla pagina di accesso online) e/o "Accesso generico" (un tag HTML con ``data-element="service-generic-access"`` per un componente diverso da quelli sopra identificati);
 - "Condizioni di servizio": viene controllata la presenza di un tag <a> con ``data-element="service-file"`` contenente il link al file dei "Termini e condizioni di servizio";
 - "Contatti": viene controllata la presenza di un tag <div> con ``data-element="service-area"`` che identifica i contatti.
 
@@ -354,8 +354,6 @@ Criterio C.SI.2.4 - Segnalazione disservizio
 **Condizioni di successo:** nel footer del sito è presente un link contenente le espressioni "disservizio" oppure "segnala disservizio" oppure "segnalazione disservizio" che invia alla funzionalità di segnalazione di un disservizio. Se viene usata una funzionalità dedicata di segnalazione disservizio, devono essere presenti i campi richiesti nella Documentazione del modello.
 
 **Modalità di verifica:** ricercando uno specifico attributo data-element, viene verificata la presenza del link nel footer dell'homepage che invii ad una pagina esistente e che il testo del link contenga almeno una delle espressioni richieste, senza fare distinzione tra caratteri minuscoli o maiuscoli.
-
-**Template HTML su cui si effettua scraping:** template-homepage.html
 
 **Requisiti tecnici:** All’interno del footer della pagina (tag <footer>) deve esserci un tag <a> che contiene l’href alla Segnalazione disservizio. Il tag <a> deve avere l’attributo ``data-element="report-inefficiency"``. (L’<a> può essere contenuto in altri tag, esempio <li>) 
 
@@ -537,7 +535,7 @@ Criterio C.SI.3.4 - Licenza e attribuzione
 
 **Modalità di verifica**: ricercando uno specifico attributo data-element, viene verificato che la pagina delle note legali sia raggiungibile dal footer dell’homepage e che questa contenga una sezione intitolata "Licenza dei contenuti" riportante la seguente dicitura
 
-*“In applicazione del principio open by default ai sensi dell’articolo 52 del decreto legislativo 7 marzo 2005, n. 82 (CAD) e salvo dove diversamente specificato (compresi i contenuti incorporati di terzi), i dati, i documenti e le informazioni pubblicati sul sito sono rilasciati con licenza CC-BY 4.0. Gli utenti sono quindi liberi di condividere (riprodurre, distribuire, comunicare al pubblico, esporre in pubblico), rappresentare, eseguire e recitare questo materiale con qualsiasi mezzo e formato e modificare (trasformare il materiale e utilizzarlo per opere derivate) per qualsiasi fine, anche commerciale con il solo onere di attribuzione, senza apporre restrizioni aggiuntive.”*
+“In applicazione del principio open by default ai sensi dell’articolo 52 del decreto legislativo 7 marzo 2005, n. 82 (CAD) e salvo dove diversamente specificato (compresi i contenuti incorporati di terzi), i dati, i documenti e le informazioni pubblicati sul sito sono rilasciati con `licenza CC-BY 4.0 <https://creativecommons.org/licenses/by/4.0/legalcode.it>`_. Gli utenti sono quindi liberi di condividere (riprodurre, distribuire, comunicare al pubblico, esporre in pubblico), rappresentare, eseguire e recitare questo materiale con qualsiasi mezzo e formato e modificare (trasformare il materiale e utilizzarlo per opere derivate) per qualsiasi fine, anche commerciale con il solo onere di attribuzione, senza apporre restrizioni aggiuntive.”
 
 
 **Requisiti tecnici**:
