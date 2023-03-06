@@ -198,9 +198,9 @@ Criterio C.SC.2.1 - Informativa privacy
 
 **Condizioni di successo:** il sito presenta una voce nel footer che riporta a una pagina sicura riguardante l'informativa sulla privacy.
 
-**Modalità di verifica:** ricercando uno specifico attributo data-element, viene verificata la presenza del link nel footer dell’homepage, che riporti a una pagina esistente, che l'url della pagina di destinazione inizi con "https://form.agid.gov.it/view/" e che la pagina contenga l'url del sito della scuola.
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente e con certificato HTTPS valido e attivo.
 
-**Requisiti tecnici:** All’interno del footer dell’homepage (tag <footer>) deve esserci un tag <a> che contiene l’href alla dichiarazione di accessibilità. Il tag <a> deve avere l’attributo ``data-element="accessibility-link"``. L’<a> può essere contenuto in altri tag, esempio <li>.
+**Requisiti tecnici:** Il tag <a> deve avere l’attributo ``data-element=”privacy-policy-link”`` e contenere un “href” (può essere contenuto in altri tag, ad esempio <li> …). Il tag deve essere presente all’interno del tag <footer>.
 
 **Esempio:**
 
@@ -212,9 +212,9 @@ Criterio C.SC.2.2 - Dichiarazione di accessibilità
 
 **Condizioni di successo:** il sito presenta una voce nel footer che riporta a una dichiarazione di accessibilità AGID valida per il sito.
 
-**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente che sia quella contenente la dichiarazione di accessibilità (il link deve iniziare con "https://form.agid.gov.it/view/").
+**Modalità di verifica:** ricercando uno specifico attributo data-element, viene verificata la presenza del link nel footer dell’homepage, che riporti a una pagina esistente, che l'url della pagina di destinazione inizi con "https://form.agid.gov.it/view/" e che la pagina contenga l'url del sito della scuola.
 
-**Requisiti tecnici:** Il tag <a> deve avere l’attributo ``data-element=”accessibility-link”`` e contenere un “href” (può essere contenuto in altri tag, ad esempio <li> …). Il tag deve essere presente all’interno del tag <footer>. 
+**Requisiti tecnici:** All’interno del footer dell’homepage (tag <footer>) deve esserci un tag <a> che contiene l’href alla dichiarazione di accessibilità. Il tag <a> deve avere l’attributo ``data-element="accessibility-link"``. L’<a> può essere contenuto in altri tag, esempio <li>. 
 
 **Esempio:**
 
