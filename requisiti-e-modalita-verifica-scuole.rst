@@ -288,7 +288,7 @@ Criterio C.SC.3.1 - Certificato HTTPS
 
 **Condizioni di successo:** il sito utilizza un certificato https valido e non obsoleto secondo le raccomandazioni AGID.
 
-**Modalità di verifica:** viene verificato che il certificato https del sito sia valido e attivo.
+**Modalità di verifica:** viene verificato che il certificato https dell'homepage sia valido e attivo.
 
 
 
