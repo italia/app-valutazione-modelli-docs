@@ -123,6 +123,9 @@ La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di 
 
 **Requisiti tecnici:** 
 
+.. note::
+  Qualora il test dovesse fallire e tutti i data-element necessari sono presenti, riprova la verifica disabilitando il post processing del CSS (minificazione o inlining).
+
 *Caricamento pagina di accesso all’area riservata*:
 
 In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenete il link alla pagina.
@@ -260,6 +263,9 @@ Criterio C.SI.1.4 - Utilizzo di temi per CMS (Content Management System)
 Il testo ricercato nei file .css è:
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-4.html
+
+.. note::
+  Qualora il test non dovesse identificare correttamente il tema CMS e la versione in uso, riprova la verifica disabilitando il post processing del CSS (minificazione o inlining).
 
 
   
