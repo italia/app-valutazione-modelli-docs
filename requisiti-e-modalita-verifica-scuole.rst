@@ -101,6 +101,9 @@ La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di 
 
 **Requisiti tecnici**:
 
+.. note::
+  Qualora il test dovesse fallire e tutti i data-element necessari sono presenti, riprova la verifica disabilitando il post processing del CSS (minificazione o inlining).
+
 *Caricamento pagine di primo livello*:
 
 In homepage, nel menù principale identificato dal tag <ul> i link alle pagine di primo livello devono contenere, all'interno del tag <a>, il ``data-element="overview"`` (sulla voce "Panoramica"). Questo deve accadere per tutte le voci richieste ("Scuola", "Servizi", "Novità", "Didattica") e per tutte le voci aggiuntive inserite nel menù di primo livello, permettendo di identificare i link alle pagine di primo livello. L’assenza del data-element in ognuna delle 4 voci richieste porta all’impossibilità di esecuzione dell’audit in quanto non sarà possibile recuperare i link.
@@ -154,6 +157,9 @@ Criterio C.SC.1.3 - Utilizzo di temi per CMS (Content Management System)
 Il testo ricercato nei file .css è:
 
 .. literalinclude:: esempi-codice-scuole/c-sc-1-3.html
+
+.. note::
+  Qualora il test non dovesse identificare correttamente il tema CMS e la versione in uso, riprova la verifica disabilitando il post processing del CSS (minificazione o inlining).
 
 
 Criterio C.SC.1.4 - Voci di menù di primo livello
