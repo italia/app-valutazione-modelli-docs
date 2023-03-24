@@ -21,7 +21,7 @@ La chiave generale dei data attribute è ``data-element=*`` e va inserita all’
   Per tutto ciò che viene controllato sulla base di un vocabolario si utilizzano controlli non case-sensitive. 
   
 .. important::
-  I requisiti tecnici qui riportati sono necessari, oltre per il funzionamento dell'App di valutazione, anche per lo svolgimento delle verifiche da parte del DTD per il rilascio dei fondi della misura 1.4.1. A questo proposito, si ricorda che, una volta live, il sito scolastico deve anche essere funzionante durante gli **orari notturni** e raggiungibile dagli indirizzi IP **15.160.11.200**, **15.160.250.158** e **18.102.41.229** (è necessario che questi indirizzi non vengano bloccati da un eventuale firewall).
+  I requisiti tecnici qui riportati sono necessari, oltre che per il funzionamento dell'App di valutazione, anche per lo svolgimento delle verifiche da parte del DTD per il rilascio dei fondi della misura 1.4.1. A questo proposito il sito scolastico, una volta pubblicato, deve anche essere funzionante durante gli **orari notturni** e raggiungibile dagli indirizzi IP **15.160.11.200**, **15.160.250.158** e **18.102.41.229** (è necessario che questi indirizzi non vengano bloccati da un eventuale firewall).
 
 
 Criterio C.SC.1.1 - Coerenza dell'utilizzo dei font
