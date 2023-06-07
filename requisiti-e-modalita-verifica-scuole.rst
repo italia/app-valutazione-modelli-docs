@@ -76,7 +76,7 @@ Pagina di primo livello "Servizi":
 Criterio C.SC.1.2 - Libreria di elementi di interfaccia
 ------------------------------------------------------------
 
-**Condizioni di successo:** la libreria Bootstrap Italia è presente e in uso in una versione uguale o superiore alla 1.6.
+**Condizioni di successo:** In tutte le pagine del sito viene utilizzata la libreria Bootstrap Italia, la libreria Bootstrap Italia è presente nel tag <head> delle pagine del sito e la versione in uso è uguale o superiore alla 1.6.
 
 **Modalità di verifica:** in ogni pagina analizzata viene verificata la presenza della libreria Bootstrap Italia e la versione in uso, individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
 
@@ -168,7 +168,7 @@ Il testo ricercato nei file .css è:
 Criterio C.SC.1.4 - Voci di menù di primo livello
 -----------------------------------------------------
 
-**Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero Scuola, Servizi, Novità, Didattica).
+**Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero Scuola, Servizi, Novità, Didattica) e tutte le pagine raggiungibili dal menu di primo livello appartengono al dominio della scuola.
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito, il loro ordine e confrontate con quanto indicato nella Documentazione del modello scuole, applicando una tolleranza di massimo 3 voci aggiuntive.
 
@@ -182,7 +182,7 @@ Criterio C.SC.1.4 - Voci di menù di primo livello
 Criterio C.SC.1.5 - Voci di menu di secondo livello
 ------------------------------------------------------------
 
-**Condizioni di successo:** tutte le voci del menù di secondo livello usate fanno riferimento alla voce di primo livello corrispondente secondo quanto indicato nella Documentazione del modello scuole.
+**Condizioni di successo:** tutte le voci del menù di secondo livello usate fanno riferimento alla voce di primo livello corrispondente secondo quanto indicato nella Documentazione del modello scuole e tutte le pagine raggiungibili dal menu di secondo livello appartengono al dominio della scuola.
 
 **Modalità di verifica:**  ricercando specifici attributi data-element, vengono verificate le voci di secondo livello usate rispetto ad ognuna delle voci di primo livello del menù. Nel conteggio vengono incluse anche le voci di secondo livello riferite a voci di primo livello non indicate nella documentazione.
 
@@ -295,7 +295,7 @@ I luoghi della scuola:
 Criterio C.SC.3.1 - Certificato HTTPS
 ------------------------------------------
 
-**Condizioni di successo:** il sito utilizza un certificato https valido e non obsoleto secondo le raccomandazioni AGID.
+**Condizioni di successo:** il sito utilizza un certificato https valido e non obsoleto.
 
 **Modalità di verifica:** viene verificato che il certificato https dell'homepage sia valido e attivo.
 
@@ -318,7 +318,7 @@ Raccomandazione R.SC.1.1 - Vocabolari controllati
 Raccomandazione R.SC.1.2 - Schede informative di servizio
 ----------------------------------------------------------------
 
-**Condizioni di successo:** nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e, dove richiesto, sono nell'ordine corretto.
+**Condizioni di successo:** nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e sono nell'ordine corretto.
 
 **Modalità di verifica:** ricercando specifici attributi "data-element", la presenza e l'ordine delle voci richieste viene verificato ricercandoli all'interno della pagina e dell'indice. Per essere ritenute valide, le voci devono avere contenuti associati della tipologia indicata all'interno del documento di architettura dell'informazione. La verifica viene svolta su N pagine di terzo livello “Scheda servizio”.
 
@@ -394,7 +394,7 @@ Corpo della pagina "Scheda servizio":
 Raccomandazione R.SC.2.2 - Licenza e attribuzione
 ------------------------------------------------------
 
-**Condizioni di successo**: nella pagina delle noti legali viene indicato che i dati, documenti e informazioni riportati sul sito sono rilasciati con licenza CC-BY 4.0.
+**Condizioni di successo**: il sito della scuola pubblica dati, documenti o informazioni con licenza aperta CC-BY 4.0, la licenza viene comunicata nella pagina delle “note legali“ raggiungibile da un link nel footer del sito e all’interno della pagina delle “note legali” è presente la sezione “Licenza dei contenuti” con la dicitura richiesta.
 
 **Modalità di verifica**: ricercando uno specifico attributo "data-element", viene verificato che la pagina delle note legali sia raggiungibile dal footer e che questa contenga una sezione intitolata "Licenza dei contenuti" riportante la seguente dicitura
 
