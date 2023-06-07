@@ -95,7 +95,8 @@ Esempio:
 Criterio C.SI.1.2 - Libreria di elementi di interfaccia
 ----------------------------------------------------------
 
-**Condizioni di successo:** la libreria Bootstrap Italia è presente e in uso in una versione uguale o superiore alla 2.0.
+**Condizioni di successo:** In tutte le pagine del sito viene utilizzata la libreria Bootstrap Italia, la libreria Bootstrap Italia è presente nel tag <head> delle pagine del sito
+e la versione in uso è uguale o superiore alla 2.0.
 
 **Modalità di verifica:** ricercando specifici attributi data-element, in ogni pagina analizzata viene verificata la presenza della libreria Bootstrap Italia e la versione in uso, individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
 
@@ -199,7 +200,7 @@ Esempio:
 Criterio C.SI.1.3 - Schede informative di servizio per il cittadino
 ------------------------------------------------------------------------
 
-**Condizioni di successo:** nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e, dove richiesto, sono nell'ordine corretto.
+**Condizioni di successo:** nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e sono nell'ordine corretto.
 
 **Modalità di verifica:** viene verificato se le voci indicate come obbligatorie nella Documentazione del modello Comuni sono presenti e nell'ordine corretto, ricercandole all'interno della pagina e dell'indice tramite specifici data-element. Per essere ritenute valide, le voci devono avere contenuti associati della tipologia indicata all'interno del documento di architettura dell'informazione. La verifica viene effettuata su N pagine di terzo livello “Scheda servizio”.
 
@@ -276,7 +277,7 @@ Il testo ricercato nei file .css è:
 Criterio C.SI.1.5 - Vocabolari controllati
 ---------------------------------------------
 
-**Condizioni di successo:** gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello Comuni alla voce "Tassonomia argomenti" o al vocabolario controllato EuroVoc e l’elenco completo degli argomenti utilizzati è presente in una pagina raggiungibile dall'homepage.
+**Condizioni di successo:** gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello Comuni alla voce "Tassonomia argomenti" o al vocabolario controllato EuroVoc ed è presente un link in homepage (chiamato ad esempio, "Tutti gli argomenti") che porta a una pagina con l’elenco completo degli argomenti.
 
 **Modalità di verifica:** gli argomenti identificati all'interno della pagina contenente l'elenco degli argomenti vengono confrontati con l'elenco di voci presente nel documento di architettura dell'informazione e con il vocabolario controllato EuroVoc, ricercandoli usando specifici attributi "data-element".
 
@@ -292,7 +293,7 @@ Esempi:
 Criterio C.SI.1.6 - Voci di menù di primo livello
 -------------------------------------------------------
 
-**Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero "Amministrazione", "Novità", "Servizi", "Vivere il Comune" oppure "Vivere [nome del Comune]").
+**Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero "Amministrazione", "Novità", "Servizi", "Vivere il Comune" oppure "Vivere [nome del Comune]") e tutte le pagine raggiungibili dal menu di primo livello portano a pagine interne al dominio del Comune.
 
 **Modalità di verifica:** ricercando uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito e il loro ordine, confrontandole con quanto indicato nella Documentazione del modello Comuni.
 
@@ -362,7 +363,7 @@ Esempio:
 Criterio C.SI.2.1 - Prenotazione appuntamenti
 ------------------------------------------------------
 
-**Condizioni di successo:** la funzionalità di prenotazione di un appuntamento è accessibile dalla sezione di funzionalità trasversali delle schede servizio e della pagina di primo livello "Servizi".
+**Condizioni di successo:** la funzionalità di prenotazione di un appuntamento è accessibile dalla sezione di funzionalità trasversali delle schede servizio e della pagina di primo livello "Servizi", permette al cittadino di indicare/fornire le informazioni richieste, e, se è presente il pulsante di Prenotazione appuntamento come modalità di accesso al servizio all’interno di una scheda servizio, la funzionalità circoscrive la scelta degli uffici disponibili a quelli competenti per il servizio selezionato e la funzionalità indica come argomento pre-selezionato il titolo del servizio.
 
 **Modalità di verifica:** ricercando specifici attributi "data-element", viene verificata la presenza del componente "Prenota appuntamento" all'interno della sezione di funzionalità trasversali delle schede servizio analizzate e della pagina di primo livello "Servizi". Viene inoltre indicato se è stato rilevato il pulsante di accesso alla funzionalità di prenotazione appuntamento all'interno della sezione "Accedi al servizio" delle schede servizio. La verifica viene eseguita sulla pagina di primo livello “Servizi” e su N pagine di terzo livello “Scheda servizio”. 
 
@@ -439,7 +440,7 @@ Esempio:
 Criterio C.SI.2.3 - Richiesta di assistenza / domande frequenti
 ----------------------------------------------------------------------------
 
-**Condizioni di successo:** nel footer del sito è presente un link contenente le espressioni "FAQ" oppure "domande frequenti" che invia a una pagina di domande frequenti.
+**Condizioni di successo:** nel footer del sito è presente un link contenente le espressioni «FAQ» oppure «domande frequenti» che invia a una pagina che contiene le domande frequenti.
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza del link nel footer dell'homepage che invii ad una pagina esistente e che il testo del link contenga almeno una delle espressioni richieste, senza fare distinzione tra caratteri minuscoli o maiuscoli.
 
@@ -453,7 +454,7 @@ Esempio:
 Criterio C.SI.2.4 - Segnalazione disservizio
 -----------------------------------------------
 
-**Condizioni di successo:** nel footer del sito è presente un link contenente le espressioni "disservizio" oppure "segnala disservizio" oppure "segnalazione disservizio" che invia alla funzionalità di segnalazione di un disservizio. Se viene usata una funzionalità dedicata di segnalazione disservizio, devono essere presenti i campi richiesti nella Documentazione del modello.
+**Condizioni di successo:** nel footer del sito è presente un link contenente le espressioni "disservizio" oppure "segnala disservizio" oppure "segnalazione disservizio" che permette di segnalare un disservizio tramite email o funzionalità dedicato. Se viene usata una funzionalità dedicata di segnalazione disservizio, devono essere presenti i campi richiesti nella Documentazione del modello.
 
 **Modalità di verifica:** ricercando uno specifico attributo data-element, viene verificata la presenza del link nel footer dell'homepage che invii ad una pagina esistente e che il testo del link contenga almeno una delle espressioni richieste, senza fare distinzione tra caratteri minuscoli o maiuscoli.
 
@@ -682,7 +683,7 @@ Esempio:
 Criterio C.SI.3.4 - Licenza e attribuzione
 -------------------------------------------------
 
-**Condizioni di successo**: nella pagina delle noti legali viene indicato che i dati, documenti e informazioni riportati sul sito sono rilasciati con licenza CC-BY 4.0.
+**Condizioni di successo**: il sito del Comune pubblica dati, documenti o informazioni con licenza aperta CC-BY 4.0, la licenza viene comunicata nella pagina delle “note legali“ raggiungibile da un link nel footer del sito e all’interno della pagina delle “note legali” è presente la sezione “Licenza dei contenuti” con la dicitura richiesta.
 
 **Modalità di verifica**: ricercando uno specifico attributo data-element, viene verificato che la pagina delle note legali sia raggiungibile dal footer dell’homepage e che questa contenga una sezione intitolata "Licenza dei contenuti" riportante la seguente dicitura
 
@@ -703,7 +704,7 @@ Esempio:
 Criterio C.SI.4.1 - Velocità e tempi di risposta
 --------------------------------------------------
 
-**Condizioni di successo**: il sito presenta livelli di prestazioni (media pesata di 6 metriche standard) pari o superiori a 50. Se il punteggio è inferiore a 50, il Comune deve pubblicare sul sito un “Piano di miglioramento del sito” raggiungibile dal footer che mostri, per ciascuna voce che impatta negativamente le prestazioni, le azioni future di miglioramento e le relative tempistiche di realizzazione attese.
+**Condizioni di successo**: Tutte le pagine del sito presentano almeno un punteggio di prestazioni pari a 50 quando testate in modalità “mobile” con Lighthouse
 
 **Modalità di verifica**: l’homepage del sito viene testata in modalità “mobile” con Lighthouse.
 
@@ -711,7 +712,7 @@ Criterio C.SI.4.1 - Velocità e tempi di risposta
 Criterio C.SI.5.1 - Certificato HTTPS
 -----------------------------------------
 
-**Condizioni di successo**: il sito utilizza un certificato https valido e non obsoleto secondo le raccomandazioni AgID;
+**Condizioni di successo**: il sito utilizza un certificato https valido e non obsoleto;
 
 **Modalità di verifica**: viene verificato che il certificato https dell’homepage sia valido e attivo.
 
@@ -720,7 +721,7 @@ Criterio C.SI.5.1 - Certificato HTTPS
 Criterio C.SI.5.2 - Dominio istituzionale
 --------------------------------------------
 
-**Condizioni di successo**: il sito comunale è raggiungibile senza necessità di inserimento del sottodominio “www.” e utilizza il sottodominio "comune." immediatamente seguito da uno dei domini istituzionali per il Comune presente nell'Elenco Nomi a Dominio Riservati Per i Comuni Italiani (es: comune.anzio.roma.it) o dal nome del Comune se coincidente con il nome del capoluogo di provincia (es: comune.roma.it);
+**Condizioni di successo**: il sito comunale è raggiungibile senza necessità di inserimento del sottodominio “www.” e utilizza il sottodominio "comune." seguito da uno dei possibili `domini utilizzabili <https://raw.githubusercontent.com/italia/pa-website-validator/main/src/storage/municipality/allowedDomains.ts>`_, secondo la seguente struttura: (1) per i Comuni non capoluogo di provincia, comune.[nome comune].[sigla provincia].it o comune.[nome comune].[nome esteso provincia].it (Esempi: comune.anzio.rm.it o comune.anzio.roma.it) o (2) per i Comuni capoluogo di provincia, comune.[nome capoluogo].it o comune.[nome capoluogo].[sigla della provincia].it (Esempi: comune.roma.it o comune.roma.rm.it).
 
 **Modalità di verifica**: viene verificato che il dominio utilizzato nell’homepage sia presente nell'Elenco Nomi a Dominio Riservati per i Comuni Italiani o sia un nome di capoluogo di provincia e che immediatamente prima di questo sia utilizzato il sottodominio "comune.". Il test viene condotto anche nella pagina di accesso all'area riservata, se presente, identificandola tramite uno specifico attributo "data-element".
 
