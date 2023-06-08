@@ -28,7 +28,7 @@ La chiave generale dei data attribute è ``data-element=*`` e va inserita all’
 Criterio C.SI.1.1 - Coerenza dell’utilizzo dei font (librerie di caratteri)
 --------------------------------------------------------------------------------
 
-**Condizioni di successo:** tutti i titoli (heading) e tutti i paragrafi delle pagine del sito in lingua italiana utilizzano esclusivamente i font Titillium Web, Lora o Roboto Mono come font di default.
+**Condizioni di successo:** per superare il test effettuato dall'app, tutti i titoli (heading) e tutti i paragrafi delle pagine del sito in lingua italiana utilizzano esclusivamente i font Titillium Web, Lora o Roboto Mono come font di default. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** tramite ricerca di specifici attributi data-element, nelle pagine analizzate viene verificato che i font di default siano quelli richiesti all'interno di tutti gli <h> e <p>. La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello, N pagine di terzo livello “Scheda servizio” e nella pagina di accesso all’area riservata.
 
@@ -95,8 +95,7 @@ Esempio:
 Criterio C.SI.1.2 - Libreria di elementi di interfaccia
 ----------------------------------------------------------
 
-**Condizioni di successo:** In tutte le pagine del sito viene utilizzata la libreria Bootstrap Italia, la libreria Bootstrap Italia è presente nel tag <head> delle pagine del sito
-e la versione in uso è uguale o superiore alla 2.0.
+**Condizioni di successo:** per superare il test effettuato dall'app, in tutte le pagine del sito viene utilizzata la libreria Bootstrap Italia, la libreria Bootstrap Italia è presente nel tag <head> delle pagine del sito e la versione in uso è uguale o superiore alla 2.0. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** ricercando specifici attributi data-element, in ogni pagina analizzata viene verificata la presenza della libreria Bootstrap Italia e la versione in uso, individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
 
@@ -200,7 +199,7 @@ Esempio:
 Criterio C.SI.1.3 - Schede informative di servizio per il cittadino
 ------------------------------------------------------------------------
 
-**Condizioni di successo:** nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e sono nell'ordine corretto.
+**Condizioni di successo:** per superare il test effettuato dall'app, nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e sono nell'ordine corretto. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** viene verificato se le voci indicate come obbligatorie nella Documentazione del modello Comuni sono presenti e nell'ordine corretto, ricercandole all'interno della pagina e dell'indice tramite specifici data-element. Per essere ritenute valide, le voci devono avere contenuti associati della tipologia indicata all'interno del documento di architettura dell'informazione. La verifica viene effettuata su N pagine di terzo livello “Scheda servizio”.
 
@@ -260,7 +259,7 @@ Esempio:
 Criterio C.SI.1.4 - Utilizzo di temi per CMS (Content Management System)
 ----------------------------------------------------------------------------
 
-**Condizioni di successo:** se è in uso il tema CMS del modello per i Comuni, la versione utilizzata è uguale o superiore alla 1.0.
+**Condizioni di successo:** per superare il test effettuato dall'app, se è in uso il tema CMS del modello per i Comuni, la versione utilizzata è uguale o superiore alla 1.0. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** viene verificato l'uso del tema CMS del modello e la versione in uso ricercando uno specifico testo all'interno di tutti i file .CSS presenti in pagina.
 
@@ -277,7 +276,7 @@ Il testo ricercato nei file .css è:
 Criterio C.SI.1.5 - Vocabolari controllati
 ---------------------------------------------
 
-**Condizioni di successo:** gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello Comuni alla voce "Tassonomia argomenti" o al vocabolario controllato EuroVoc ed è presente un link in homepage (chiamato ad esempio, "Tutti gli argomenti") che porta a una pagina con l’elenco completo degli argomenti.
+**Condizioni di successo:** per superare il test effettuato dall'app, gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello Comuni alla voce "Tassonomia argomenti" o al vocabolario controllato EuroVoc ed è presente un link in homepage (chiamato ad esempio, "Tutti gli argomenti") che porta a una pagina con l’elenco completo degli argomenti. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** gli argomenti identificati all'interno della pagina contenente l'elenco degli argomenti vengono confrontati con l'elenco di voci presente nel documento di architettura dell'informazione e con il vocabolario controllato EuroVoc, ricercandoli usando specifici attributi "data-element".
 
@@ -293,7 +292,7 @@ Esempi:
 Criterio C.SI.1.6 - Voci di menù di primo livello
 -------------------------------------------------------
 
-**Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero "Amministrazione", "Novità", "Servizi", "Vivere il Comune" oppure "Vivere [nome del Comune]") e tutte le pagine raggiungibili dal menu di primo livello portano a pagine interne al dominio del Comune.
+**Condizioni di successo:** per superare il test effettuato dall'app, le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero "Amministrazione", "Novità", "Servizi", "Vivere il Comune" oppure "Vivere [nome del Comune]") e tutte le pagine raggiungibili dal menu di primo livello portano a pagine interne al dominio del Comune. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** ricercando uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito e il loro ordine, confrontandole con quanto indicato nella Documentazione del modello Comuni.
 
@@ -315,7 +314,7 @@ Esempio:
 Criterio C.SI.1.7 - Titoli delle pagine di secondo livello
 ---------------------------------------------------------------
 
-**Condizioni di successo:** i titoli delle pagine di secondo livello corrispondono a quelli indicati nel capitolo "Conformità al modello Comuni" della Documentazione del Modello Comuni.
+**Condizioni di successo:** per superare il test effettuato dall'app, i titoli delle pagine di secondo livello corrispondono a quelli indicati nel capitolo "Conformità al modello Comuni" della Documentazione del Modello Comuni. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** ricercando specifici attributi data-element, viene verificato che i titoli delle card usate per rimandare alle pagine di secondo livello siano corretti e presenti sulle rispettive pagine genitore di primo livello. Nel caso della pagina di primo livello "Vivere il Comune", viene verificato che i titoli delle pagine di secondo livello raggiungibili da questa siano corretti. Nel conteggio vengono incluse anche le pagine di secondo livello raggiungibili da pagine di primo livello non indicate nella documentazione.
 
@@ -363,7 +362,7 @@ Esempio:
 Criterio C.SI.2.1 - Prenotazione appuntamenti
 ------------------------------------------------------
 
-**Condizioni di successo:** la funzionalità di prenotazione di un appuntamento è accessibile dalla sezione di funzionalità trasversali delle schede servizio e della pagina di primo livello "Servizi", permette al cittadino di indicare/fornire le informazioni richieste, e, se è presente il pulsante di Prenotazione appuntamento come modalità di accesso al servizio all’interno di una scheda servizio, la funzionalità circoscrive la scelta degli uffici disponibili a quelli competenti per il servizio selezionato e la funzionalità indica come argomento pre-selezionato il titolo del servizio.
+**Condizioni di successo:** per superare il test effettuato dall'app, la funzionalità di prenotazione di un appuntamento è accessibile dalla sezione di funzionalità trasversali delle schede servizio e della pagina di primo livello "Servizi", permette al cittadino di indicare/fornire le informazioni richieste, e, se è presente il pulsante di Prenotazione appuntamento come modalità di accesso al servizio all’interno di una scheda servizio, la funzionalità circoscrive la scelta degli uffici disponibili a quelli competenti per il servizio selezionato e la funzionalità indica come argomento pre-selezionato il titolo del servizio. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** ricercando specifici attributi "data-element", viene verificata la presenza del componente "Prenota appuntamento" all'interno della sezione di funzionalità trasversali delle schede servizio analizzate e della pagina di primo livello "Servizi". Viene inoltre indicato se è stato rilevato il pulsante di accesso alla funzionalità di prenotazione appuntamento all'interno della sezione "Accedi al servizio" delle schede servizio. La verifica viene eseguita sulla pagina di primo livello “Servizi” e su N pagine di terzo livello “Scheda servizio”. 
 
@@ -411,7 +410,7 @@ Esempio:
 Criterio C.SI.2.2 - Richiesta di assistenza / contatti
 ----------------------------------------------------------
 
-**Condizioni di successo:** i contatti dell'ufficio preposto all'erogazione del servizio sono presenti in tutte le schede servizio.
+**Condizioni di successo:** per superare il test effettuato dall'app, i contatti dell'ufficio preposto all'erogazione del servizio sono presenti in tutte le schede servizio. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** ricercando specifici attributi data-element, viene verificata la presenza della voce "Contatti" all'interno dell'indice e nel corpo della pagina delle schede servizio analizzate, ricercando specifici attributi "data-element". La verifica viene eseguita su N pagine di primo livello “Scheda servizio”.
 
@@ -440,7 +439,7 @@ Esempio:
 Criterio C.SI.2.3 - Richiesta di assistenza / domande frequenti
 ----------------------------------------------------------------------------
 
-**Condizioni di successo:** nel footer del sito è presente un link contenente le espressioni «FAQ» oppure «domande frequenti» che invia a una pagina che contiene le domande frequenti.
+**Condizioni di successo:** per superare il test effettuato dall'app, nel footer del sito è presente un link contenente le espressioni «FAQ» oppure «domande frequenti» che invia a una pagina che contiene le domande frequenti. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza del link nel footer dell'homepage che invii ad una pagina esistente e che il testo del link contenga almeno una delle espressioni richieste, senza fare distinzione tra caratteri minuscoli o maiuscoli.
 
@@ -454,7 +453,7 @@ Esempio:
 Criterio C.SI.2.4 - Segnalazione disservizio
 -----------------------------------------------
 
-**Condizioni di successo:** nel footer del sito è presente un link contenente le espressioni "disservizio" oppure "segnala disservizio" oppure "segnalazione disservizio" che permette di segnalare un disservizio tramite email o funzionalità dedicato. Se viene usata una funzionalità dedicata di segnalazione disservizio, devono essere presenti i campi richiesti nella Documentazione del modello.
+**Condizioni di successo:** per superare il test effettuato dall'app, nel footer del sito è presente un link contenente le espressioni "disservizio" oppure "segnala disservizio" oppure "segnalazione disservizio" che permette di segnalare un disservizio tramite email o funzionalità dedicato. Se viene usata una funzionalità dedicata di segnalazione disservizio, devono essere presenti i campi richiesti nella Documentazione del modello. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** ricercando uno specifico attributo data-element, viene verificata la presenza del link nel footer dell'homepage che invii ad una pagina esistente e che il testo del link contenga almeno una delle espressioni richieste, senza fare distinzione tra caratteri minuscoli o maiuscoli.
 
@@ -468,7 +467,7 @@ Esempio:
 Criterio C.SI.2.5 - Valutazione dell’esperienza d’uso, chiarezza delle pagine informative
 --------------------------------------------------------------------------------------------
 
-**Condizioni di successo:** la funzionalità per valutare la chiarezza informativa è presente su tutte le pagine di primo e secondo livello del sito e rispetta tutte le caratteristiche e i passaggi richiesti; 
+**Condizioni di successo:** per superare il test effettuato dall'app, la funzionalità per valutare la chiarezza informativa è presente su tutte le pagine di primo e secondo livello del sito e rispetta tutte le caratteristiche e i passaggi richiesti. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** ricercando specifici attributi data-element, viene verificata la presenza del componente di valutazione nelle pagine di primo e di secondo livello, controllando che la funzionalità abbia le caratteristiche richieste nella documentazione. La verifica viene eseguita su N pagine di primo livello e su N pagine di secondo livello.
 
@@ -532,7 +531,7 @@ Esempio:
 Criterio C.SI.2.6 - Valutazione dell'esperienza d'uso, chiarezza informativa della scheda di servizio
 ----------------------------------------------------------------------------------------------------------------
 
-**Condizioni di successo**: la funzionalità per valutare la chiarezza informativa è presente su tutte le schede servizio e rispetta tutte le caratteristiche e passaggi richiesti; 
+**Condizioni di successo**: per superare il test effettuato dall'app, la funzionalità per valutare la chiarezza informativa è presente su tutte le schede servizio e rispetta tutte le caratteristiche e passaggi richiesti. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica**: ricercando specifici attributi data-element, viene verificata la presenza del componente di valutazione all'interno delle schede servizio, controllando che la funzionalità abbia le caratteristiche richieste nella documentazione. La verifica viene eseguita su N pagine di terzo livello “Scheda servizio”. 
 
@@ -569,7 +568,7 @@ Esempio:
 Criterio C.SI.3.1 - Cookie
 ----------------------------------
 
-**Condizioni di successo:** il dominio di tutti i cookie già presenti nel sito, ovvero senza che sia stata espressa una preferenza da parte dell’utente riguardo il loro uso, è corrispondente al dominio del sito web del Comune.
+**Condizioni di successo:** per superare il test effettuato dall'app, il dominio di tutti i cookie già presenti nel sito, ovvero senza che sia stata espressa una preferenza da parte dell’utente riguardo il loro uso, è corrispondente al dominio del sito web del Comune. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** ricercando specifici attributi data-element, viene verificato che al caricamento di ogni pagina analizzata il dominio dei cookie identificati sia corrispondente al dominio del sito web. La verifica viene eseguita sull’homepage, sulla pagina di accesso all’area riservata, sulla pagina della funzionalità di prenotazione appuntamento, su N pagine di primo livello, su N pagine di secondo livello, su N pagine di terzo livello “Scheda servizio” e su N pagine di quarto livello “Evento”. 
 
@@ -654,7 +653,7 @@ Esempio:
 Criterio C.SI.3.2 - Dichiarazione di accessibilità
 -------------------------------------------------------
 
-**Condizioni di successo:** il sito presenta una voce nel footer che riporta a una dichiarazione di accessibilità AgID valida per il sito.
+**Condizioni di successo:** per superare il test effettuato dall'app, il sito presenta una voce nel footer che riporta a una dichiarazione di accessibilità AgID valida per il sito. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** ricercando uno specifico attributo data-element, viene verificata la presenza di un link nel footer dell'homepage che riporti a una pagina esistente, che l'url della pagina di destinazione inizi con "https://form.agid.gov.it/view/" e che la pagina contenga l'url del sito del Comune.
 
@@ -668,7 +667,7 @@ Esempio:
 Criterio C.SI.3.3 - Informativa privacy
 --------------------------------------------
 
-**Condizioni di successo:** il sito presenta una voce nel footer che riporta a una pagina sicura riguardante l'informativa sulla privacy.
+**Condizioni di successo:** per superare il test effettuato dall'app, il sito presenta una voce nel footer che riporta a una pagina sicura riguardante l'informativa sulla privacy. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** ricercando uno specifico attributo data-element, viene verificata la presenza di un link nel footer dell'homepage che riporti a una pagina esistente e con certificato HTTPS valido e attivo.
 
@@ -683,7 +682,7 @@ Esempio:
 Criterio C.SI.3.4 - Licenza e attribuzione
 -------------------------------------------------
 
-**Condizioni di successo**: il sito del Comune pubblica dati, documenti o informazioni con licenza aperta CC-BY 4.0, la licenza viene comunicata nella pagina delle “note legali“ raggiungibile da un link nel footer del sito e all’interno della pagina delle “note legali” è presente la sezione “Licenza dei contenuti” con la dicitura richiesta.
+**Condizioni di successo**: per superare il test effettuato dall'app, il sito del Comune pubblica dati, documenti o informazioni con licenza aperta CC-BY 4.0, la licenza viene comunicata nella pagina delle “note legali“ raggiungibile da un link nel footer del sito e all’interno della pagina delle “note legali” è presente la sezione “Licenza dei contenuti” con la dicitura richiesta. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica**: ricercando uno specifico attributo data-element, viene verificato che la pagina delle note legali sia raggiungibile dal footer dell’homepage e che questa contenga una sezione intitolata "Licenza dei contenuti" riportante la seguente dicitura
 
@@ -704,7 +703,7 @@ Esempio:
 Criterio C.SI.4.1 - Velocità e tempi di risposta
 --------------------------------------------------
 
-**Condizioni di successo**: Tutte le pagine del sito presentano almeno un punteggio di prestazioni pari a 50 quando testate in modalità “mobile” con Lighthouse
+**Condizioni di successo**: per superare il test effettuato dall'app, tutte le pagine del sito presentano almeno un punteggio di prestazioni pari a 50 quando testate in modalità “mobile” con Lighthouse. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica**: l’homepage del sito viene testata in modalità “mobile” con Lighthouse.
 
@@ -712,7 +711,7 @@ Criterio C.SI.4.1 - Velocità e tempi di risposta
 Criterio C.SI.5.1 - Certificato HTTPS
 -----------------------------------------
 
-**Condizioni di successo**: il sito utilizza un certificato https valido e non obsoleto;
+**Condizioni di successo**: per superare il test effettuato dall'app, il sito utilizza un certificato https valido e non obsoleto. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica**: viene verificato che il certificato https dell’homepage sia valido e attivo.
 
@@ -721,7 +720,7 @@ Criterio C.SI.5.1 - Certificato HTTPS
 Criterio C.SI.5.2 - Dominio istituzionale
 --------------------------------------------
 
-**Condizioni di successo**: il sito comunale è raggiungibile senza necessità di inserimento del sottodominio “www.” e utilizza il sottodominio "comune." seguito da uno dei possibili `domini utilizzabili <https://raw.githubusercontent.com/italia/pa-website-validator/main/src/storage/municipality/allowedDomains.ts>`_, secondo la seguente struttura: (1) per i Comuni non capoluogo di provincia, comune.[nome comune].[sigla provincia].it o comune.[nome comune].[nome esteso provincia].it (Esempi: comune.anzio.rm.it o comune.anzio.roma.it) o (2) per i Comuni capoluogo di provincia, comune.[nome capoluogo].it o comune.[nome capoluogo].[sigla della provincia].it (Esempi: comune.roma.it o comune.roma.rm.it).
+**Condizioni di successo**: per superare il test effettuato dall'app, il sito comunale è raggiungibile senza necessità di inserimento del sottodominio “www.” e utilizza il sottodominio "comune." seguito da uno dei possibili `domini utilizzabili <https://raw.githubusercontent.com/italia/pa-website-validator/main/src/storage/municipality/allowedDomains.ts>`_, secondo la seguente struttura: (1) per i Comuni non capoluogo di provincia, comune.[nome comune].[sigla provincia].it o comune.[nome comune].[nome esteso provincia].it (Esempi: comune.anzio.rm.it o comune.anzio.roma.it) o (2) per i Comuni capoluogo di provincia, comune.[nome capoluogo].it o comune.[nome capoluogo].[sigla della provincia].it (Esempi: comune.roma.it o comune.roma.rm.it). Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica**: viene verificato che il dominio utilizzato nell’homepage sia presente nell'Elenco Nomi a Dominio Riservati per i Comuni Italiani o sia un nome di capoluogo di provincia e che immediatamente prima di questo sia utilizzato il sottodominio "comune.". Il test viene condotto anche nella pagina di accesso all'area riservata, se presente, identificandola tramite uno specifico attributo "data-element".
 
@@ -740,7 +739,7 @@ Esempio:
 Raccomandazione R.SI.1.1 - Metatag
 ---------------------------------------
 
-**Condizioni di successo:** le voci delle schede servizio presentano tutti i metatag richiesti dal modello.
+**Condizioni di successo:** per superare il test effettuato dall'app, le voci delle schede servizio presentano tutti i metatag richiesti dal modello. Le condizioni complete di successo, tolleranza e fallimento per il superamento della raccomandazione sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica:** tramite ricerca di specifici attributi data-element, viene verificata la presenza e correttezza dei metatag su N pagine di terzo livello “Scheda servizio”.
 
@@ -782,7 +781,7 @@ Esempio:
 Test aggiuntivi - Localizzazione IP
 ----------------------------------------
 
-**Condizioni di successo**: l'indirizzo IP fa riferimento a un datacenter localizzato su territorio europeo;
+**Condizioni di successo**: per superare il test effettuato dall'app, l'indirizzo IP fa riferimento a un datacenter localizzato su territorio europeo. Le condizioni complete di successo, tolleranza e fallimento per il superamento della raccomandazione sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
 **Modalità di verifica**: viene verificato che la localizzazione dell'IP rientri all'interno di uno dei confini degli stati membri dell'UE
 
