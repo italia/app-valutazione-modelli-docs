@@ -27,7 +27,7 @@ La chiave generale dei data attribute è ``data-element=*`` e va inserita all’
 Criterio C.SC.1.1 - Coerenza dell'utilizzo dei font
 ---------------------------------------------------------
 
-**Condizioni di successo:** tutti i titoli (heading) e tutti i paragrafi delle pagine del sito in lingua italiana utilizzano esclusivamente i font Titillium Web, Lora o Roboto Mono come font di default.
+**Condizioni di successo:** per superare il test effettuato dall'app, tutti i titoli (heading) e tutti i paragrafi delle pagine del sito in lingua italiana utilizzano esclusivamente i font Titillium Web, Lora o Roboto Mono come font di default. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:** ricercando specifici attributi data-element, nelle pagine analizzate viene verificato che i font di default siano quelli richiesti all'interno di tutti gli <h> e <p>. La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello, N pagine di terzo livello “Scheda servizio”.
 
@@ -76,7 +76,7 @@ Pagina di primo livello "Servizi":
 Criterio C.SC.1.2 - Libreria di elementi di interfaccia
 ------------------------------------------------------------
 
-**Condizioni di successo:** In tutte le pagine del sito viene utilizzata la libreria Bootstrap Italia, la libreria Bootstrap Italia è presente nel tag <head> delle pagine del sito e la versione in uso è uguale o superiore alla 1.6.
+**Condizioni di successo:** per superare il test effettuato dall'app, in tutte le pagine del sito viene utilizzata la libreria Bootstrap Italia, la libreria Bootstrap Italia è presente nel tag <head> delle pagine del sito e la versione in uso è uguale o superiore alla 1.6. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:** in ogni pagina analizzata viene verificata la presenza della libreria Bootstrap Italia e la versione in uso, individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
 
@@ -153,7 +153,7 @@ Pagina di primo livello "Servizi":
 Criterio C.SC.1.3 - Utilizzo di temi per CMS (Content Management System)
 ---------------------------------------------------------------------------
 
-**Condizioni di successo:** se è in uso il tema CMS del modello scuole, la versione utilizzata è uguale o superiore alla 2.0.
+**Condizioni di successo:** per superare il test effettuato dall'app, se è in uso il tema CMS del modello scuole, la versione utilizzata è uguale o superiore alla 2.0. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:** viene verificato l'uso del tema CMS del modello e la versione in uso ricercando uno specifico testo all'interno di tutti i file .CSS presenti in pagina.
 
@@ -168,7 +168,7 @@ Il testo ricercato nei file .css è:
 Criterio C.SC.1.4 - Voci di menù di primo livello
 -----------------------------------------------------
 
-**Condizioni di successo:** le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero Scuola, Servizi, Novità, Didattica) e tutte le pagine raggiungibili dal menu di primo livello appartengono al dominio della scuola.
+**Condizioni di successo:** per superare il test effettuato dall'app, le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero Scuola, Servizi, Novità, Didattica) e tutte le pagine raggiungibili dal menu di primo livello appartengono al dominio della scuola. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito, il loro ordine e confrontate con quanto indicato nella Documentazione del modello scuole, applicando una tolleranza di massimo 3 voci aggiuntive.
 
@@ -182,7 +182,7 @@ Criterio C.SC.1.4 - Voci di menù di primo livello
 Criterio C.SC.1.5 - Voci di menu di secondo livello
 ------------------------------------------------------------
 
-**Condizioni di successo:** tutte le voci del menù di secondo livello usate fanno riferimento alla voce di primo livello corrispondente secondo quanto indicato nella Documentazione del modello scuole e tutte le pagine raggiungibili dal menu di secondo livello appartengono al dominio della scuola.
+**Condizioni di successo:** per superare il test effettuato dall'app, tutte le voci del menù di secondo livello usate fanno riferimento alla voce di primo livello corrispondente secondo quanto indicato nella Documentazione del modello scuole e tutte le pagine raggiungibili dal menu di secondo livello appartengono al dominio della scuola. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:**  ricercando specifici attributi data-element, vengono verificate le voci di secondo livello usate rispetto ad ognuna delle voci di primo livello del menù. Nel conteggio vengono incluse anche le voci di secondo livello riferite a voci di primo livello non indicate nella documentazione.
 
@@ -205,7 +205,7 @@ Attraverso questi data-element vengono caricate le voci dei sotto-menù per eseg
 Criterio C.SC.2.1 - Informativa privacy
 ------------------------------------------
 
-**Condizioni di successo:** il sito presenta una voce nel footer che riporta a una pagina sicura riguardante l'informativa sulla privacy.
+**Condizioni di successo:** per superare il test effettuato dall'app, il sito presenta una voce nel footer che riporta a una pagina sicura riguardante l'informativa sulla privacy. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, viene verificata la presenza di un link nel footer che riporti a una pagina esistente e con certificato HTTPS valido e attivo.
 
@@ -219,7 +219,7 @@ Criterio C.SC.2.1 - Informativa privacy
 Criterio C.SC.2.2 - Dichiarazione di accessibilità
 ---------------------------------------------------------
 
-**Condizioni di successo:** il sito presenta una voce nel footer che riporta a una dichiarazione di accessibilità AGID valida per il sito.
+**Condizioni di successo:** per superare il test effettuato dall'app, il sito presenta una voce nel footer che riporta a una dichiarazione di accessibilità AGID valida per il sito. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:** ricercando uno specifico attributo data-element, viene verificata la presenza del link nel footer dell’homepage, che riporti a una pagina esistente, che l'url della pagina di destinazione inizi con "https://form.agid.gov.it/view/" e che la pagina contenga l'url del sito della scuola.
 
@@ -233,7 +233,7 @@ Criterio C.SC.2.2 - Dichiarazione di accessibilità
 Criterio C.SC.2.3 - Cookie
 --------------------------------
 
-**Condizioni di successo:** il dominio di tutti i cookie già presenti nel sito, ovvero senza che sia stata espressa una preferenza da parte dell’utente riguardo il loro uso, è corrispondente al dominio del sito web della scuola.
+**Condizioni di successo:** per superare il test effettuato dall'app, il dominio di tutti i cookie già presenti nel sito, ovvero senza che sia stata espressa una preferenza da parte dell’utente riguardo il loro uso, è corrispondente al dominio del sito web della scuola. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:** ricercando specifici attributi data-element, viene verificato che al caricamento di ogni pagina analizzata il dominio dei cookie identificati sia corrispondente al dominio del sito web. La verifica viene eseguita sulla homepage, in N pagine di primo livello, in N pagine di secondo livello, in N pagine di terzo livello “Scheda servizio” e in N pagine di terzo livello “Luogo”.
 
@@ -295,7 +295,7 @@ I luoghi della scuola:
 Criterio C.SC.3.1 - Certificato HTTPS
 ------------------------------------------
 
-**Condizioni di successo:** il sito utilizza un certificato https valido e non obsoleto.
+**Condizioni di successo:** per superare il test effettuato dall'app, il sito utilizza un certificato https valido e non obsoleto. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:** viene verificato che il certificato https dell'homepage sia valido e attivo.
 
@@ -304,7 +304,7 @@ Criterio C.SC.3.1 - Certificato HTTPS
 Raccomandazione R.SC.1.1 - Vocabolari controllati
 ------------------------------------------------------
 
-**Condizioni di successo:** gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello scuole alla voce "Le parole della scuola" e l’elenco completo degli argomenti utilizzati è presente nella pagina dei risultati di ricerca.
+**Condizioni di successo:** per superare il test effettuato dall'app, gli argomenti utilizzati appartengono alla lista indicata all'interno del documento di architettura dell'informazione del modello scuole alla voce "Le parole della scuola" e l’elenco completo degli argomenti utilizzati è presente nella pagina dei risultati di ricerca. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:** tramite ricerca di specifici attributi data-element, gli argomenti identificati all'interno della funzione di ricerca del sito vengono confrontati con l'elenco di voci presente nel documento di architettura dell'informazione.
 
@@ -318,7 +318,7 @@ Raccomandazione R.SC.1.1 - Vocabolari controllati
 Raccomandazione R.SC.1.2 - Schede informative di servizio
 ----------------------------------------------------------------
 
-**Condizioni di successo:** nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e sono nell'ordine corretto.
+**Condizioni di successo:** per superare il test effettuato dall'app, nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e sono nell'ordine corretto. Le condizioni complete di successo, tolleranza e fallimento per il superamento della raccomandazione sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica:** ricercando specifici attributi "data-element", la presenza e l'ordine delle voci richieste viene verificato ricercandoli all'interno della pagina e dell'indice. Per essere ritenute valide, le voci devono avere contenuti associati della tipologia indicata all'interno del documento di architettura dell'informazione. La verifica viene svolta su N pagine di terzo livello “Scheda servizio”.
 
@@ -394,7 +394,7 @@ Corpo della pagina "Scheda servizio":
 Raccomandazione R.SC.2.2 - Licenza e attribuzione
 ------------------------------------------------------
 
-**Condizioni di successo**: il sito della scuola pubblica dati, documenti o informazioni con licenza aperta CC-BY 4.0, la licenza viene comunicata nella pagina delle “note legali“ raggiungibile da un link nel footer del sito e all’interno della pagina delle “note legali” è presente la sezione “Licenza dei contenuti” con la dicitura richiesta.
+**Condizioni di successo**: per superare il test effettuato dall'app, il sito della scuola pubblica dati, documenti o informazioni con licenza aperta CC-BY 4.0, la licenza viene comunicata nella pagina delle “note legali“ raggiungibile da un link nel footer del sito e all’interno della pagina delle “note legali” è presente la sezione “Licenza dei contenuti” con la dicitura richiesta. Le condizioni complete di successo, tolleranza e fallimento per il superamento della raccomandazione sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica**: ricercando uno specifico attributo "data-element", viene verificato che la pagina delle note legali sia raggiungibile dal footer e che questa contenga una sezione intitolata "Licenza dei contenuti" riportante la seguente dicitura
 
@@ -412,7 +412,7 @@ Raccomandazione R.SC.2.2 - Licenza e attribuzione
 Raccomandazione R.SC.3.1 - Velocità e tempi di risposta
 ----------------------------------------------------------
 
-**Condizioni di successo**: il sito presenta livelli di prestazioni (media pesata di 6 metriche standard) pari o superiori a 50.
+**Condizioni di successo**: per superare il test effettuato dall'app, il sito presenta livelli di prestazioni (media pesata di 6 metriche standard) pari o superiori a 50. Le condizioni complete di successo, tolleranza e fallimento per il superamento della raccomandazione sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
 **Modalità di verifica**: l’homepage del sito viene testata in modalità “mobile” con Lighthouse.
 
@@ -420,6 +420,6 @@ Raccomandazione R.SC.3.1 - Velocità e tempi di risposta
 Test aggiuntivo Localizzazione IP
 ---------------------------------
 
-**Condizioni di successo:** l'indirizzo IP fa riferimento a un datacenter localizzato su territorio europeo.
+**Condizioni di successo:** per superare il test effettuato dall'app, l'indirizzo IP fa riferimento a un datacenter localizzato su territorio europeo.
 
 **Modalità di verifica:** viene verificato che la localizzazione dell'IP rientri all'interno di uno dei confini degli stati membri dell'Unione Europea.
