@@ -17,5 +17,6 @@ Documentazione delle App di valutazione dell’adesione ai modelli
    scarica-app-avvia-valutazione.rst
    requisiti-e-modalita-verifica-comuni.rst
    requisiti-e-modalita-verifica-scuole.rst
+   changelog.rst
 
    
