@@ -1,5 +1,7 @@
 Changelog
 ===========
+Il registro delle modifiche apportate alla documentazione dell'App di valutazione.
+
 Per consultare la versione aggiornata del changelog, assicurati di aver selezionato la versione "versione-attuale" della documentazione dal menu a tendina in alto.
 
 6 luglio 2023
