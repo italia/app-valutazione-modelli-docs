@@ -6,7 +6,7 @@ Per consultare la versione aggiornata del changelog, assicurati di aver selezion
 
 26 luglio 2023
 ------------------
-`5. Requisiti tecnici e modalità di verifica per il modello Comuni - Criterio C.SI.1.3 - Schede informative di servizio per il cittadino <https://docs.italia.it/italia/designers-italia/app-valutazione-modelli-docs/it/versione-attuale/requisiti-e-modalita-verifica-comuni.html#criterio-c-si-1-3-schede-informative-di-servizio-per-il-cittadino>`_ - Corretto l'esempio "pagina di terzo livello Scheda servizio” della sezione "Controllo della presenza e ordine delle voci nelle “Schede servizio”, dove era indicata erroneamente la presenza del data-element `<div data-element="service-extended-description"><p>. . .</p></div>` per l'elemento <h2>Descrizione</h2>.
+`5. Requisiti tecnici e modalità di verifica per il modello Comuni - Criterio C.SI.1.3 - Schede informative di servizio per il cittadino <https://docs.italia.it/italia/designers-italia/app-valutazione-modelli-docs/it/versione-attuale/requisiti-e-modalita-verifica-comuni.html#criterio-c-si-1-3-schede-informative-di-servizio-per-il-cittadino>`_ - Corretto l'esempio *pagina di terzo livello Scheda servizio* della sezione *Controllo della presenza e ordine delle voci nelle “Schede servizio”*, dove era indicata erroneamente la presenza del data-element `<div data-element="service-extended-description"><p>. . .</p></div>` per l'elemento `<h2>Descrizione</h2>`.
 
 6 luglio 2023
 ---------------
