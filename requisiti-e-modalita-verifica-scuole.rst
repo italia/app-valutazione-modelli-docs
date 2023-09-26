@@ -170,7 +170,7 @@ Criterio C.SC.1.4 - Voci di menù di primo livello
 
 **Condizioni di successo:** per superare il test effettuato dall'app, le voci del menù di primo livello del sito sono esattamente quelle indicate nel documento di architettura dell'informazione e sono nell'ordine indicato (ovvero Scuola, Servizi, Novità, Didattica) e tutte le pagine raggiungibili dal menu di primo livello appartengono al dominio della scuola. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
-**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito, il loro ordine e confrontate con quanto indicato nella Documentazione del modello scuole, applicando una tolleranza di massimo 3 voci aggiuntive.
+**Modalità di verifica:** tramite ricerca di uno specifico attributo data-element, vengono identificate le voci presenti nel menù del sito, il loro ordine e confrontate con quanto indicato nella Documentazione del modello scuole, applicando una tolleranza di massimo 3 voci aggiuntive. Inoltre, viene verificato che tutte le pagine raggiungibili dal menu di primo livello portino a pagine interne al dominio del sito della scuola.
 
 **Requisiti tecnici:** Nell’elemento del menù, il tag <ul> deve avere l’attributo ``data-element=”menu”`` ed essere composto da <li> e <a>.
 
@@ -184,7 +184,7 @@ Criterio C.SC.1.5 - Voci di menu di secondo livello
 
 **Condizioni di successo:** per superare il test effettuato dall'app, tutte le voci del menù di secondo livello usate fanno riferimento alla voce di primo livello corrispondente secondo quanto indicato nella Documentazione del modello scuole e tutte le pagine raggiungibili dal menu di secondo livello appartengono al dominio della scuola. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-scuole-docs/it/versione-corrente/conformita-modello-scuola.html>`_.
 
-**Modalità di verifica:**  ricercando specifici attributi data-element, vengono verificate le voci di secondo livello usate rispetto ad ognuna delle voci di primo livello del menù. Nel conteggio vengono incluse anche le voci di secondo livello riferite a voci di primo livello non indicate nella documentazione.
+**Modalità di verifica:**  ricercando specifici attributi data-element, vengono verificate le voci di secondo livello usate rispetto ad ognuna delle voci di primo livello del menù. Nel conteggio vengono incluse anche le voci di secondo livello riferite a voci di primo livello non indicate nella documentazione. Inoltre, viene verificato che tutte le pagine raggiungibili dal menu di secondo livello portino a pagine interne al dominio del sito della scuola.
 
 
 **Requisiti tecnici:** In homepage, nel menù principale i sotto-menù (menù di secondo livello) che contengono i link alle pagine di secondo livello devono contenere, all'interno del tag <ul>, i seguenti attributi:
