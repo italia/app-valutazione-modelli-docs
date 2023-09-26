@@ -95,34 +95,9 @@ Esempio:
 Criterio C.SI.1.2 - Libreria di elementi di interfaccia
 ----------------------------------------------------------
 
-**Condizioni di successo:** per superare il test effettuato dall'app, in tutte le pagine del sito viene utilizzata la libreria Bootstrap Italia, la libreria Bootstrap Italia è presente nel tag <head> delle pagine del sito e la versione in uso è uguale o superiore alla 2.0. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
+**Condizioni di successo:** per superare il test effettuato dall'app, in ogni pagina deve essere presente e in uso la libreria Bootstrap Italia in una versione uguale o superiore alla 2.0 e almeno il 50% delle classi CSS usate deve appartenere alle classi CSS di Bootstrap Italia. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
-**Modalità di verifica:** ricercando specifici attributi data-element, in ogni pagina analizzata viene verificata la presenza della libreria Bootstrap Italia e la versione in uso, individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION.
-
-Inoltre ogni pagina analizzata deve utilizzare almeno una tra le seguenti classi CSS di Bootstrap Italia:
-
-- .it-header-wrapper
-- .it-nav-wrapper
-- .navbar
-- .it-brand-title
-- .row
-- .col
-- .card
-- .container
-- .variable-gutters
-- .section
-- .font-serif
-- .font-sans-serif
-- .font-monospace
-- .lead
-- .it-list
-- .link-list
-- .link-list-wrapper
-- .list-item
-- .text-primary
-- .text-secondary
-
-La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello, N pagine di terzo livello “Scheda servizio”, nella pagina di accesso all’area riservata e nella pagina della funzionalità di prenotazione appuntamento.
+**Modalità di verifica:** ricercando specifici attributi data-element, in ogni pagina analizzata viene verificata la presenza della libreria Bootstrap Italia e la versione in uso, individuando la proprietà CSS --bootstrap-italia-version all’interno del selettore :root o la variabile globale window.BOOTSTRAP_ITALIA_VERSION. Inoltre, viene verificato che almeno il 50% delle classi CSS uniche trovate nella pagina appartiene all'elenco delle classi CSS di Bootstrap Italia. La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello, N pagine di terzo livello “Scheda servizio”, nella pagina di accesso all’area riservata e nella pagina della funzionalità di prenotazione appuntamento.
 
 **Requisiti tecnici:** 
 
@@ -199,9 +174,9 @@ Esempio:
 Criterio C.SI.1.3 - Schede informative di servizio per il cittadino
 ------------------------------------------------------------------------
 
-**Condizioni di successo:** per superare il test effettuato dall'app, nelle schede informative di servizio le voci obbligatorie e i relativi contenuti sono presenti e sono nell'ordine corretto. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
+**Condizioni di successo:** per superare il test effettuato dall'app, devono essere presenti almeno 10 schede informative di servizio e in queste le voci obbligatorie e i relativi contenuti sono presenti e, dove richiesto, sono nell'ordine corretto. Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
-**Modalità di verifica:** viene verificato se le voci indicate come obbligatorie nella Documentazione del modello Comuni sono presenti e nell'ordine corretto, ricercandole all'interno della pagina e dell'indice tramite specifici data-element. Per essere ritenute valide, le voci devono avere contenuti associati della tipologia indicata all'interno del documento di architettura dell'informazione. La verifica viene effettuata su N pagine di terzo livello “Scheda servizio”.
+**Modalità di verifica:** viene verificata la presenza e l'ordine delle voci richieste ricercandole all'interno della pagina e dell'indice tramite specifici data-element. Per essere ritenute valide, le voci devono avere contenuti associati della tipologia indicata all'interno del documento di architettura dell'informazione. La verifica viene effettuata su N pagine di terzo livello “Scheda servizio”.
 
 **Requisiti tecnici:**
 
@@ -302,6 +277,8 @@ Viene verificata la presenza e la sequenzialità delle seguenti voci:
 - *Novità*
 - *Servizi*
 - *Vivere il Comune* o *Vivere {nome_Comune}*
+
+Inoltre, viene verificato che tutte le pagine raggiungibili dal menu di primo livello portino a pagine interne al dominio del Comune.
 
 
 **Requisiti tecnici:** In template-homepage deve esserci un <ul> con l’attributo ``data-element=”main-navigation”`` che contenga degli <li> e degli <a> in cui ci sono le label (può contenere altri tag). 
@@ -722,17 +699,74 @@ Criterio C.SI.5.2 - Dominio istituzionale
 
 **Condizioni di successo**: per superare il test effettuato dall'app, il sito comunale è raggiungibile senza necessità di inserimento del sottodominio “www.” e utilizza il sottodominio "comune." seguito da uno dei possibili `domini utilizzabili <https://raw.githubusercontent.com/italia/pa-website-validator/main/src/storage/municipality/allowedDomains.ts>`_, secondo la seguente struttura: (1) per i Comuni non capoluogo di provincia, comune.[nome comune].[sigla provincia].it o comune.[nome comune].[nome esteso provincia].it (Esempi: comune.anzio.rm.it o comune.anzio.roma.it) o (2) per i Comuni capoluogo di provincia, comune.[nome capoluogo].it o comune.[nome capoluogo].[sigla della provincia].it (Esempi: comune.roma.it o comune.roma.rm.it). Le condizioni complete di successo, tolleranza e fallimento per il superamento del criterio di conformità sono dettagliate nella documentazione del modello sui `criteri di conformità per la misura 1.4.1 <https://docs.italia.it/italia/designers-italia/design-comuni-docs/it/versione-corrente/conformita.html>`_.
 
-**Modalità di verifica**: viene verificato che il dominio utilizzato nell’homepage sia presente nell'elenco dei `domini utilizzabili <https://raw.githubusercontent.com/italia/pa-website-validator/main/src/storage/municipality/allowedDomains.ts>`_ o sia un nome di capoluogo di provincia e che immediatamente prima di questo sia utilizzato il sottodominio "comune.". Il test viene condotto anche nella pagina di accesso all'area riservata, se presente, identificandola tramite uno specifico attributo "data-element".
+**Modalità di verifica**: tramite ricerca di specifici attributi "data-element", viene verificato che il dominio utilizzato nelle pagine analizzate rispetti la struttura richiesta dal criterio di conformità e che le pagine siano raggiungibili senza necessità di inserimento del sottodominio "www.". La verifica viene svolta sulla homepage, N pagine di primo livello, N pagine di secondo livello, N pagine di terzo livello “Scheda servizio” e nella pagina di accesso all’area riservata.
+
+Nello specifico, le pagine di secondo livello analizzate sono:
+
+- Per la sezione Amministrazione, “Organi di governo”, “Aree amministrative”, “Uffici”, “Enti e fondazioni”, “Politici”, “Personale amministrativo”, “Documenti e dati”;
+- Per la sezione Novità, “Notizie”, “Comunicati”, “Avvisi”
+- Per la sezione Servizi, “Educazione e formazione”, “Salute, benessere e assistenza”, “Vita lavorativa”, “Mobilità e trasporti”, “Catasto e urbanistica”, “Anagrafe e stato civile”, “Turismo”, “Giustizia e sicurezza pubblica”, “Tributi, finanze e contravvenzioni”, “Cultura e tempo libero”, “Ambiente”, “Imprese e commercio”, “Autorizzazioni”, “Appalti pubblici”, “Agricoltura e pesca”;
+- Per la sezione Vivere il Comune o Vivere {nome_comune}, “Luoghi”, “Eventi”.
+
 
 **Requisiti tecnici**:
 
 *Caricamento pagina di accesso all’area riservata*:
 
-In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenete il link alla pagina.
+In homepage, se è presente un link alla pagina di accesso all'area riservata, questo deve contenere il ``data-element="personal-area-login"`` nel tag <a> contenente il link alla pagina.
 
 Esempio:
 
-.. literalinclude:: esempi-codice-comuni/c-si-5-2.html
+.. literalinclude:: esempi-codice-comuni/c-si-1-1-a.html
+
+
+*Caricamento pagine primo livello*:
+
+In homepage, per poter identificare i link alle pagine di primo livello, nel menù principale identificato dal tag <div class="navbar"> i link alle pagine di primo livello devono contenere all'interno del tag <a class="nav-link"> i seguenti attributi:
+
+- "Amministrazione": ``data-element="management"``
+- "Novità": ``data-element="news"``
+- "Servizi": ``data-element="all-services"``
+- "Vivere il Comune": ``data-element="live"``
+- Eventuali voci aggiuntive: ``data-element=”custom-submenu”``
+
+L'assenza di uno dei data-element (ad eccezione di quelli relativi a eventuali voci aggiuntive) porta all'impossibilità di esecuzione dell'audit in quanto non sarà possibile recuperare il link.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-1-b.html
+
+
+*Caricamento pagine di secondo livello*:
+
+Per il caricamento delle pagine di secondo livello è necessario che i data-element alle pagine di primo livello siano correttamente posizionati all'interno dei link delle pagine di primo livello nel menù principale.
+
+La pagina di primo livello "Amministrazione", identificata grazie al ``data-element="management"``, dovrà contenere il ``data-element="management-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Novità", identificata grazie al ``data-element="news"``, dovrà contenere il ``data-element="news-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-category-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello. La mancata individuazione di almeno un link attraverso questo data-element porta all'impossibilità di esecuzione dell'audit.
+
+La pagina di primo livello "Vivere il comune", identificata grazie al ``data-element="live"``, dovrà contenere due bottoni. Il bottone che porta alla pagina di secondo livello "Eventi" dovrà contenere ``data-element="live-button-events"`` e il bottone che porta alla pagina di secondo livello "Luoghi" dovrà contenere ``data-element="live-button-locations"``. Per entrambi i bottoni il data-element dovrà essere posizionato sul tag <button> e il link alla pagina di secondo livello dovrà essere presente o all’interno dell’attributo «onclick» o all'interno di un attributo «href». La mancata individuazione di almeno un link attraverso questi data-element porta all'impossibilità di esecuzione dell'audit.
+
+Nel caso fossero presenti delle voci aggiuntive di primo livello esse vengono identificate attraverso il ``data-element=”custom-submenu”``. In ognuna di queste pagine è necessaria la presenza del ``data-element=”custom-category-link”`` all’interno dei tag <a> contenenti i link di atterraggio alle pagine di secondo livello.
+
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-1-c.html
+
+
+*Caricamento pagine di terzo livello "Scheda servizio"*:
+
+Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
+
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/c-si-1-1-d.html
 
 
 
