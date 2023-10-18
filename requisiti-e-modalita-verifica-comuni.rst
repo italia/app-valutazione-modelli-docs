@@ -84,12 +84,21 @@ Esempio:
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
-La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
-
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``.
 
 Esempio:
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-1-d.html
+
+Se invece i link ai servizi sono organizzati tramite paginazione è necessario inserire il ``data-element="pager-link"`` in tutti i link <a> per cambiare pagina, incluso quello per caricare i link successivi.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/servizi-con-paginazione.html
+
+La paginazione dei servizi può essere fatta anche su una pagina dedicata, diversa dalla pagina di primo livello "Servizi". In questo caso la pagina di primo livello "Servizi" deve avere un link con ``data-element="pager-link"`` che punta alla pagina con i link ai servizi.
+
+La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 
 Criterio C.SI.1.2 - Libreria di elementi di interfaccia
@@ -162,13 +171,21 @@ Esempio:
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
-La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``.
 
 Esempio:
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-2-e.html
 
+Se invece i link ai servizi sono organizzati tramite paginazione è necessario inserire il ``data-element="pager-link"`` in tutti i link <a> per cambiare pagina, incluso quello per caricare i link successivi.
 
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/servizi-con-paginazione.html
+
+La paginazione dei servizi può essere fatta anche su una pagina dedicata, diversa dalla pagina di primo livello "Servizi". In questo caso la pagina di primo livello "Servizi" deve avere un link con ``data-element="pager-link"`` che punta alla pagina con i link ai servizi.
+
+La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 
 Criterio C.SI.1.3 - Schede informative di servizio per il cittadino
@@ -184,11 +201,21 @@ Criterio C.SI.1.3 - Schede informative di servizio per il cittadino
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
-La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il data-element="load-other-cards". La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il data-element="load-other-cards".
 
 Esempio:
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-3-a.html
+
+Se invece i link ai servizi sono organizzati tramite paginazione è necessario inserire il ``data-element="pager-link"`` in tutti i link <a> per cambiare pagina, incluso quello per caricare i link successivi.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/servizi-con-paginazione.html
+
+La paginazione dei servizi può essere fatta anche su una pagina dedicata, diversa dalla pagina di primo livello "Servizi". In questo caso la pagina di primo livello "Servizi" deve avere un link con ``data-element="pager-link"`` che punta alla pagina con i link ai servizi.
+
+La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 
 *Controllo della presenza e ordine delle voci nelle “Schede servizio”*:
@@ -362,11 +389,21 @@ Esempio:
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
-La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``.
 
 Esempio:
 
 .. literalinclude:: esempi-codice-comuni/c-si-2-1-b.html
+
+Se invece i link ai servizi sono organizzati tramite paginazione è necessario inserire il ``data-element="pager-link"`` in tutti i link <a> per cambiare pagina, incluso quello per caricare i link successivi.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/servizi-con-paginazione.html
+
+La paginazione dei servizi può essere fatta anche su una pagina dedicata, diversa dalla pagina di primo livello "Servizi". In questo caso la pagina di primo livello "Servizi" deve avere un link con ``data-element="pager-link"`` che punta alla pagina con i link ai servizi.
+
+La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 
 *Controllo presenza prenotazione appuntamenti*:
@@ -399,11 +436,21 @@ Criterio C.SI.2.2 - Richiesta di assistenza / contatti
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
-La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``.
 
 Esempio:
 
 .. literalinclude:: esempi-codice-comuni/c-si-2-2-a.html
+
+Se invece i link ai servizi sono organizzati tramite paginazione è necessario inserire il ``data-element="pager-link"`` in tutti i link <a> per cambiare pagina, incluso quello per caricare i link successivi.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/servizi-con-paginazione.html
+
+La paginazione dei servizi può essere fatta anche su una pagina dedicata, diversa dalla pagina di primo livello "Servizi". In questo caso la pagina di primo livello "Servizi" deve avere un link con ``data-element="pager-link"`` che punta alla pagina con i link ai servizi.
+
+La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 
 *Controllo sui contatti*:
@@ -520,11 +567,21 @@ Criterio C.SI.2.6 - Valutazione dell'esperienza d'uso, chiarezza informativa del
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link alla pagina di primo livello nel menù principale.
 
-La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio". Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio". Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``.
 
 Esempio:
 
 .. literalinclude:: esempi-codice-comuni/c-si-2-6-a.html
+
+Se invece i link ai servizi sono organizzati tramite paginazione è necessario inserire il ``data-element="pager-link"`` in tutti i link <a> per cambiare pagina, incluso quello per caricare i link successivi.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/servizi-con-paginazione.html
+
+La paginazione dei servizi può essere fatta anche su una pagina dedicata, diversa dalla pagina di primo livello "Servizi". In questo caso la pagina di primo livello "Servizi" deve avere un link con ``data-element="pager-link"`` che punta alla pagina con i link ai servizi.
+
+La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 
 *Controllo componente di valutazione*:
@@ -611,11 +668,21 @@ Esempio:
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
-La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``.
 
 Esempio:
 
 .. literalinclude:: esempi-codice-comuni/c-si-3-1-e.html
+
+Se invece i link ai servizi sono organizzati tramite paginazione è necessario inserire il ``data-element="pager-link"`` in tutti i link <a> per cambiare pagina, incluso quello per caricare i link successivi.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/servizi-con-paginazione.html
+
+La paginazione dei servizi può essere fatta anche su una pagina dedicata, diversa dalla pagina di primo livello "Servizi". In questo caso la pagina di primo livello "Servizi" deve avere un link con ``data-element="pager-link"`` che punta alla pagina con i link ai servizi.
+
+La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 
 *Caricamento pagine di quarto livello "Evento"*:
@@ -763,13 +830,22 @@ Esempio:
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
-La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``.
 
 
 Esempio:
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-1-d.html
 
+Se invece i link ai servizi sono organizzati tramite paginazione è necessario inserire il ``data-element="pager-link"`` in tutti i link <a> per cambiare pagina, incluso quello per caricare i link successivi.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/servizi-con-paginazione.html
+
+La paginazione dei servizi può essere fatta anche su una pagina dedicata, diversa dalla pagina di primo livello "Servizi". In questo caso la pagina di primo livello "Servizi" deve avere un link con ``data-element="pager-link"`` che punta alla pagina con i link ai servizi.
+
+La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 
 Raccomandazione R.SI.1.1 - Metatag
@@ -799,7 +875,7 @@ I metatag ricercati sono i seguenti:
 
 Per il caricamento di queste pagine di terzo livello è necessario che il data-element alla pagina di primo livello "Servizi" sia correttamente posizionato all'interno del link della pagina di primo livello nel menù principale.
 
-La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``. La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
+La pagina di primo livello "Servizi", identificata grazie al ``data-element="all-services"``, dovrà contenere il ``data-element="service-link"`` all'interno dei tag <a> contenenti i link di atterraggio alle pagine di terzo livello “Scheda servizio”. Se nella pagina è presente un bottone che permette di caricare altri link ai servizi attraverso una chiamata AJAX esso dovrà contenere il ``data-element="load-other-cards"``.
 
 Esempio:
 
@@ -812,6 +888,15 @@ Esempio:
 
 .. literalinclude:: esempi-codice-comuni/r-si-1-1-b.html
 
+Se invece i link ai servizi sono organizzati tramite paginazione è necessario inserire il ``data-element="pager-link"`` in tutti i link <a> per cambiare pagina, incluso quello per caricare i link successivi.
+
+Esempio:
+
+.. literalinclude:: esempi-codice-comuni/servizi-con-paginazione.html
+
+La paginazione dei servizi può essere fatta anche su una pagina dedicata, diversa dalla pagina di primo livello "Servizi". In questo caso la pagina di primo livello "Servizi" deve avere un link con ``data-element="pager-link"`` che punta alla pagina con i link ai servizi.
+
+La mancata individuazione di almeno un link attraverso il ``data-element="service-link"`` porta all'impossibilità di esecuzione dell'audit.
 
 
 Test aggiuntivi - Localizzazione IP
