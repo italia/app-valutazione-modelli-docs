@@ -230,6 +230,8 @@ Esempio:
 
 .. literalinclude:: esempi-codice-comuni/c-si-1-3-b.html
   
+.. note::
+  Le voci controllate in questo criterio sono *case sensitive*, cioè devono coincidere anche nella distinzione tra maiuscole e minuscole.
 
 Criterio C.SI.1.4 - Utilizzo di temi per CMS (Content Management System)
 ----------------------------------------------------------------------------
