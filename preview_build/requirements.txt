@@ -1,3 +1,4 @@
 Sphinx==4.4.0
 sphinx-autobuild==2021.3.14
+urllib3==1.26.18
 docs-italia-theme @ git+https://github.com/italia/docs-italia-theme.git@02555a67183b5c9143b5c4f37b144af05cb2f098
