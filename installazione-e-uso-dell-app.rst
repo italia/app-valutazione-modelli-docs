@@ -15,6 +15,12 @@ Vai sul `repository GitHub <https://github.com/italia/pa-website-validator-gui/r
 
 Assicurati che la release sia l’ultima disponibile, contrassegnata dall’etichetta verde «Latest».
 
+**Abilitazione app su Linux**
+
+Per abilitare l'app, assegnale i permessi di esecuzione. Fai clic con il tasto destro sul file scaricato e seleziona "Proprietà" > "Permessi"; quindi spunta la casella "Consenti l'esecuzione del file come programma".
+
+Apri l'app facendo doppio clic sul file scaricato.
+
 **Abilitazione app su MacOS**
 
 Potresti ricevere un avviso da MacOS che indica che l’app proviene da uno sviluppatore non riconosciuto. Per abilitare l’app, segui questi passaggi dopo aver scaricato il file ZIP:
