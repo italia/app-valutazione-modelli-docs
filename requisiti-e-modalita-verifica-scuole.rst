@@ -1,7 +1,7 @@
 Requisiti tecnici e modalità di verifica per il modello scuole
 ==============================================================
 
-Di seguito sono riportati i criteri di conformità e le raccomandazioni verificabili tramite App di valutazione dell'adesione al modello scuole.
+Di seguito sono riportati i criteri di conformità e le raccomandazioni verificabili tramite App di valutazione dell'adesione al modello scuole. 
 
 Per il corretto funzionamento dell'App di valutazione, è necessario inserire dei **data attribute** all’interno dei tag HTML del sito. Questi vengono indicati separatamente per ognuno dei criteri. Alcuni data attribute valgono per più criteri.
 
